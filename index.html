@@ -4,17 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AIOU Resources | Home</title>
-  <meta name="description" content="Access AIOU books, lesson plans, teaching practice guides, research projects and an easy result calculator.">
-  <meta name="keywords" content="AIOU resources, AIOU books, lesson plan, teaching practice, research project, result calculator">
+  <meta name="description" content="Access AIOU books, lesson plans, teaching practice guides, research projects, past papers and an easy result calculator.">
+  <meta name="keywords" content="AIOU resources, AIOU books, lesson plan, teaching practice, research project, past papers, result calculator">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background: #f8fdf8;
       margin: 0;
       padding: 0;
       color: #00472D;
     }
+
+    /* Abstract Background */
+    .abstract-background {
+      background-color: #f0f4f9; 
+      background-image:
+        radial-gradient(at 10% 20%, rgba(255, 255, 255, 0.8) 0px, transparent 50%),
+        radial-gradient(at 10% 90%, rgba(200, 220, 255, 0.5) 0px, transparent 50%),
+        radial-gradient(at 90% 40%, rgba(240, 220, 255, 0.6) 0px, transparent 50%),
+        radial-gradient(at 70% 80%, rgba(230, 240, 250, 0.7) 0px, transparent 50%);
+      backdrop-filter: blur(100px); 
+      -webkit-backdrop-filter: blur(100px);
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      z-index: -1;
+    }
+
     header {
       background: #00472D;
       color: white;
@@ -79,6 +95,7 @@
       font-size: 14px;
     }
     .thanks { margin-top: 10px; font-weight: 600; }
+
     /* Comments Section */
     .comments-box {
       max-width: 800px;
@@ -96,15 +113,26 @@
     .comment {
       border-bottom: 1px solid #ddd;
       padding: 10px 0;
+      margin-left: 0;
     }
-    .comment:last-child { border-bottom: none; }
-    .comment-actions { font-size: 12px; color: gray; cursor: pointer; margin-left: 10px; }
-    textarea {
+    .comment .meta {
+      font-size: 13px;
+      color: gray;
+      margin-bottom: 5px;
+    }
+    .reply-box {
+      margin-left: 30px;
+      margin-top: 10px;
+      padding-left: 15px;
+      border-left: 2px solid #ddd;
+    }
+    textarea, input[type="text"] {
       width: 100%;
       padding: 10px;
       border-radius: 6px;
       border: 1px solid #ccc;
       resize: vertical;
+      margin-bottom: 8px;
     }
     button {
       background: #00472D;
@@ -112,18 +140,21 @@
       border: none;
       padding: 8px 15px;
       border-radius: 6px;
-      margin-top: 10px;
+      margin-top: 5px;
       cursor: pointer;
     }
+    .comment-actions { font-size: 12px; color: gray; cursor: pointer; margin-left: 10px; }
   </style>
 </head>
 
 <body>
+  <!-- Background Layer -->
+  <div class="abstract-background"></div>
 
   <header>
     <img src="images/aiou-logo.png" alt="AIOU Logo">
     <h1>Allama Iqbal Open University Resources</h1>
-    <p>Access your study materials, lesson plans, and tools in one place</p>
+    <p>Access Your Study Material in One Place</p>
   </header>
 
   <nav>
@@ -132,6 +163,7 @@
     <a href="./lesson-plan.html">Lesson Plan</a>
     <a href="./teaching-practice.html">Teaching Practice</a>
     <a href="./research-project.html">Research Project</a>
+    <a href="./past-papers.html">Past Papers</a>
     <a href="./calculator.html">Calculator</a>
   </nav>
 
@@ -156,6 +188,11 @@
       <h3>Research Project (8613)</h3>
       <p>Download Research Projects Samples</p>
     </div>
+    <div class="card" onclick="location.href='past-papers.html'">
+      <div class="icon">📝</div>
+      <h3>Past Papers</h3>
+      <p>Download Previous Years Past Papers</p>
+    </div>
     <div class="card" onclick="location.href='calculator.html'">
       <div class="icon">🧮</div>
       <h3>Result Calculator</h3>
@@ -173,6 +210,7 @@
   <!-- Comment Section -->
   <div class="comments-box">
     <h2>Leave a Comment</h2>
+    <input type="text" id="nameInput" placeholder="Enter your name">
     <textarea id="commentInput" rows="3" placeholder="Write your comment..."></textarea>
     <br>
     <button onclick="addComment()">Post Comment</button>
@@ -186,13 +224,12 @@
   </footer>
 
   <script>
-    // Comments with LocalStorage + Admin Control
     let comments = JSON.parse(localStorage.getItem("comments")) || [];
-    let isAdmin = false;  // admin status
+    let isAdmin = false;
 
     function adminLogin() {
       const pass = document.getElementById("adminPass").value;
-      if (pass === "522375426") {   // apna secret password set karo
+      if (pass === "zee522375426") {
         isAdmin = true;
         document.getElementById("adminStatus").innerText = "✅ Admin Logged In";
         renderComments();
@@ -208,22 +245,81 @@
         const div = document.createElement("div");
         div.className = "comment";
         div.innerHTML = `
-          ${c.text}
-          ${isAdmin ? `
-            <span class="comment-actions" onclick="deleteComment(${i})">🗑 Delete</span>
-            <span class="comment-actions" onclick="hideComment(${i})">${c.hidden ? "👁 Show" : "🙈 Hide"}</span>
-          ` : ""}
+          <div class="meta"><b>${c.name}</b> • ${c.date}</div>
+          <div>${c.text}</div>
+          <div>
+            <span class="comment-actions" onclick="showReplyBox(${i})">↩ Reply</span>
+            ${isAdmin ? `
+              <span class="comment-actions" onclick="deleteComment(${i})">🗑 Delete</span>
+              <span class="comment-actions" onclick="hideComment(${i})">${c.hidden ? "👁 Show" : "🙈 Hide"}</span>
+            ` : ""}
+          </div>
+          <div class="reply-box" id="replies-${i}"></div>
         `;
-        if (!c.hidden || isAdmin) list.appendChild(div); 
+        if (!c.hidden || isAdmin) {
+          list.appendChild(div);
+          renderReplies(c.replies, document.getElementById("replies-" + i), i);
+        }
       });
       localStorage.setItem("comments", JSON.stringify(comments));
     }
 
+    function renderReplies(replies, container, parentIndex) {
+      container.innerHTML = "";
+      replies.forEach((r, j) => {
+        const div = document.createElement("div");
+        div.className = "comment";
+        div.style.marginLeft = "20px";
+        div.innerHTML = `
+          <div class="meta"><b>${r.name}</b> • ${r.date}</div>
+          <div>${r.text}</div>
+          <div>
+            <span class="comment-actions" onclick="showReplyBox(${parentIndex}, ${j})">↩ Reply</span>
+            ${isAdmin ? `<span class="comment-actions" onclick="deleteReply(${parentIndex}, ${j})">🗑 Delete</span>` : ""}
+          </div>
+          <div class="reply-box" id="replies-${parentIndex}-${j}"></div>
+        `;
+        container.appendChild(div);
+        if (r.replies) {
+          renderReplies(r.replies, document.getElementById(`replies-${parentIndex}-${j}`), parentIndex + "-" + j);
+        }
+      });
+    }
+
     function addComment() {
-      const input = document.getElementById("commentInput");
-      if (input.value.trim() !== "") {
-        comments.push({ text: input.value.trim(), hidden: false });
-        input.value = "";
+      const name = document.getElementById("nameInput").value.trim();
+      const text = document.getElementById("commentInput").value.trim();
+      if (name && text) {
+        comments.push({ name, text, hidden: false, date: new Date().toLocaleString(), replies: [] });
+        document.getElementById("nameInput").value = "";
+        document.getElementById("commentInput").value = "";
+        renderComments();
+      }
+    }
+
+    function showReplyBox(i, j = null) {
+      const targetId = j === null ? `replies-${i}` : `replies-${i}-${j}`;
+      const container = document.getElementById(targetId);
+      const form = document.createElement("div");
+      form.innerHTML = `
+        <input type="text" id="replyName-${i}-${j}" placeholder="Your name">
+        <textarea id="replyText-${i}-${j}" rows="2" placeholder="Write a reply..."></textarea>
+        <button onclick="addReply(${i}, ${j})">Reply</button>
+      `;
+      container.appendChild(form);
+    }
+
+    function addReply(i, j = null) {
+      const name = document.getElementById(`replyName-${i}-${j}`).value.trim();
+      const text = document.getElementById(`replyText-${i}-${j}`).value.trim();
+      if (name && text) {
+        const reply = { name, text, date: new Date().toLocaleString(), replies: [] };
+        if (j === null) {
+          comments[i].replies.push(reply);
+        } else {
+          comments[i].replies[j].replies = comments[i].replies[j].replies || [];
+          comments[i].replies[j].replies.push(reply);
+        }
         renderComments();
       }
     }
@@ -231,6 +327,13 @@
     function deleteComment(i) {
       if (confirm("Delete this comment?")) {
         comments.splice(i, 1);
+        renderComments();
+      }
+    }
+
+    function deleteReply(i, j) {
+      if (confirm("Delete this reply?")) {
+        comments[i].replies.splice(j, 1);
         renderComments();
       }
     }
