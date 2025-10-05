@@ -163,6 +163,13 @@
     </div>
   </div>
 
+  <!-- Admin Login -->
+  <div style="max-width:800px; margin:20px auto; text-align:right;">
+    <input type="password" id="adminPass" placeholder="Admin Password" style="padding:6px; border-radius:5px; border:1px solid #ccc;">
+    <button onclick="adminLogin()">Login</button>
+    <span id="adminStatus" style="margin-left:10px; font-size:13px; color:gray;"></span>
+  </div>
+
   <!-- Comment Section -->
   <div class="comments-box">
     <h2>Leave a Comment</h2>
@@ -179,8 +186,20 @@
   </footer>
 
   <script>
-    // Comments with LocalStorage
+    // Comments with LocalStorage + Admin Control
     let comments = JSON.parse(localStorage.getItem("comments")) || [];
+    let isAdmin = false;  // admin status
+
+    function adminLogin() {
+      const pass = document.getElementById("adminPass").value;
+      if (pass === "522375426") {   // apna secret password set karo
+        isAdmin = true;
+        document.getElementById("adminStatus").innerText = "✅ Admin Logged In";
+        renderComments();
+      } else {
+        alert("Wrong password!");
+      }
+    }
 
     function renderComments() {
       const list = document.getElementById("commentsList");
@@ -190,10 +209,12 @@
         div.className = "comment";
         div.innerHTML = `
           ${c.text}
-          <span class="comment-actions" onclick="deleteComment(${i})">🗑 Delete</span>
-          <span class="comment-actions" onclick="hideComment(${i})">${c.hidden ? "👁 Show" : "🙈 Hide"}</span>
+          ${isAdmin ? `
+            <span class="comment-actions" onclick="deleteComment(${i})">🗑 Delete</span>
+            <span class="comment-actions" onclick="hideComment(${i})">${c.hidden ? "👁 Show" : "🙈 Hide"}</span>
+          ` : ""}
         `;
-        if (!c.hidden) list.appendChild(div);
+        if (!c.hidden || isAdmin) list.appendChild(div); 
       });
       localStorage.setItem("comments", JSON.stringify(comments));
     }
@@ -208,7 +229,6 @@
     }
 
     function deleteComment(i) {
-      // admin only: simple confirm
       if (confirm("Delete this comment?")) {
         comments.splice(i, 1);
         renderComments();
