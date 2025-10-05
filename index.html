@@ -1,127 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AIOU Academic Resources</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIOU Resources | Home</title>
+  <meta name="description" content="Access AIOU books, lesson plans, teaching practice guides, research projects and an easy result calculator.">
+  <meta name="keywords" content="AIOU resources, AIOU books, lesson plan, teaching practice, research project, result calculator">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Roboto', sans-serif; background: #fff; color: #333; }
-
-    /* Header */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8fdf8;
+      margin: 0;
+      padding: 0;
+      color: #00472D;
+    }
     header {
+      background: #00472D;
+      color: white;
       text-align: center;
-      padding: 20px;
-      background: #f9f9f9;
-      border-bottom: 2px solid #e0e0e0;
+      padding: 20px 10px;
       position: relative;
     }
-    header img { max-height: 90px; }
-    header h1 { color: #00472D; margin: 10px 0 5px; }
-    header h2 { color: #444; margin-top: 0; }
-
-    /* Navigation */
+    header img { max-height: 80px; }
+    header h1 { margin: 10px 0 5px; font-size: 26px; }
     nav {
-      position: absolute;
-      top: 20px;
-      right: 30px;
+      background: #006d45;
+      text-align: center;
+      padding: 10px;
     }
     nav a {
-      margin: 0 10px;
+      color: white;
       text-decoration: none;
-      color: #00472D;
-      font-weight: bold;
-      transition: color 0.3s;
+      margin: 0 12px;
+      font-weight: 500;
+      font-size: 16px;
     }
-    nav a:hover { color: #007a4d; }
-
-    /* Cards */
-    .cards {
+    nav a:hover { text-decoration: underline; }
+    .container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      max-width: 900px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
       margin: 40px auto;
-      padding: 0 20px;
+      padding: 20px;
     }
     .card {
-      background: #fff;
-      border-radius: 10px;
+      background: white;
+      border: 1px solid #cce3cc;
+      border-radius: 15px;
       padding: 30px;
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-      text-decoration: none;
-      color: inherit;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      cursor: pointer;
     }
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      transform: translateY(-6px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     }
     .icon {
-      font-size: 40px;
+      font-size: 45px;
+      background: #d4f7d4;
       color: #00472D;
-      background: #d6f5e3;
       border-radius: 50%;
-      padding: 20px;
       display: inline-block;
+      padding: 20px;
       margin-bottom: 15px;
     }
-    .card h3 { margin: 10px 0 0; color: #00472D; }
-
-    /* Footer */
+    .card h3 { font-size: 18px; color: #00472D; margin: 10px 0; }
+    .card p { font-size: 14px; color: #444; }
     footer {
+      background: #00472D;
+      color: white;
       text-align: center;
-      padding: 20px;
-      background: #f5f5f5;
-      font-size: 14px;
-      color: #666;
+      padding: 15px;
       margin-top: 50px;
+      font-size: 14px;
+    }
+    .thanks { margin-top: 10px; font-weight: 600; }
+    /* Comments Section */
+    .comments-box {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #cce3cc;
+      border-radius: 10px;
+    }
+    .comments-box h2 {
+      margin-top: 0;
+      font-size: 20px;
+      color: #00472D;
+    }
+    .comment {
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+    .comment:last-child { border-bottom: none; }
+    .comment-actions { font-size: 12px; color: gray; cursor: pointer; margin-left: 10px; }
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+    button {
+      background: #00472D;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 6px;
+      margin-top: 10px;
+      cursor: pointer;
     }
   </style>
 </head>
-<body>
-  <header>
-    <!-- Navigation Menu -->
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="books.html">Books</a>
-      <a href="lesson-plan.html">Lesson Plan</a>
-      <a href="teaching-practice.html">Teaching Practice</a>
-      <a href="research-project.html">Research Project</a>
-    </nav>
 
-    <!-- Logo + Title -->
+<body>
+
+  <header>
     <img src="images/aiou-logo.png" alt="AIOU Logo">
-    <h1>Allama Iqbal Open University Islamabad</h1>
-    <h2>AIOU Program Resources</h2>
+    <h1>Allama Iqbal Open University Resources</h1>
+    <p>Access your study materials, lesson plans, and tools in one place</p>
   </header>
 
-  <!-- Main Cards -->
-  <main>
-    <div class="cards">
-      <a href="books.html" class="card">
-        <div class="icon">📚</div>
-        <h3>Books</h3>
-      </a>
-      <a href="lesson-plan.html" class="card">
-        <div class="icon">📄</div>
-        <h3>Lesson Plan (8608/6997)</h3>
-      </a>
-      <a href="teaching-practice.html" class="card">
-        <div class="icon">👨‍🏫</div>
-        <h3>Teaching Practice (8607/6996)</h3>
-      </a>
-      <a href="research-project.html" class="card">
-        <div class="icon">🔍</div>
-        <h3>Research Project (8613)</h3>
-      </a>
-    </div>
-  </main>
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./books.html">Books</a>
+    <a href="./lesson-plan.html">Lesson Plan</a>
+    <a href="./teaching-practice.html">Teaching Practice</a>
+    <a href="./research-project.html">Research Project</a>
+    <a href="./calculator.html">Calculator</a>
+  </nav>
 
-  <!-- Footer -->
+  <div class="container">
+    <div class="card" onclick="location.href='books.html'">
+      <div class="icon">📚</div>
+      <h3>Books</h3>
+      <p>Download Urdu Key Books</p>
+    </div>
+    <div class="card" onclick="location.href='lesson-plan.html'">
+      <div class="icon">📄</div>
+      <h3>Lesson Plan (8608/6997)</h3>
+      <p>Download Lesson Plan Samples</p>
+    </div>
+    <div class="card" onclick="location.href='teaching-practice.html'">
+      <div class="icon">👩🏫</div>
+      <h3>Teaching Practice (8607/6996)</h3>
+      <p>Download Teaching Practical Samples</p>
+    </div>
+    <div class="card" onclick="location.href='research-project.html'">
+      <div class="icon">🔍</div>
+      <h3>Research Project (8613)</h3>
+      <p>Download Research Projects Samples</p>
+    </div>
+    <div class="card" onclick="location.href='calculator.html'">
+      <div class="icon">🧮</div>
+      <h3>Result Calculator</h3>
+      <p>Calculate your AIOU marks easily</p>
+    </div>
+  </div>
+
+  <!-- Comment Section -->
+  <div class="comments-box">
+    <h2>Leave a Comment</h2>
+    <textarea id="commentInput" rows="3" placeholder="Write your comment..."></textarea>
+    <br>
+    <button onclick="addComment()">Post Comment</button>
+    <div id="commentsList"></div>
+  </div>
+
   <footer>
-    © 2025 AIOU Resources | Designed by Zeeshan (AIOU Help) | Mobile: 03040571214
+    Developed by Zeeshan (AIOU Help) | Contact: 0304-0571214<br>
+    © 2025 Allama Iqbal Open University
+    <div class="thanks">Thanks To Visiting Zeeshan AIOU Help</div>
   </footer>
+
+  <script>
+    // Comments with LocalStorage
+    let comments = JSON.parse(localStorage.getItem("comments")) || [];
+
+    function renderComments() {
+      const list = document.getElementById("commentsList");
+      list.innerHTML = "";
+      comments.forEach((c, i) => {
+        const div = document.createElement("div");
+        div.className = "comment";
+        div.innerHTML = `
+          ${c.text}
+          <span class="comment-actions" onclick="deleteComment(${i})">🗑 Delete</span>
+          <span class="comment-actions" onclick="hideComment(${i})">${c.hidden ? "👁 Show" : "🙈 Hide"}</span>
+        `;
+        if (!c.hidden) list.appendChild(div);
+      });
+      localStorage.setItem("comments", JSON.stringify(comments));
+    }
+
+    function addComment() {
+      const input = document.getElementById("commentInput");
+      if (input.value.trim() !== "") {
+        comments.push({ text: input.value.trim(), hidden: false });
+        input.value = "";
+        renderComments();
+      }
+    }
+
+    function deleteComment(i) {
+      // admin only: simple confirm
+      if (confirm("Delete this comment?")) {
+        comments.splice(i, 1);
+        renderComments();
+      }
+    }
+
+    function hideComment(i) {
+      comments[i].hidden = !comments[i].hidden;
+      renderComments();
+    }
+
+    renderComments();
+  </script>
+
 </body>
 </html>
