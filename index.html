@@ -38,7 +38,10 @@
       padding: 20px 10px;
       position: relative;
     }
-    header img { max-height: 80px; }
+    header img { 
+      max-height: 80px; 
+      width: auto;
+    }
     header h1 { margin: 10px 0 5px; font-size: 26px; }
     nav {
       background: #006d45;
@@ -51,16 +54,20 @@
       margin: 0 12px;
       font-weight: 500;
       font-size: 16px;
+      display: inline-block;
     }
     nav a:hover { text-decoration: underline; }
+
     .container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 25px;
       max-width: 1100px;
+      width: 90%;
       margin: 40px auto;
       padding: 20px;
     }
+
     .card {
       background: white;
       border: 1px solid #cce3cc;
@@ -86,6 +93,7 @@
     }
     .card h3 { font-size: 18px; color: #00472D; margin: 10px 0; }
     .card p { font-size: 14px; color: #444; }
+
     footer {
       background: #00472D;
       color: white;
@@ -99,6 +107,7 @@
     /* Comments Section */
     .comments-box {
       max-width: 800px;
+      width: 90%;
       margin: 40px auto;
       padding: 20px;
       background: #fff;
@@ -144,6 +153,35 @@
       cursor: pointer;
     }
     .comment-actions { font-size: 12px; color: gray; cursor: pointer; margin-left: 10px; }
+
+    /* ✅ Mobile Responsive Fix */
+    @media (max-width: 768px) {
+      header h1 { font-size: 20px; }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+      }
+      nav a {
+        background: #005c3c;
+        padding: 8px 12px;
+        border-radius: 5px;
+        margin: 4px;
+        font-size: 14px;
+      }
+      .container {
+        grid-template-columns: 1fr;
+        width: 95%;
+      }
+      .card {
+        padding: 20px;
+      }
+      footer {
+        font-size: 13px;
+      }
+    }
+
   </style>
 </head>
 
@@ -152,7 +190,7 @@
   <div class="abstract-background"></div>
 
   <header>
-    <img src="aiou-logo.png" alt="AIOU Logo">
+    <img src="images/aiou-logo.png" alt="AIOU Logo">
     <h1>Allama Iqbal Open University Resources</h1>
     <p>Access Your Study Material in One Place</p>
   </header>
@@ -201,7 +239,7 @@
   </div>
 
   <!-- Admin Login -->
-  <div style="max-width:800px; margin:20px auto; text-align:right;">
+  <div style="max-width:800px; width:90%; margin:20px auto; text-align:right;">
     <input type="password" id="adminPass" placeholder="Admin Password" style="padding:6px; border-radius:5px; border:1px solid #ccc;">
     <button onclick="adminLogin()">Login</button>
     <span id="adminStatus" style="margin-left:10px; font-size:13px; color:gray;"></span>
@@ -347,5 +385,4 @@
   </script>
 
 </body>
-
 </html>
