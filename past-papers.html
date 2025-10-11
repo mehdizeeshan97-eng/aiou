@@ -103,7 +103,7 @@
   <div class="abstract-background"></div>
 
   <header>
-    <img src="aiou-logo.png" alt="AIOU Logo">
+    <img src="images/aiou-logo.png" alt="AIOU Logo">
     <nav>
       <a href="./index.html">Home</a>
       <a href="./books.html">Books</a>
@@ -119,17 +119,39 @@
   <div class="container">
     <h3>Available Past Papers</h3>
     <div class="file-list">
-      <a href="https://drive.google.com/drive/folders/1djp6YPDmDlwBTQI7vvEHE3KirEVaCAWI?usp=drive_link" target="_blank">
+      <a href="https://drive.google.com/drive/folders/1djp6YPDmDlwBTQI7vvEHE3KirEVaCAWI?usp=drive_link" target="_blank" rel="noopener">
         📂 Click Here to View & Download Past Papers
       </a>
     </div>
   </div>
 
-  <footer>
+<footer>
     Developed by Zeeshan (AIOU Help) | Contact: 0304-0571214<br>
     © 2025 Allama Iqbal Open University
   </footer>
+
+  <!-- 🔒 Website Protection Script -->
+  <script>
+    // Disable right-click
+    document.addEventListener('contextmenu', e => e.preventDefault());
+
+    // Disable text selection
+    document.addEventListener('selectstart', e => e.preventDefault());
+
+    // Disable certain keyboard shortcuts
+    document.onkeydown = function(e) {
+      if (e.keyCode == 123) return false; // F12
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false; // Ctrl+Shift+I
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false; // Ctrl+Shift+C
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false; // Ctrl+Shift+J
+      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false; // Ctrl+U
+    };
+
+    // Optional: Warn user on copy attempt
+    document.addEventListener('copy', (e) => {
+      e.preventDefault();
+      alert("Copying content is disabled on this website.");
+    });
+  </script>
 </body>
-
 </html>
-

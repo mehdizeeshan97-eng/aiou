@@ -19,7 +19,6 @@
       z-index: 0;
     }
 
-    /* Abstract Background */
     .abstract-background {
       background-color: #f0f4f9; 
       background-image:
@@ -37,7 +36,6 @@
       z-index: -1;
     }
 
-    /* Header */
     header {
       background: #00472D;
       color: white;
@@ -61,7 +59,6 @@
       text-decoration: underline;
     }
 
-    /* Page Heading */
     h1 {
       text-align: center;
       color: #00472D;
@@ -70,7 +67,6 @@
       z-index: 1;
     }
 
-    /* Container */
     .container {
       max-width: 800px;
       margin: 20px auto;
@@ -110,7 +106,6 @@
       background: #006400;
     }
 
-    /* Result Card */
     .result-card {
       border: 2px solid #00472D;
       padding: 15px;
@@ -142,7 +137,6 @@
       font-weight: bold;
     }
 
-    /* Footer */
     footer {
       text-align: center;
       padding: 15px;
@@ -157,12 +151,10 @@
 </head>
 <body>
 
-  <!-- Background Layer -->
   <div class="abstract-background"></div>
 
-  <!-- Header -->
   <header>
-    <img src="aiou-logo.png" alt="AIOU Logo">
+    <img src="images/aiou-logo.png" alt="AIOU Logo">
     <nav>
       <a href="./index.html">Home</a>
       <a href="./books.html">Books</a>
@@ -176,8 +168,26 @@
 
   <h1>AIOU Result Calculator</h1>
 
-  <!-- Calculator -->
   <div class="container">
+
+    <!-- 🔹 Grade & CGPA Calculator -->
+    <h3 style="color:#00472D;text-align:center;">Calculate Grade & CGPA</h3>
+    <label for="totalMarks">Enter your total number:</label>
+    <input type="number" id="totalMarks" placeholder="Total Marks" min="1">
+
+    <label for="obtainedMarks">Enter your obtained number:</label>
+    <input type="number" id="obtainedMarks" placeholder="Obtained Marks" min="0">
+
+    <button onclick="calculateGrade()">Calculate Grade & CGPA</button>
+
+    <div id="gradeResult" class="result-card" style="display:none;">
+      <h3>Grade & CGPA Result</h3>
+      <div id="gradeDetails"></div>
+    </div>
+
+    <hr style="margin:30px 0;">
+
+    <!-- 🔹 Class Result Calculator -->
     <label for="class">Select Class:</label>
     <select id="class" onchange="toggleInputs()">
       <option value="">--Select--</option>
@@ -185,7 +195,6 @@
       <option value="bs">BS / B.Ed / ADE / BBA</option>
     </select>
 
-    <!-- Matric Section -->
     <div id="matricInputs" style="display:none;">
       <label for="assignSelect">Select Assignments:</label>
       <select id="assignSelect" onchange="generateAssignmentInputs()">
@@ -198,7 +207,6 @@
       <input type="number" id="matricPaper" min="0" max="100">
     </div>
 
-    <!-- BS Section -->
     <div id="bsInputs" style="display:none;">
       <label>Assignment 1 Marks:</label>
       <input type="number" id="bsAssign1" min="0" max="100">
@@ -218,13 +226,81 @@
     </div>
   </div>
 
-  <!-- Footer -->
   <footer>
     Developed by Zeeshan (AIOU Help) | Contact: 0304-0571214<br>
     © 2025 Allama Iqbal Open University
   </footer>
 
+  <!-- 🔒 Website Protection Script -->
   <script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('selectstart', e => e.preventDefault());
+    document.onkeydown = function(e) {
+      if (e.keyCode == 123) return false;
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false;
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
+      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
+    };
+    document.addEventListener('copy', (e) => {
+      e.preventDefault();
+      alert("Copying content is disabled on this website.");
+    });
+  </script>
+
+  <script>
+    // 🔹 Calculate Grade & CGPA Function
+    function calculateGrade() {
+      const total = parseFloat(document.getElementById("totalMarks").value);
+      const obtained = parseFloat(document.getElementById("obtainedMarks").value);
+
+      if (!total || !obtained || obtained > total) {
+        alert("Please enter valid marks.");
+        return;
+      }
+
+      const percentage = (obtained / total) * 100;
+      let grade = "";
+      let cgpa = "";
+
+// ✅ AIOU Accurate Grade & CGPA Scheme
+if (percentage < 40) {
+  grade = "F";
+  cgpa = "0.00";
+} 
+else if (percentage >= 40 && percentage < 50) {
+  grade = "D";
+  cgpa = (2.00 - (50 - percentage) * 0.20).toFixed(2); // 40=1.00 to 49=1.90
+} 
+else if (percentage >= 50 && percentage < 65) {
+  grade = "C";
+  cgpa = (2.00 + (percentage - 50) * 0.067).toFixed(2); // 50=2.00 to 64≈2.94
+} 
+else if (percentage >= 65 && percentage < 80) {
+  grade = "B";
+  cgpa = (3.00 + (percentage - 65) * 0.067).toFixed(2); // 65=3.00 to 79≈3.94
+} 
+else if (percentage >= 80 && percentage <= 100) {
+  grade = "A";
+  cgpa = "4.00"; // 80 and above
+} 
+else {
+  grade = "Invalid";
+  cgpa = "N/A";
+}
+
+      const resultHTML = `
+        <table>
+          <tr><th>Percentage</th><th>Grade</th><th>CGPA</th></tr>
+          <tr><td>${percentage.toFixed(2)}%</td><td>${grade}</td><td>${cgpa}</td></tr>
+        </table>
+      `;
+
+      document.getElementById("gradeDetails").innerHTML = resultHTML;
+      document.getElementById("gradeResult").style.display = "block";
+    }
+
+    // 🔹 Existing Result Calculator Functions
     function toggleInputs() {
       const selectedClass = document.getElementById("class").value;
       document.getElementById("matricInputs").style.display = "none";
@@ -295,7 +371,6 @@
         let assignAvg = (assign1 + assign2) / 2;
         let assignWeighted = (assignAvg * 0.20);
         let paperWeighted = (paper * 0.50);
-        // quiz is out of 30, included directly
         let finalResult = assignWeighted + quiz + paperWeighted;
 
         tableHTML = `
@@ -318,5 +393,4 @@
     }
   </script>
 </body>
-
 </html>

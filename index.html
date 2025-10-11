@@ -7,7 +7,9 @@
   <meta name="description" content="Access AIOU books, lesson plans, teaching practice guides, research projects, past papers and an easy result calculator.">
   <meta name="keywords" content="AIOU resources, AIOU books, lesson plan, teaching practice, research project, past papers, result calculator">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
+    /* === Existing CSS (unchanged) === */
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
@@ -15,7 +17,6 @@
       color: #00472D;
     }
 
-    /* Abstract Background */
     .abstract-background {
       background-color: #f0f4f9; 
       background-image:
@@ -38,10 +39,7 @@
       padding: 20px 10px;
       position: relative;
     }
-    header img { 
-      max-height: 80px; 
-      width: auto;
-    }
+    header img { max-height: 80px; width: auto; }
     header h1 { margin: 10px 0 5px; font-size: 26px; }
     nav {
       background: #006d45;
@@ -104,57 +102,6 @@
     }
     .thanks { margin-top: 10px; font-weight: 600; }
 
-    /* Comments Section */
-    .comments-box {
-      max-width: 800px;
-      width: 90%;
-      margin: 40px auto;
-      padding: 20px;
-      background: #fff;
-      border: 1px solid #cce3cc;
-      border-radius: 10px;
-    }
-    .comments-box h2 {
-      margin-top: 0;
-      font-size: 20px;
-      color: #00472D;
-    }
-    .comment {
-      border-bottom: 1px solid #ddd;
-      padding: 10px 0;
-      margin-left: 0;
-    }
-    .comment .meta {
-      font-size: 13px;
-      color: gray;
-      margin-bottom: 5px;
-    }
-    .reply-box {
-      margin-left: 30px;
-      margin-top: 10px;
-      padding-left: 15px;
-      border-left: 2px solid #ddd;
-    }
-    textarea, input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      resize: vertical;
-      margin-bottom: 8px;
-    }
-    button {
-      background: #00472D;
-      color: white;
-      border: none;
-      padding: 8px 15px;
-      border-radius: 6px;
-      margin-top: 5px;
-      cursor: pointer;
-    }
-    .comment-actions { font-size: 12px; color: gray; cursor: pointer; margin-left: 10px; }
-
-    /* ✅ Mobile Responsive Fix */
     @media (max-width: 768px) {
       header h1 { font-size: 20px; }
       nav {
@@ -170,27 +117,18 @@
         margin: 4px;
         font-size: 14px;
       }
-      .container {
-        grid-template-columns: 1fr;
-        width: 95%;
-      }
-      .card {
-        padding: 20px;
-      }
-      footer {
-        font-size: 13px;
-      }
+      .container { grid-template-columns: 1fr; width: 95%; }
+      .card { padding: 20px; }
+      footer { font-size: 13px; }
     }
-
   </style>
 </head>
 
 <body>
-  <!-- Background Layer -->
   <div class="abstract-background"></div>
 
   <header>
-    <img src="aiou-logo.png" alt="AIOU Logo">
+    <img src="images/aiou-logo.png" alt="AIOU Logo">
     <h1>Allama Iqbal Open University Resources</h1>
     <p>Access Your Study Material in One Place</p>
   </header>
@@ -243,8 +181,33 @@
     © 2025 Allama Iqbal Open University
     <div class="thanks">Thanks To Visiting Zeeshan AIOU Help</div>
   </footer>
+
+  <!-- 🔒 Website Protection Script -->
+  <script>
+    // Disable Right Click
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    
+    // Disable Common DevTools Shortcuts
+    document.onkeydown = function(e) {
+      if (e.keyCode == 123) return false; // F12
+      if (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0))) return false;
+      if (e.ctrlKey && e.shiftKey && (e.keyCode == 'C'.charCodeAt(0))) return false;
+      if (e.ctrlKey && e.shiftKey && (e.keyCode == 'J'.charCodeAt(0))) return false;
+      if (e.ctrlKey && (e.keyCode == 'U'.charCodeAt(0))) return false;
+    };
+
+    // Disable Text Selection and Copy
+    document.addEventListener('copy', e => e.preventDefault());
+    document.addEventListener('selectstart', e => e.preventDefault());
+
+    // Console Tamper Protection
+    (function() {
+      var devtools = /./;
+      devtools.toString = function() {
+        throw new Error("Console is disabled for this website!");
+      };
+      console.log('%c', devtools);
+    })();
+  </script>
 </body>
 </html>
-
-
-
