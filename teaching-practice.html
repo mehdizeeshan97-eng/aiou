@@ -3,66 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIOU Resources | Home</title>
+  <title>AIOU Teaching Practice | Reports & Guides for Students</title>
 
   <!-- ✅ SEO Meta Tags -->
-  <meta name="description" content="Access AIOU books, lesson plans, teaching practice guides, research projects, past papers and a result calculator — all in one place." />
-  <meta name="keywords" content="AIOU, AIOU Resources, Allama Iqbal Open University, AIOU books, AIOU lesson plan, AIOU teaching practice, AIOU research project, AIOU past papers, AIOU result calculator, AIOU CGPA" />
-  <meta name="author" content="Zeeshan | AIOU Help" />
-  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Access AIOU teaching practice reports, guides, and sample files for B.Ed and M.Ed students. Download teaching practice materials to prepare your reports effectively.">
+  <meta name="keywords" content="AIOU teaching practice, teaching reports, AIOU resources, B.Ed reports, M.Ed practice files, AIOU guides">
 
   <!-- ✅ Canonical URL -->
-  <link rel="canonical" href="https://aiou-help.github.io/index.html" />
+  <link rel="canonical" href="https://yourdomain.com/teaching-practice.html" />
+
+  <!-- ✅ Open Graph (Facebook, WhatsApp Preview) -->
+  <meta property="og:title" content="AIOU Teaching Practice | Reports & Guides for Students">
+  <meta property="og:description" content="Download AIOU teaching practice reports and guides for B.Ed & M.Ed students.">
+  <meta property="og:image" content="https://yourdomain.com/images/aiou-preview.jpg">
+  <meta property="og:url" content="https://yourdomain.com/teaching-practice.html">
+  <meta property="og:type" content="website">
+
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AIOU Teaching Practice | Reports & Guides for Students">
+  <meta name="twitter:description" content="Teaching practice reports and resources for AIOU students.">
+  <meta name="twitter:image" content="https://yourdomain.com/images/aiou-preview.jpg">
 
   <!-- ✅ Favicon -->
-  <link rel="icon" type="image/png" href="images/aiou-logo.png" />
+  <link rel="icon" href="images/favicon.png" type="image/png">
 
-  <!-- ✅ Open Graph Meta Tags -->
-  <meta property="og:title" content="AIOU Resources | Allama Iqbal Open University Help Portal" />
-  <meta property="og:description" content="Get access to AIOU books, lesson plans, research projects, past papers and result calculator easily." />
-  <meta property="og:image" content="https://aiou-help.github.io/images/aiou-logo.png" />
-  <meta property="og:url" content="https://aiou-help.github.io/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_PK" />
-
-  <!-- ✅ Twitter Card Tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="AIOU Resources | AIOU Help Portal" />
-  <meta name="twitter:description" content="Access AIOU books, lesson plans, past papers, research projects and calculator at one place." />
-  <meta name="twitter:image" content="https://aiou-help.github.io/images/aiou-logo.png" />
-
-  <!-- ✅ Structured Data (Schema.org JSON-LD) -->
+  <!-- ✅ Structured Data (JSON-LD Schema) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "AIOU Resources",
-    "url": "https://aiou-help.github.io/",
-    "author": {
-      "@type": "Person",
-      "name": "Zeeshan"
-    },
-    "description": "AIOU Resources portal provides books, lesson plans, teaching practice guides, research projects, past papers and result calculators.",
+    "@type": "WebPage",
+    "name": "AIOU Teaching Practice",
+    "description": "Teaching practice reports and guides for AIOU B.Ed and M.Ed students.",
     "publisher": {
       "@type": "Organization",
-      "name": "AIOU Help"
-    }
+      "name": "Allama Iqbal Open University",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://yourdomain.com/images/aiou-logo.png"
+      }
+    },
+    "url": "https://yourdomain.com/teaching-practice.html"
   }
   </script>
 
-  <!-- ✅ Google Fonts + Icons -->
+  <!-- ✅ Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- ✅ CSS -->
   <style>
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      color: #00472D;
+      color: #222;
+      position: relative;
+      z-index: 0;
     }
 
+    /* Abstract Background */
     .abstract-background {
       background-color: #f0f4f9; 
       background-image:
@@ -70,32 +69,52 @@
         radial-gradient(at 10% 90%, rgba(200, 220, 255, 0.5) 0px, transparent 50%),
         radial-gradient(at 90% 40%, rgba(240, 220, 255, 0.6) 0px, transparent 50%),
         radial-gradient(at 70% 80%, rgba(230, 240, 250, 0.7) 0px, transparent 50%);
+      backdrop-filter: blur(100px);
+      -webkit-backdrop-filter: blur(100px);
       position: fixed;
-      top: 0; left: 0;
-      width: 100vw; height: 100vh;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
       z-index: -1;
     }
 
+    /* 🟩 Top Green Bar (Books Page size) */
     .topbar {
-      background: #1e603f !important;
-      color: #ffffff !important;
-      padding: 20px 0 !important;
-      font-size: 15px;
+      background-color: #1e603f;
+      color: #ffffff;
+      padding: 26px 0;
+      font-size: 14px;
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100%;
+      position: relative;
+      z-index: 1000;
+      margin: 0;
+      border: none;
+      box-shadow: none;
     }
-
+    .topbar::before, 
+    .topbar::after {
+      content: none !important;
+      background: none !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+    .topbar * {
+      background: transparent !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
     .topbar .container {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 1200px;
       width: 100%;
+      max-width: 1200px;
       margin: 0 auto;
     }
-
     .topbar ul {
       list-style: none;
       margin: 0;
@@ -104,197 +123,229 @@
       gap: 15px;
       align-items: center;
     }
-
-    .topbar ul li i {
-      color: #fff;
-      margin-right: 5px;
-    }
-
     .topbar a {
-      color: #fff !important;
+      color: #ffffff;
       text-decoration: none;
     }
-
     .topbar a:hover {
       text-decoration: underline;
     }
 
-    header {
+    /* 🏫 Header Main */
+    header.header-default .header-main {
       background: #fff;
+      padding: 10px 0;
+    }
+    .header-main .container {
+      width: 95%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .site-branding-logo img {
+      max-height: 80px;
+      width: auto;
+    }
+    .header-info ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .header-info ul li {
+      margin-bottom: 5px;
+    }
+    .header-info a {
       color: #00472D;
-      text-align: center;
-      padding: 20px 10px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .header-info span {
+      color: #888;
+      font-weight: 400;
+    }
+
+    /* 🔵 Main Menu Bar */
+    .main-menu {
+      background: #192f59;
+    }
+    .main-menu nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .main-menu nav ul li {
       position: relative;
     }
-
-    header img { max-height: 100px; width: auto; }
-    header h1 { margin: 10px 0 5px; font-size: 26px; }
-
-    nav {
-      background: #192f59;
-      text-align: center;
-      padding: 12px;
-    }
-
-    nav a {
-      color: white;
+    .main-menu nav ul li a {
+      display: block;
+      padding: 12px 20px;
+      color: #fff;
       text-decoration: none;
-      margin: 0 12px;
-      font-weight: 600;
-      font-size: 15px;
       text-transform: uppercase;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .main-menu nav ul li a:hover {
+      background: #143059;
+    }
+    .main-menu nav ul li a::after {
+      content: "";
+      width: 1px;
+      height: 18px;
+      background: rgba(255,255,255,0.3);
+      position: absolute;
+      right: 0;
+      top: 14px;
     }
 
-    nav a:hover { text-decoration: underline; }
-
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      max-width: 1100px;
-      width: 90%;
-      margin: 40px auto;
-      padding: 20px;
-    }
-
-    .card {
-      background: white;
-      border: 1px solid #cce3cc;
-      border-radius: 15px;
-      padding: 30px;
+    /* 📄 Main Page Content */
+    h1 {
       text-align: center;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    }
-
-    .icon {
-      font-size: 45px;
-      background: #d4f7d4;
       color: #00472D;
-      border-radius: 50%;
-      display: inline-block;
-      padding: 20px;
-      margin-bottom: 15px;
+      margin-top: 20px;
     }
-
-    .card h3 { font-size: 18px; color: #00472D; margin: 10px 0; }
-    .card p { font-size: 14px; color: #444; }
+    .container-content {
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 30px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      text-align: center;
+      background: #fff;
+      position: relative;
+      z-index: 1;
+    }
+    .file-list a {
+      display: inline-block;
+      padding: 15px 25px;
+      background: #e8f5e9;
+      color: #00472D;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+      border: 1px solid #c8e6c9;
+    }
+    .file-list a:hover {
+      background: #d0f0d4;
+    }
 
     footer {
+      text-align: center;
+      padding: 10px;
       background: #00472D;
       color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 50px;
-      font-size: 14px;
+      margin-top: 40px;
+      position: relative;
+      z-index: 1;
     }
 
-    .thanks { margin-top: 10px; font-weight: 600; }
-
     @media (max-width: 768px) {
-      header h1 { font-size: 20px; }
-      nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
-      nav a { background: #2b3f77; padding: 8px 12px; border-radius: 5px; margin: 4px; font-size: 14px; }
-      .container { grid-template-columns: 1fr; width: 95%; }
-      .card { padding: 20px; }
-      footer { font-size: 13px; }
+      .header-main .container, .topbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .main-menu nav ul {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 
 <body>
-  <!-- Background Layer -->
   <div class="abstract-background"></div>
 
-  <!-- Top Bar -->
+  <!-- 🟩 Top Green Bar -->
   <div class="topbar">
     <div class="container">
-      <ul>
-        <li><i class="fa fa-envelope"></i> 
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=zeeshanaiouhelp1214@gmail.com" target="_blank">zeeshanaiouhelp1214@gmail.com</a>
-        </li>
-        <li><i class="fa fa-phone"></i> 
-          <a href="tel:+923040571214">0304-0571214</a>
-        </li>
-      </ul>
+      <ul></ul>
       <div>
-        <a id="text_resize_decrease" class="text_resize-item"><i class=""></i></a>
-        <a id="text_resize_reset" class="text_resize-item"></a>
-        <a id="text_resize_increase" class="text_resize-item"><i class=""></i></a>
+        <a href="#" style="color:white;margin:0 5px;"></a>
+        <a href="#" style="color:white;margin:0 5px;"></a>
+        <a href="#" style="color:white;margin:0 5px;"></a>
       </div>
     </div>
   </div>
 
-  <header>
-    <img src="images/aiou-logo.png" alt="AIOU Logo">
-    <h1>Allama Iqbal Open University Resources</h1>
+  <!-- ⚪ Header -->
+  <header class="header">
+    <img src="images/aiou-logo.png" alt="AIOU Logo" class="logo">
+    <h1>Allama Iqbal Open University</h1>
   </header>
 
-  <nav>
-    <a href="./index.html">Home</a>
-    <a href="./books.html">Books</a>
-    <a href="./lesson-plan.html">Lesson Plan</a>
-    <a href="./teaching-practice.html">Teaching Practice</a>
-    <a href="./research-project.html">Research Project</a>
-    <a href="./past-papers.html">Past Papers</a>
-    <a href="./calculator.html">Calculator</a>
-  </nav>
+  <style>
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background-color: #f8f8f8;
+    }
+    .logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .header h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+  </style>
 
-  <div class="container">
-    <div class="card" onclick="location.href='books.html'">
-      <div class="icon">📚</div>
-      <h3>Books</h3>
-      <p>Download Urdu Key Books</p>
-    </div>
-    <div class="card" onclick="location.href='lesson-plan.html'">
-      <div class="icon">📄</div>
-      <h3>Lesson Plan (8608/6997)</h3>
-      <p>Download Lesson Plan Samples</p>
-    </div>
-    <div class="card" onclick="location.href='teaching-practice.html'">
-      <div class="icon">👩🏫</div>
-      <h3>Teaching Practice (8607/6996)</h3>
-      <p>Download Teaching Practical Samples</p>
-    </div>
-    <div class="card" onclick="location.href='research-project.html'">
-      <div class="icon">🔍</div>
-      <h3>Research Project (8613)</h3>
-      <p>Download Research Projects Samples</p>
-    </div>
-    <div class="card" onclick="location.href='past-papers.html'">
-      <div class="icon">📝</div>
-      <h3>Past Papers</h3>
-      <p>Download Previous Years Past Papers</p>
-    </div>
-    <div class="card" onclick="location.href='calculator.html'">
-      <div class="icon">🧮</div>
-      <h3>Result & CGPA Calculator</h3>
-      <p>Calculate your AIOU marks & CGPA easily</p>
+  <!-- 🔵 Main Menu Bar -->
+  <div class="main-menu">
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./books.html">Books</a></li>
+        <li><a href="./lesson-plan.html">Lesson Plan</a></li>
+        <li><a href="./teaching-practice.html">Teaching Practice</a></li>
+        <li><a href="./research-project.html">Research Project</a></li>
+        <li><a href="./past-papers.html">Past Papers</a></li>
+        <li><a href="./calculator.html">Calculator</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- 📄 Page Content -->
+  <h1>AIOU Teaching Practice Resources</h1>
+  <div class="container-content">
+    <h3>Available Teaching Practice Files</h3>
+    <div class="file-list">
+      <a href="https://drive.google.com/drive/folders/1tHIyDDeK8UZYw4lIQrzoU_X_LOLEXQ9R?usp=drive_link" target="_blank" rel="noopener">
+        📘 Click Here to View & Download Teaching Practice Files
+      </a>
     </div>
   </div>
 
+  <!-- Footer -->
   <footer>
     Developed by Zeeshan (AIOU Help) | Contact: 0304-0571214<br>
     © 2025 Allama Iqbal Open University
     <div class="thanks">Thanks To Visiting Zeeshan AIOU Help</div>
   </footer>
 
+  <!-- 🔒 Protection Script -->
   <script>
     document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('selectstart', e => e.preventDefault());
     document.onkeydown = function(e) {
       if (e.keyCode == 123) return false;
-      if (e.ctrlKey && e.shiftKey && ['I','C','J'].includes(String.fromCharCode(e.keyCode))) return false;
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false;
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
       if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
     };
-    document.addEventListener('copy', e => e.preventDefault());
-    document.addEventListener('selectstart', e => e.preventDefault());
-    (function(){var d=/./;d.toString=function(){throw new Error("Console is disabled!");};console.log('%c',d);})();
+    document.addEventListener('copy', e => {
+      e.preventDefault();
+      alert("Copying content is disabled on this website.");
+    });
   </script>
 </body>
 </html>
