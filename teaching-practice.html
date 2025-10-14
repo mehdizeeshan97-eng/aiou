@@ -95,103 +95,35 @@
       border: none;
       box-shadow: none;
     }
-    .topbar::before, .topbar::after {
-      content: none !important;
-      background: none !important;
-      box-shadow: none !important;
-      border: none !important;
-    }
-    .topbar * {
-      background: transparent !important;
-      box-shadow: none !important;
-      border: none !important;
-    }
-    .topbar .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .topbar ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 15px;
-      align-items: center;
-    }
-    .topbar a {
-      color: #ffffff;
-      text-decoration: none;
-    }
-    .topbar a:hover {
-      text-decoration: underline;
-    }
+    .topbar::before, .topbar::after { content: none !important; background: none !important; box-shadow: none !important; border: none !important; }
+    .topbar * { background: transparent !important; box-shadow: none !important; border: none !important; }
+    .topbar .container { display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1200px; margin: 0 auto; }
+    .topbar ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 15px; align-items: center; }
+    .topbar a { color: #ffffff; text-decoration: none; }
+    .topbar a:hover { text-decoration: underline; }
 
     /* 🏫 Header Main */
-    .header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      background-color: #f8f8f8;
+    header.header-default .header-main {
+      background: #fff;
+      padding: 10px 0;
     }
-    .logo {
-      width: 120px;
-      height: auto;
-      margin-bottom: 10px;
-    }
-    .header h1 {
-      font-size: 24px;
-      margin: 0;
-    }
+    .header-main .container { width: 95%; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .site-branding-logo img { max-height: 80px; width: auto; }
+    .header-info ul { list-style: none; margin: 0; padding: 0; }
+    .header-info ul li { margin-bottom: 5px; }
+    .header-info a { color: #00472D; text-decoration: none; font-weight: 600; }
+    .header-info span { color: #888; font-weight: 400; }
 
     /* 🔵 Main Menu Bar */
-    .main-menu {
-      background: #192f59;
-    }
-    .main-menu nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .main-menu nav ul li {
-      position: relative;
-    }
-    .main-menu nav ul li a {
-      display: block;
-      padding: 12px 20px;
-      color: #fff;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: 600;
-      font-size: 13px;
-    }
-    .main-menu nav ul li a:hover {
-      background: #143059;
-    }
-    .main-menu nav ul li a::after {
-      content: "";
-      width: 1px;
-      height: 18px;
-      background: rgba(255,255,255,0.3);
-      position: absolute;
-      right: 0;
-      top: 14px;
-    }
+    .main-menu { background: #192f59; }
+    .main-menu nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; }
+    .main-menu nav ul li { position: relative; }
+    .main-menu nav ul li a { display: block; padding: 12px 20px; color: #fff; text-decoration: none; text-transform: uppercase; font-weight: 600; font-size: 13px; }
+    .main-menu nav ul li a:hover { background: #143059; }
+    .main-menu nav ul li a::after { content: ""; width: 1px; height: 18px; background: rgba(255,255,255,0.3); position: absolute; right: 0; top: 14px; }
 
     /* 📄 Main Page Content */
-    h1 {
-      text-align: center;
-      color: #00472D;
-      margin-top: 20px;
-    }
+    h1 { text-align: center; color: #00472D; margin-top: 20px; }
     .container-content {
       max-width: 700px;
       margin: 30px auto;
@@ -215,81 +147,40 @@
       transition: 0.3s;
       border: 1px solid #c8e6c9;
     }
-    .file-list a:hover {
-      background: #d0f0d4;
-    }
+    .file-list a:hover { background: #d0f0d4; }
 
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 10px;
-      background: #00472D;
-      color: white;
-      margin-top: 40px;
-      position: relative;
-      z-index: 1;
-    }
+    footer { text-align: center; padding: 10px; background: #00472D; color: white; margin-top: 40px; position: relative; z-index: 1; }
 
-    /* 📱 Responsive CSS */
+    /* Header Section */
+    .header { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; background-color: #f8f8f8; }
+    .logo { width: 120px; height: auto; margin-bottom: 10px; }
+    .header h1 { font-size: 24px; margin: 0; }
+
+    /* ================== Responsive CSS Start ================== */
+    /* Mobile Devices ≤768px */
     @media (max-width: 768px) {
-      header.header, .topbar .container, .main-menu nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
-      .logo {
-        width: 100px;
-      }
-      .header h1 {
-        font-size: 20px;
-        text-align: center;
-      }
-      .main-menu nav ul li a {
-        padding: 10px 12px;
-        font-size: 13px;
-        text-align: center;
-      }
-      .container-content {
-        width: 95%;
-        padding: 15px;
-      }
-      .file-list a {
-        font-size: 14px;
-        padding: 12px 18px;
-      }
-      footer {
-        font-size: 13px;
-        padding: 8px;
-      }
+      .header-main .container, .topbar .container { flex-direction: column; align-items: center; }
+      .logo { width: 100px; margin-bottom: 8px; }
+      .header h1 { font-size: 20px; text-align: center; }
+      .main-menu nav ul { flex-direction: column; width: 100%; }
+      .main-menu nav ul li a { padding: 10px 12px; font-size: 13px; text-align: center; }
+      .container-content { width: 95%; padding: 15px; }
+      .file-list a { font-size: 14px; padding: 12px 18px; }
+      footer { font-size: 13px; padding: 8px; }
     }
 
+    /* Tablets 769px – 1024px */
     @media (min-width: 769px) and (max-width: 1024px) {
-      header.header, .topbar .container, .main-menu nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
-      .logo {
-        width: 110px;
-      }
-      .header h1 {
-        font-size: 22px;
-      }
-      .main-menu nav ul li a {
-        padding: 11px 16px;
-        font-size: 14px;
-      }
-      .container-content {
-        width: 90%;
-        padding: 20px;
-      }
-      .file-list a {
-        font-size: 15px;
-        padding: 14px 20px;
-      }
-      footer {
-        font-size: 14px;
-        padding: 10px;
-      }
+      .header-main .container, .topbar .container { flex-direction: column; align-items: center; }
+      .logo { width: 110px; }
+      .header h1 { font-size: 22px; }
+      .main-menu nav ul { flex-wrap: wrap; justify-content: center; }
+      .main-menu nav ul li a { padding: 11px 16px; font-size: 14px; }
+      .container-content { width: 90%; padding: 20px; }
+      .file-list a { font-size: 15px; padding: 14px 20px; }
+      footer { font-size: 14px; padding: 10px; }
     }
+    /* ================== Responsive CSS End ================== */
   </style>
 </head>
 
