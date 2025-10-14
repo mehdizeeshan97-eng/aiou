@@ -28,7 +28,7 @@
   <!-- ✅ Favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
-  <!-- ✅ Schema Markup (Structured Data) -->
+  <!-- ✅ Schema Markup -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -51,20 +51,22 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    body {
+    /* ✅ General Reset */
+    html, body {
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
       color: #00472D;
-      background-color: #f0f4f9;
+      background: #f9f9f9;
+      overflow-x: hidden;
     }
 
-    /* ✅ Top Bar (Updated to match Books Page double size) */
+    /* 🟩 FIXED TOP BAR */
     .topbar {
       background-color: #1e603f;
       color: #ffffff;
-      padding: 25px 0;
-      font-size: 15px;
+      padding: 6px 0;
+      font-size: 14px;
       width: 100%;
       display: flex;
       justify-content: center;
@@ -99,47 +101,36 @@
       margin: 0 auto;
     }
 
-    .topbar ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 15px;
-      align-items: center;
-    }
-
-    .topbar a {
-      color: #ffffff;
-      text-decoration: none;
-    }
-
-    .topbar a:hover {
-      text-decoration: underline;
-    }
-
     /* ⚪ Header */
     header {
-      background: #fff;
+      background: #ffffff;
       color: #00472D;
       text-align: center;
       padding: 20px 10px;
+      border: none;
     }
+
     header img {
       max-height: 100px;
       width: auto;
+      display: block;
+      margin: 0 auto;
     }
+
     header h1 {
       margin: 10px 0 5px;
       font-size: 26px;
     }
 
-    /* 🔵 Main Menu */
-    nav.main-menu {
+    /* 🔵 Main Menu Bar */
+    nav {
       background: #192f59;
       text-align: center;
       padding: 12px;
+      margin: 0;
     }
-    nav.main-menu a {
+
+    nav a {
       color: white;
       text-decoration: none;
       margin: 0 12px;
@@ -147,26 +138,23 @@
       font-size: 15px;
       text-transform: uppercase;
     }
-    nav.main-menu a:hover {
+
+    nav a:hover {
       text-decoration: underline;
     }
 
-    /* 📘 Content Section */
-    h1 {
-      text-align: center;
-      color: #00472D;
-      margin-top: 20px;
-    }
-    .container-content {
+    /* 📘 Lesson Plan Section */
+    .container {
       max-width: 700px;
-      margin: 20px auto;
+      margin: 40px auto;
       padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      background: #ffffff;
+      border: 1px solid #cce3cc;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
       text-align: center;
-      background: #fff;
     }
+
     .file-list a {
       display: block;
       padding: 12px;
@@ -174,100 +162,58 @@
       margin: 10px 0;
       text-decoration: none;
       color: #00472D;
-      border-radius: 5px;
+      border-radius: 8px;
       font-weight: 500;
       transition: 0.2s;
     }
+
     .file-list a:hover {
       background: #c8e6c9;
     }
 
+    /* ⚫ Footer */
     footer {
-      text-align: center;
-      padding: 15px;
       background: #00472D;
       color: white;
+      text-align: center;
+      padding: 15px;
       margin-top: 50px;
       font-size: 14px;
     }
 
+    /* 📱 Responsive Design */
     @media (max-width: 768px) {
-      /* Mobile Devices (≤768px) */
-@media (max-width: 768px) {
-  header h1 { font-size: 20px; }
-  header img { max-height: 80px; }
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-  }
-  nav a {
-    background: #2b3f77;
-    padding: 8px 12px;
-    border-radius: 5px;
-    margin: 4px;
-    font-size: 14px;
-  }
-
-  .container {
-    grid-template-columns: 1fr;
-    width: 95%;
-    gap: 20px;
-    padding: 15px;
-  }
-
-  .card { padding: 20px; }
-
-  footer { font-size: 13px; }
-}
-
-/* Tablets (769px – 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  header h1 { font-size: 24px; }
-  header img { max-height: 90px; }
-
-  nav a {
-    margin: 6px;
-    font-size: 15px;
-    padding: 10px 15px;
-  }
-
-  .container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    width: 90%;
-    padding: 20px;
-  }
-
-  .card { padding: 25px; }
-}
       header h1 { font-size: 20px; }
-      nav.main-menu {
+      header img { max-height: 80px; }
+
+      nav {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 8px;
       }
-      nav.main-menu a {
+
+      nav a {
         background: #2b3f77;
         padding: 8px 12px;
         border-radius: 5px;
         margin: 4px;
         font-size: 14px;
       }
-      .container-content {
-        width: 90%;
+
+      .container {
+        width: 95%;
+        margin: 20px auto;
         padding: 15px;
       }
+
       footer { font-size: 13px; }
     }
   </style>
 </head>
 
 <body>
-  <!-- 🟩 Top Bar (Exactly same design & size as Books Page) -->
+  <!-- 🟩 Top Bar -->
   <div class="topbar">
     <div class="container">
       <ul></ul>
@@ -280,13 +226,13 @@
   </div>
 
   <!-- ⚪ Header -->
-  <header>
-    <img src="aiou-logo.png" alt="AIOU Logo">
+  <header class="header">
+    <img src="images/aiou-logo.png" alt="AIOU Logo" class="logo">
     <h1>Allama Iqbal Open University</h1>
   </header>
 
   <!-- 🔵 Main Menu -->
-  <nav class="main-menu">
+  <nav>
     <a href="./index.html">Home</a>
     <a href="./books.html">Books</a>
     <a href="./lesson-plan.html">Lesson Plan</a>
@@ -296,35 +242,33 @@
     <a href="./calculator.html">Calculator</a>
   </nav>
 
-  <!-- 📘 Page Content -->
-  <h1>AIOU Lesson Plans</h1>
-  <div class="container-content">
-    <h3>Available Lesson Plans</h3>
+  <!-- 📘 Lesson Plan Section -->
+  <div class="container">
+    <h2>📚 Available Lesson Plans</h2>
     <div class="file-list">
-      <a href="https://drive.google.com/drive/folders/1on08SApFi-ToXK02OkVD-mkEGkrHHUpa?usp=drive_link" target="_blank" rel="noopener">
+      <a href="https://drive.google.com/drive/folders/1on08SApFi-ToXK02OkVD-mkEGkrHHUpa?usp=drive_link" target="_blank">
         📘 Click Here to View & Download Lesson Plans
       </a>
     </div>
   </div>
 
-  <!-- 🔹 Footer -->
+  <!-- ⚫ Footer -->
   <footer>
     Developed by Zeeshan (AIOU Help) | Contact: 0304-0571214<br>
     © 2025 Allama Iqbal Open University
     <div class="thanks">Thanks To Visiting Zeeshan AIOU Help</div>
   </footer>
 
-  <!-- 🔒 Website Protection -->
+  <!-- 🔒 Protection Script -->
   <script>
     document.addEventListener('contextmenu', e => e.preventDefault());
-    document.addEventListener('selectstart', e => e.preventDefault());
     document.onkeydown = function(e) {
       if (e.keyCode == 123) return false;
       if (e.ctrlKey && e.shiftKey && ['I','C','J'].includes(String.fromCharCode(e.keyCode))) return false;
       if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
     };
     document.addEventListener('copy', e => e.preventDefault());
+    document.addEventListener('selectstart', e => e.preventDefault());
   </script>
 </body>
 </html>
-
