@@ -197,48 +197,86 @@
 
     .thanks { margin-top: 10px; font-weight: 600; }
 
-    /* ================= Responsive Design: Multi-device Compatible ================= */
-    /* Mobile Devices ≤768px */
+    /* ================= Responsive Fix (Full Mobile + Tablet Optimization) ================= */
     @media only screen and (max-width: 768px) {
-        header h1 { font-size: 20px; }
-        header img { max-height: 80px; }
-        nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
-        nav a { background: #2b3f77; padding: 8px 12px; border-radius: 5px; margin: 4px; font-size: 14px; }
-        .container { grid-template-columns: 1fr; width: 95%; gap: 20px; padding: 15px; }
-        .card { padding: 20px; }
-        footer { font-size: 13px; }
-    }
-
-    /* Tablets 769px – 1024px */
-    @media only screen and (min-width: 769px) and (max-width: 1024px) {
-        header h1 { font-size: 24px; }
-        header img { max-height: 90px; }
-        nav a { margin: 6px; font-size: 15px; padding: 10px 15px; }
-        .container { grid-template-columns: repeat(2, 1fr); width: 90%; padding: 20px; gap: 25px; }
-        .card { padding: 25px; }
-    }
-
-    /* Desktops ≥992px */
-    @media screen and (min-width: 992px) {
-        .container { max-width: 1100px; }
-    }
-
-    /* ✅ Extra Mobile Fix for Perfect Responsiveness */
-    @media only screen and (max-width: 600px) {
       body { overflow-x: hidden; }
-      .topbar .container { flex-direction: column; text-align: center; gap: 8px; }
-      .topbar ul { flex-direction: column; gap: 5px; }
-      nav { flex-direction: column; padding: 8px; }
-      nav a { display: block; width: 100%; border-bottom: 1px solid rgba(255,255,255,0.2); }
-      .container { grid-template-columns: 1fr; width: 95%; margin: 20px auto; }
-      .card { padding: 15px; font-size: 14px; }
-      .icon { font-size: 35px; padding: 15px; }
-      footer { font-size: 12px; padding: 10px; }
+
+      .topbar .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+
+      .topbar ul {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      header img { max-height: 70px; }
+      header h1 { font-size: 18px; padding: 0 8px; }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 8px;
+      }
+
+      nav a {
+        background: #2b3f77;
+        padding: 8px 10px;
+        border-radius: 5px;
+        margin: 4px;
+        font-size: 13px;
+        display: inline-block;
+      }
+
+      .container {
+        grid-template-columns: 1fr;
+        width: 95%;
+        padding: 10px;
+        gap: 15px;
+      }
+
+      .card { padding: 18px; font-size: 14px; }
+
+      footer { font-size: 12px; line-height: 1.5; padding: 10px; }
+    }
+
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+      .topbar .container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 10px;
+      }
+
+      nav a {
+        margin: 5px;
+        font-size: 14px;
+        padding: 10px 12px;
+      }
+
+      .container {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        padding: 15px;
+        gap: 20px;
+      }
+
+      .card { padding: 22px; }
+
+      footer { font-size: 13px; }
+    }
+
+    @media screen and (min-width: 1025px) {
+      .container { max-width: 1100px; gap: 25px; }
     }
   </style>
 </head>
+
 <body>
   <div class="abstract-background"></div>
+
   <div class="topbar">
     <div class="container">
       <ul>
@@ -252,11 +290,6 @@
           WhatsApp: <a href="https://wa.me/923040571214" target="_blank">Chat</a>
         </li>
       </ul>
-      <div>
-        <a id="text_resize_decrease" class="text_resize-item"><i class=""></i></a>
-        <a id="text_resize_reset" class="text_resize-item"></a>
-        <a id="text_resize_increase" class="text_resize-item"><i class=""></i></a>
-      </div>
     </div>
   </div>
 
