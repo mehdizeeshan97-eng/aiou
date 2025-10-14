@@ -4,12 +4,58 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AIOU Resources | Home</title>
-  <meta name="description" content="Access AIOU books, lesson plans, teaching practice guides, research projects, past papers and an easy result calculator.">
-  <meta name="keywords" content="AIOU resources, AIOU books, lesson plan, teaching practice, research project, past papers, result calculator">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
+  <!-- ✅ SEO Meta Tags -->
+  <meta name="description" content="Access AIOU books, lesson plans, teaching practice guides, research projects, past papers and a result calculator — all in one place." />
+  <meta name="keywords" content="AIOU, AIOU Resources, Allama Iqbal Open University, AIOU books, AIOU lesson plan, AIOU teaching practice, AIOU research project, AIOU past papers, AIOU result calculator, AIOU CGPA" />
+  <meta name="author" content="Zeeshan | AIOU Help" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- ✅ Canonical URL -->
+  <link rel="canonical" href="https://aiou-help.github.io/index.html" />
+
+  <!-- ✅ Favicon -->
+  <link rel="icon" type="image/png" href="images/aiou-logo.png" />
+
+  <!-- ✅ Open Graph Meta Tags (for Facebook / WhatsApp) -->
+  <meta property="og:title" content="AIOU Resources | Allama Iqbal Open University Help Portal" />
+  <meta property="og:description" content="Get access to AIOU books, lesson plans, research projects, past papers and result calculator easily." />
+  <meta property="og:image" content="https://aiou-help.github.io/images/aiou-logo.png" />
+  <meta property="og:url" content="https://aiou-help.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_PK" />
+
+  <!-- ✅ Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AIOU Resources | AIOU Help Portal" />
+  <meta name="twitter:description" content="Access AIOU books, lesson plans, past papers, research projects and calculator at one place." />
+  <meta name="twitter:image" content="https://aiou-help.github.io/images/aiou-logo.png" />
+
+  <!-- ✅ Structured Data (Schema.org JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AIOU Resources",
+    "url": "https://aiou-help.github.io/",
+    "author": {
+      "@type": "Person",
+      "name": "Zeeshan"
+    },
+    "description": "AIOU Resources portal provides books, lesson plans, teaching practice guides, research projects, past papers and result calculators.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "AIOU Help"
+    }
+  }
+  </script>
+
+  <!-- ✅ Google Fonts + Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- ✅ Your Existing CSS (Unchanged) -->
   <style>
-    /* === Existing CSS (unchanged) === */
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
@@ -24,37 +70,95 @@
         radial-gradient(at 10% 90%, rgba(200, 220, 255, 0.5) 0px, transparent 50%),
         radial-gradient(at 90% 40%, rgba(240, 220, 255, 0.6) 0px, transparent 50%),
         radial-gradient(at 70% 80%, rgba(230, 240, 250, 0.7) 0px, transparent 50%);
-      backdrop-filter: blur(100px); 
-      -webkit-backdrop-filter: blur(100px);
       position: fixed;
       top: 0; left: 0;
       width: 100vw; height: 100vh;
       z-index: -1;
     }
 
+    .topbar {
+      background: #1e603f !important;
+      color: #ffffff !important;
+      padding: 20px 0 !important;
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .topbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .topbar i {
+      color: #fff !important;
+      margin-right: 5px;
+    }
+
+    .topbar a {
+      color: #fff !important;
+      text-decoration: none;
+    }
+
+    .topbar a:hover {
+      text-decoration: underline;
+    }
+
     header {
-      background: #00472D;
-      color: white;
+      background: #fff;
+      color: #00472D;
       text-align: center;
       padding: 20px 10px;
       position: relative;
     }
-    header img { max-height: 80px; width: auto; }
-    header h1 { margin: 10px 0 5px; font-size: 26px; }
-    nav {
-      background: #006d45;
-      text-align: center;
-      padding: 10px;
+
+    header img {
+      max-height: 100px;
+      width: auto;
     }
+
+    header h1 {
+      margin: 10px 0 5px;
+      font-size: 26px;
+    }
+
+    header p {
+      color: #00472D;
+    }
+
+    nav {
+      background: #192f59;
+      text-align: center;
+      padding: 12px;
+    }
+
     nav a {
       color: white;
       text-decoration: none;
       margin: 0 12px;
-      font-weight: 500;
-      font-size: 16px;
-      display: inline-block;
+      font-weight: 600;
+      font-size: 15px;
+      text-transform: uppercase;
     }
-    nav a:hover { text-decoration: underline; }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
 
     .container {
       display: grid;
@@ -76,10 +180,12 @@
       transition: all 0.3s ease;
       cursor: pointer;
     }
+
     .card:hover {
       transform: translateY(-6px);
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     }
+
     .icon {
       font-size: 45px;
       background: #d4f7d4;
@@ -89,6 +195,7 @@
       padding: 20px;
       margin-bottom: 15px;
     }
+
     .card h3 { font-size: 18px; color: #00472D; margin: 10px 0; }
     .card p { font-size: 14px; color: #444; }
 
@@ -100,6 +207,7 @@
       margin-top: 50px;
       font-size: 14px;
     }
+
     .thanks { margin-top: 10px; font-weight: 600; }
 
     @media (max-width: 768px) {
@@ -111,7 +219,7 @@
         gap: 8px;
       }
       nav a {
-        background: #005c3c;
+        background: #2b3f77;
         padding: 8px 12px;
         border-radius: 5px;
         margin: 4px;
@@ -125,12 +233,28 @@
 </head>
 
 <body>
+  <!-- Background Layer -->
   <div class="abstract-background"></div>
 
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="container">
+      <ul>
+        <li><i class=""></i> <a href="#"></a></li>
+        <li><i class=""></i> <a href="#"></a></li>
+        <li><i class=""></i></li>
+      </ul>
+      <div>
+        <a id="text_resize_decrease" class="text_resize-item"><i class=""></i></a>
+        <a id="text_resize_reset" class="text_resize-item"></a>
+        <a id="text_resize_increase" class="text_resize-item"><i class=""></i></a>
+      </div>
+    </div>
+  </div>
+
   <header>
-    <img src="aiou-logo.png" alt="AIOU Logo">
+    <img src="images/aiou-logo.png" alt="AIOU Logo">
     <h1>Allama Iqbal Open University Resources</h1>
-    <p>Access Your Study Material in One Place</p>
   </header>
 
   <nav>
@@ -171,8 +295,8 @@
     </div>
     <div class="card" onclick="location.href='calculator.html'">
       <div class="icon">🧮</div>
-      <h3>Result Calculator</h3>
-      <p>Calculate your AIOU marks easily</p>
+      <h3>Result & CGPA Calculator</h3>
+      <p>Calculate your AIOU marks & CGPA easily</p>
     </div>
   </div>
 
@@ -182,33 +306,16 @@
     <div class="thanks">Thanks To Visiting Zeeshan AIOU Help</div>
   </footer>
 
-  <!-- 🔒 Website Protection Script -->
   <script>
-    // Disable Right Click
-    document.addEventListener('contextmenu', event => event.preventDefault());
-    
-    // Disable Common DevTools Shortcuts
+    document.addEventListener('contextmenu', e => e.preventDefault());
     document.onkeydown = function(e) {
-      if (e.keyCode == 123) return false; // F12
-      if (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0))) return false;
-      if (e.ctrlKey && e.shiftKey && (e.keyCode == 'C'.charCodeAt(0))) return false;
-      if (e.ctrlKey && e.shiftKey && (e.keyCode == 'J'.charCodeAt(0))) return false;
-      if (e.ctrlKey && (e.keyCode == 'U'.charCodeAt(0))) return false;
+      if (e.keyCode == 123) return false;
+      if (e.ctrlKey && e.shiftKey && ['I','C','J'].includes(String.fromCharCode(e.keyCode))) return false;
+      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
     };
-
-    // Disable Text Selection and Copy
     document.addEventListener('copy', e => e.preventDefault());
     document.addEventListener('selectstart', e => e.preventDefault());
-
-    // Console Tamper Protection
-    (function() {
-      var devtools = /./;
-      devtools.toString = function() {
-        throw new Error("Console is disabled for this website!");
-      };
-      console.log('%c', devtools);
-    })();
+    (function(){var d=/./;d.toString=function(){throw new Error("Console is disabled!");};console.log('%c',d);})();
   </script>
 </body>
 </html>
-

@@ -3,64 +3,161 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIOU Lesson Plans</title>
-  <meta name="description" content="Download AIOU lesson plans and related teaching resources.">
-  <meta name="keywords" content="AIOU lesson plan, lesson plans download, AIOU resources">
+  <title>AIOU Lesson Plans | Download Allama Iqbal Open University Lesson Plans</title>
+
+  <!-- ✅ Primary SEO Meta Tags -->
+  <meta name="description" content="Download AIOU lesson plans and teaching resources in PDF format. Access Allama Iqbal Open University lesson plans for all subjects easily.">
+  <meta name="keywords" content="AIOU lesson plan, lesson plans download, AIOU resources, Allama Iqbal Open University, AIOU teaching materials, AIOU B.Ed lesson plan">
+  <meta name="author" content="Zeeshan - AIOU Help">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://yourdomain.com/lesson-plan.html" />
+
+  <!-- ✅ Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AIOU Lesson Plans | Download AIOU Teaching Resources">
+  <meta property="og:description" content="Get AIOU lesson plans and teaching practice resources for free. Download lesson plans for B.Ed, M.Ed, and other AIOU programs.">
+  <meta property="og:url" content="https://yourdomain.com/lesson-plan.html">
+  <meta property="og:image" content="https://yourdomain.com/images/aiou-preview.jpg">
+
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AIOU Lesson Plans | Free AIOU Teaching Resources">
+  <meta name="twitter:description" content="Download lesson plans and classroom teaching guides for Allama Iqbal Open University students.">
+  <meta name="twitter:image" content="https://yourdomain.com/images/aiou-preview.jpg">
+
+  <!-- ✅ Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- ✅ Schema Markup (Structured Data) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Allama Iqbal Open University",
+    "alternateName": "AIOU",
+    "url": "https://yourdomain.com/lesson-plan.html",
+    "logo": "https://yourdomain.com/images/aiou-logo.png",
+    "sameAs": [
+      "https://www.facebook.com/AIOU",
+      "https://twitter.com/AIOU",
+      "https://www.youtube.com/@AIOU"
+    ],
+    "description": "Download Allama Iqbal Open University lesson plans and teaching resources in PDF format."
+  }
+  </script>
+
+  <!-- ✅ Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      color: #222;
-      position: relative;
-      z-index: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #00472D;
+      background-color: #f0f4f9;
     }
 
-    /* Abstract Background */
-    .abstract-background {
-      background-color: #f0f4f9; 
-      background-image:
-        radial-gradient(at 10% 20%, rgba(255, 255, 255, 0.8) 0px, transparent 50%),
-        radial-gradient(at 10% 90%, rgba(200, 220, 255, 0.5) 0px, transparent 50%),
-        radial-gradient(at 90% 40%, rgba(240, 220, 255, 0.6) 0px, transparent 50%),
-        radial-gradient(at 70% 80%, rgba(230, 240, 250, 0.7) 0px, transparent 50%);
-      backdrop-filter: blur(100px);
-      -webkit-backdrop-filter: blur(100px);
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-    }
-
-    header {
-      background: #00472D;
-      color: white;
+    /* ✅ Top Bar (Updated to match Books Page double size) */
+    .topbar {
+      background-color: #1e603f;
+      color: #ffffff;
+      padding: 25px 0;
+      font-size: 15px;
+      width: 100%;
       display: flex;
+      justify-content: center;
       align-items: center;
+      position: relative;
+      z-index: 1000;
+      margin: 0;
+      border: none;
+      box-shadow: none;
+    }
+
+    .topbar::before, 
+    .topbar::after {
+      content: none !important;
+      background: none !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+
+    .topbar * {
+      background: transparent !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+
+    .topbar .container {
+      display: flex;
       justify-content: space-between;
-      padding: 10px 20px;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    header img {
-      height: 50px;
+
+    .topbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+      align-items: center;
     }
-    nav a {
-      color: white;
-      margin: 0 10px;
+
+    .topbar a {
+      color: #ffffff;
       text-decoration: none;
-      font-weight: 500;
     }
-    nav a:hover {
+
+    .topbar a:hover {
       text-decoration: underline;
     }
+
+    /* ⚪ Header */
+    header {
+      background: #fff;
+      color: #00472D;
+      text-align: center;
+      padding: 20px 10px;
+    }
+    header img {
+      max-height: 100px;
+      width: auto;
+    }
+    header h1 {
+      margin: 10px 0 5px;
+      font-size: 26px;
+    }
+
+    /* 🔵 Main Menu */
+    nav.main-menu {
+      background: #192f59;
+      text-align: center;
+      padding: 12px;
+    }
+    nav.main-menu a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: 600;
+      font-size: 15px;
+      text-transform: uppercase;
+    }
+    nav.main-menu a:hover {
+      text-decoration: underline;
+    }
+
+    /* 📘 Content Section */
     h1 {
       text-align: center;
       color: #00472D;
       margin-top: 20px;
     }
-    .container {
+    .container-content {
       max-width: 700px;
       margin: 20px auto;
       padding: 20px;
@@ -69,8 +166,6 @@
       box-shadow: 0 0 8px rgba(0,0,0,0.1);
       text-align: center;
       background: #fff;
-      position: relative;
-      z-index: 1;
     }
     .file-list a {
       display: block;
@@ -86,37 +181,73 @@
     .file-list a:hover {
       background: #c8e6c9;
     }
+
     footer {
       text-align: center;
-      padding: 10px;
+      padding: 15px;
       background: #00472D;
       color: white;
-      margin-top: 40px;
-      position: relative;
-      z-index: 1;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 20px; }
+      nav.main-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+      }
+      nav.main-menu a {
+        background: #2b3f77;
+        padding: 8px 12px;
+        border-radius: 5px;
+        margin: 4px;
+        font-size: 14px;
+      }
+      .container-content {
+        width: 90%;
+        padding: 15px;
+      }
+      footer { font-size: 13px; }
     }
   </style>
 </head>
 
 <body>
-  <!-- Background Layer -->
-  <div class="abstract-background"></div>
+  <!-- 🟩 Top Bar (Exactly same design & size as Books Page) -->
+  <div class="topbar">
+    <div class="container">
+      <ul></ul>
+      <div>
+        <a href="#" style="color:white;margin:0 5px;"></a>
+        <a href="#" style="color:white;margin:0 5px;"></a>
+        <a href="#" style="color:white;margin:0 5px;"></a>
+      </div>
+    </div>
+  </div>
 
+  <!-- ⚪ Header -->
   <header>
-    <img src="aiou-logo.png" alt="AIOU Logo">
-    <nav>
-      <a href="./index.html">Home</a>
-      <a href="./books.html">Books</a>
-      <a href="./lesson-plan.html">Lesson Plan</a>
-      <a href="./teaching-practice.html">Teaching Practice</a>
-      <a href="./research-project.html">Research Project</a>
-      <a href="./past-papers.html">Past Papers</a>
-      <a href="./calculator.html">Calculator</a>
-    </nav>
+    <img src="images/aiou-logo.png" alt="AIOU Logo">
+    <h1>Allama Iqbal Open University</h1>
   </header>
 
+  <!-- 🔵 Main Menu -->
+  <nav class="main-menu">
+    <a href="./index.html">Home</a>
+    <a href="./books.html">Books</a>
+    <a href="./lesson-plan.html">Lesson Plan</a>
+    <a href="./teaching-practice.html">Teaching Practice</a>
+    <a href="./research-project.html">Research Project</a>
+    <a href="./past-papers.html">Past Papers</a>
+    <a href="./calculator.html">Calculator</a>
+  </nav>
+
+  <!-- 📘 Page Content -->
   <h1>AIOU Lesson Plans</h1>
-  <div class="container">
+  <div class="container-content">
     <h3>Available Lesson Plans</h3>
     <div class="file-list">
       <a href="https://drive.google.com/drive/folders/1on08SApFi-ToXK02OkVD-mkEGkrHHUpa?usp=drive_link" target="_blank" rel="noopener">
@@ -125,34 +256,23 @@
     </div>
   </div>
 
-<footer>
+  <!-- 🔹 Footer -->
+  <footer>
     Developed by Zeeshan (AIOU Help) | Contact: 0304-0571214<br>
     © 2025 Allama Iqbal Open University
+    <div class="thanks">Thanks To Visiting Zeeshan AIOU Help</div>
   </footer>
 
-  <!-- 🔒 Website Protection Script -->
+  <!-- 🔒 Website Protection -->
   <script>
-    // Disable right-click
     document.addEventListener('contextmenu', e => e.preventDefault());
-
-    // Disable text selection
     document.addEventListener('selectstart', e => e.preventDefault());
-
-    // Disable certain keyboard shortcuts
     document.onkeydown = function(e) {
-      if (e.keyCode == 123) return false; // F12
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false; // Ctrl+Shift+I
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false; // Ctrl+Shift+C
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false; // Ctrl+Shift+J
-      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false; // Ctrl+U
+      if (e.keyCode == 123) return false;
+      if (e.ctrlKey && e.shiftKey && ['I','C','J'].includes(String.fromCharCode(e.keyCode))) return false;
+      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
     };
-
-    // Optional: Warn user on copy attempt
-    document.addEventListener('copy', (e) => {
-      e.preventDefault();
-      alert("Copying content is disabled on this website.");
-    });
+    document.addEventListener('copy', e => e.preventDefault());
   </script>
 </body>
-
 </html>

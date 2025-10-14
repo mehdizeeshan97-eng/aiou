@@ -3,10 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIOU Teaching Practice</title>
-  <meta name="description" content="Teaching practice reports and guides for AIOU students.">
-  <meta name="keywords" content="AIOU teaching practice, teaching reports, AIOU resources">
+  <title>AIOU Teaching Practice | Reports & Guides for Students</title>
+
+  <!-- ✅ SEO Meta Tags -->
+  <meta name="description" content="Access AIOU teaching practice reports, guides, and sample files for B.Ed and M.Ed students. Download teaching practice materials to prepare your reports effectively.">
+  <meta name="keywords" content="AIOU teaching practice, teaching reports, AIOU resources, B.Ed reports, M.Ed practice files, AIOU guides">
+
+  <!-- ✅ Canonical URL -->
+  <link rel="canonical" href="https://yourdomain.com/teaching-practice.html" />
+
+  <!-- ✅ Open Graph (Facebook, WhatsApp Preview) -->
+  <meta property="og:title" content="AIOU Teaching Practice | Reports & Guides for Students">
+  <meta property="og:description" content="Download AIOU teaching practice reports and guides for B.Ed & M.Ed students.">
+  <meta property="og:image" content="https://yourdomain.com/images/aiou-preview.jpg">
+  <meta property="og:url" content="https://yourdomain.com/teaching-practice.html">
+  <meta property="og:type" content="website">
+
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AIOU Teaching Practice | Reports & Guides for Students">
+  <meta name="twitter:description" content="Teaching practice reports and resources for AIOU students.">
+  <meta name="twitter:image" content="https://yourdomain.com/images/aiou-preview.jpg">
+
+  <!-- ✅ Favicon -->
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+  <!-- ✅ Structured Data (JSON-LD Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "AIOU Teaching Practice",
+    "description": "Teaching practice reports and guides for AIOU B.Ed and M.Ed students.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Allama Iqbal Open University",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://yourdomain.com/images/aiou-logo.png"
+      }
+    },
+    "url": "https://yourdomain.com/teaching-practice.html"
+  }
+  </script>
+
+  <!-- ✅ Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -35,32 +79,136 @@
       z-index: -1;
     }
 
-    header {
-      background: #00472D;
-      color: white;
+    /* 🟩 Top Green Bar (Books Page size) */
+    .topbar {
+      background-color: #1e603f;
+      color: #ffffff;
+      padding: 26px 0;
+      font-size: 14px;
+      width: 100%;
       display: flex;
+      justify-content: center;
       align-items: center;
+      position: relative;
+      z-index: 1000;
+      margin: 0;
+      border: none;
+      box-shadow: none;
+    }
+    .topbar::before, 
+    .topbar::after {
+      content: none !important;
+      background: none !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+    .topbar * {
+      background: transparent !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+    .topbar .container {
+      display: flex;
       justify-content: space-between;
-      padding: 10px 20px;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    header img {
-      height: 50px;
+    .topbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+      align-items: center;
     }
-    nav a {
-      color: white;
-      margin: 0 10px;
+    .topbar a {
+      color: #ffffff;
       text-decoration: none;
-      font-weight: 500;
     }
-    nav a:hover {
+    .topbar a:hover {
       text-decoration: underline;
     }
+
+    /* 🏫 Header Main */
+    header.header-default .header-main {
+      background: #fff;
+      padding: 10px 0;
+    }
+    .header-main .container {
+      width: 95%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .site-branding-logo img {
+      max-height: 80px;
+      width: auto;
+    }
+    .header-info ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .header-info ul li {
+      margin-bottom: 5px;
+    }
+    .header-info a {
+      color: #00472D;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .header-info span {
+      color: #888;
+      font-weight: 400;
+    }
+
+    /* 🔵 Main Menu Bar */
+    .main-menu {
+      background: #192f59;
+    }
+    .main-menu nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .main-menu nav ul li {
+      position: relative;
+    }
+    .main-menu nav ul li a {
+      display: block;
+      padding: 12px 20px;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .main-menu nav ul li a:hover {
+      background: #143059;
+    }
+    .main-menu nav ul li a::after {
+      content: "";
+      width: 1px;
+      height: 18px;
+      background: rgba(255,255,255,0.3);
+      position: absolute;
+      right: 0;
+      top: 14px;
+    }
+
+    /* 📄 Main Page Content */
     h1 {
       text-align: center;
       color: #00472D;
       margin-top: 20px;
     }
-    .container {
+    .container-content {
       max-width: 700px;
       margin: 30px auto;
       padding: 30px;
@@ -86,6 +234,7 @@
     .file-list a:hover {
       background: #d0f0d4;
     }
+
     footer {
       text-align: center;
       padding: 10px;
@@ -95,28 +244,78 @@
       position: relative;
       z-index: 1;
     }
+
+    @media (max-width: 768px) {
+      .header-main .container, .topbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .main-menu nav ul {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <!-- Background Layer -->
   <div class="abstract-background"></div>
 
-  <header>
-    <img src="aiou-logo.png" alt="AIOU Logo">
-    <nav>
-      <a href="./index.html">Home</a>
-      <a href="./books.html">Books</a>
-      <a href="./lesson-plan.html">Lesson Plan</a>
-      <a href="./teaching-practice.html">Teaching Practice</a>
-      <a href="./research-project.html">Research Project</a>
-      <a href="./past-papers.html">Past Papers</a>
-      <a href="./calculator.html">Calculator</a>
-    </nav>
+  <!-- 🟩 Top Green Bar -->
+  <div class="topbar">
+    <div class="container">
+      <ul></ul>
+      <div>
+        <a href="#" style="color:white;margin:0 5px;"></a>
+        <a href="#" style="color:white;margin:0 5px;"></a>
+        <a href="#" style="color:white;margin:0 5px;"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ⚪ Header -->
+  <header class="header">
+    <img src="images/aiou-logo.png" alt="AIOU Logo" class="logo">
+    <h1>Allama Iqbal Open University</h1>
   </header>
 
+  <style>
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background-color: #f8f8f8;
+    }
+    .logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .header h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+  </style>
+
+  <!-- 🔵 Main Menu Bar -->
+  <div class="main-menu">
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./books.html">Books</a></li>
+        <li><a href="./lesson-plan.html">Lesson Plan</a></li>
+        <li><a href="./teaching-practice.html">Teaching Practice</a></li>
+        <li><a href="./research-project.html">Research Project</a></li>
+        <li><a href="./past-papers.html">Past Papers</a></li>
+        <li><a href="./calculator.html">Calculator</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- 📄 Page Content -->
   <h1>AIOU Teaching Practice Resources</h1>
-  <div class="container">
+  <div class="container-content">
     <h3>Available Teaching Practice Files</h3>
     <div class="file-list">
       <a href="https://drive.google.com/drive/folders/1tHIyDDeK8UZYw4lIQrzoU_X_LOLEXQ9R?usp=drive_link" target="_blank" rel="noopener">
@@ -125,34 +324,28 @@
     </div>
   </div>
 
-<footer>
+  <!-- Footer -->
+  <footer>
     Developed by Zeeshan (AIOU Help) | Contact: 0304-0571214<br>
     © 2025 Allama Iqbal Open University
+    <div class="thanks">Thanks To Visiting Zeeshan AIOU Help</div>
   </footer>
 
-  <!-- 🔒 Website Protection Script -->
+  <!-- 🔒 Protection Script -->
   <script>
-    // Disable right-click
     document.addEventListener('contextmenu', e => e.preventDefault());
-
-    // Disable text selection
     document.addEventListener('selectstart', e => e.preventDefault());
-
-    // Disable certain keyboard shortcuts
     document.onkeydown = function(e) {
-      if (e.keyCode == 123) return false; // F12
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false; // Ctrl+Shift+I
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false; // Ctrl+Shift+C
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false; // Ctrl+Shift+J
-      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false; // Ctrl+U
+      if (e.keyCode == 123) return false;
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false;
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
+      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
     };
-
-    // Optional: Warn user on copy attempt
-    document.addEventListener('copy', (e) => {
+    document.addEventListener('copy', e => {
       e.preventDefault();
       alert("Copying content is disabled on this website.");
     });
   </script>
 </body>
-
 </html>

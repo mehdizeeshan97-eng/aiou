@@ -3,10 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIOU Research Project Resources</title>
-  <meta name="description" content="AIOU research project files — upload and download sample projects and reports.">
-  <meta name="keywords" content="AIOU research project, research files, AIOU projects">
+  <title>AIOU Research Project Resources | Allama Iqbal Open University</title>
+
+  <!-- 🔍 Primary SEO Meta Tags -->
+  <meta name="description" content="Find and download AIOU Research Project files, sample reports, and guides for B.Ed, M.Ed, and MA Education programs. Developed by Zeeshan (AIOU Help).">
+  <meta name="keywords" content="AIOU research project, AIOU projects, AIOU research files, AIOU project samples, B.Ed research project, M.Ed research, MA Education projects, AIOU Help, Allama Iqbal Open University research">
+  <meta name="author" content="Zeeshan - AIOU Help">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="distribution" content="global">
+  <meta name="rating" content="general">
+  <link rel="canonical" href="https://aiou-help.github.io/research-project.html" />
+
+  <!-- 🌐 Open Graph / Facebook -->
+  <meta property="og:title" content="AIOU Research Project Resources | Allama Iqbal Open University">
+  <meta property="og:description" content="Access AIOU Research Project files, reports, and guides for teaching and education students.">
+  <meta property="og:image" content="https://aiou-help.github.io/images/aiou-logo.png">
+  <meta property="og:url" content="https://aiou-help.github.io/research-project.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AIOU Help">
+
+  <!-- 🐦 Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AIOU Research Project Resources | AIOU Help">
+  <meta name="twitter:description" content="Download AIOU Research Project samples, reports, and complete guides for education students.">
+  <meta name="twitter:image" content="https://aiou-help.github.io/images/aiou-logo.png">
+  <meta name="twitter:creator" content="@aiou_help">
+
+  <!-- 🔗 Favicon -->
+  <link rel="icon" href="images/aiou-logo.png" type="image/png">
+
+  <!-- 🅰️ Fonts and Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- 🧠 Structured Data (JSON-LD Schema for Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Allama Iqbal Open University - AIOU Help",
+    "url": "https://aiou-help.github.io/",
+    "logo": "https://aiou-help.github.io/images/aiou-logo.png",
+    "sameAs": [
+      "https://facebook.com/aiouhelp",
+      "https://www.youtube.com/@aiouhelp"
+    ],
+    "description": "AIOU Help provides AIOU research project files, teaching practice reports, lesson plans, and educational resources for students of Allama Iqbal Open University."
+  }
+  </script>
+
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -35,32 +81,38 @@
       z-index: -1;
     }
 
-    header {
-      background: #00472D;
-      color: white;
+    .topbar {
+      background-color: #1e603f;
+      color: #ffffff;
+      padding: 26px 0;
+      font-size: 15px;
+      width: 100%;
       display: flex;
+      justify-content: center;
       align-items: center;
+      position: relative;
+      z-index: 1000;
+      margin: 0;
+      border: none;
+      box-shadow: none;
+    }
+
+    .topbar .container {
+      display: flex;
       justify-content: space-between;
-      padding: 10px 20px;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    header img {
-      height: 50px;
-    }
-    nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    h1 {
-      text-align: center;
-      color: #00472D;
-      margin-top: 20px;
-    }
-    .container {
+
+    .main-menu { background:#192f59; }
+    .main-menu .container { max-width:1200px; margin:auto; display:flex; justify-content:center; padding:10px 0; }
+    .main-menu nav a { color:#fff; margin:0 12px; text-decoration:none; font-weight:600; text-transform:uppercase; font-size:13px; }
+    .main-menu nav a:hover { text-decoration:underline; }
+
+    h1 { text-align: center; color: #00472D; margin-top: 30px; }
+    .container-content {
       max-width: 700px;
       margin: 30px auto;
       padding: 30px;
@@ -83,9 +135,8 @@
       transition: 0.3s;
       border: 1px solid #c8e6c9;
     }
-    .file-list a:hover {
-      background: #d0f0d4;
-    }
+    .file-list a:hover { background: #d0f0d4; }
+
     footer {
       text-align: center;
       padding: 10px;
@@ -99,24 +150,62 @@
 </head>
 
 <body>
-  <!-- Background Layer -->
   <div class="abstract-background"></div>
 
-  <header>
-    <img src="aiou-logo.png" alt="AIOU Logo">
-    <nav>
-      <a href="./index.html">Home</a>
-      <a href="./books.html">Books</a>
-      <a href="./lesson-plan.html">Lesson Plan</a>
-      <a href="./teaching-practice.html">Teaching Practice</a>
-      <a href="./research-project.html">Research Project</a>
-      <a href="./past-papers.html">Past Papers</a>
-      <a href="./calculator.html">Calculator</a>
-    </nav>
+  <!-- 🟩 Top Bar -->
+  <div class="topbar">
+    <div class="container">
+      <ul></ul>
+      <div>
+        <a href="#" style="color:white;margin:0 5px;"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ⚪ Header -->
+  <header class="header">
+    <img src="images/aiou-logo.png" alt="AIOU Logo" class="logo">
+    <h1>Allama Iqbal Open University</h1>
   </header>
 
+  <style>
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background-color: #f8f8f8;
+    }
+    .logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .header h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+  </style>
+
+  <!-- 🔵 Menu -->
+  <div class="main-menu">
+    <div class="container">
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./books.html">Books</a>
+        <a href="./lesson-plan.html">Lesson Plan</a>
+        <a href="./teaching-practice.html">Teaching Practice</a>
+        <a href="./research-project.html">Research Project</a>
+        <a href="./past-papers.html">Past Papers</a>
+        <a href="./calculator.html">Calculator</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- 📘 Page Content -->
   <h1>AIOU Research Project Resources</h1>
-  <div class="container">
+  <div class="container-content">
     <h3>Available Research Project Files</h3>
     <div class="file-list">
       <a href="https://drive.google.com/drive/folders/14IT7zzZVZ2mPDKQ89HWUUxe90R0IYKjB?usp=drive_link" target="_blank">
@@ -125,34 +214,28 @@
     </div>
   </div>
 
-<footer>
+  <!-- Footer -->
+  <footer>
     Developed by Zeeshan (AIOU Help) | Contact: 0304-0571214<br>
     © 2025 Allama Iqbal Open University
+    <div class="thanks">Thanks To Visiting Zeeshan AIOU Help</div>
   </footer>
 
-  <!-- 🔒 Website Protection Script -->
+  <!-- 🔒 Protection -->
   <script>
-    // Disable right-click
     document.addEventListener('contextmenu', e => e.preventDefault());
-
-    // Disable text selection
     document.addEventListener('selectstart', e => e.preventDefault());
-
-    // Disable certain keyboard shortcuts
     document.onkeydown = function(e) {
-      if (e.keyCode == 123) return false; // F12
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false; // Ctrl+Shift+I
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false; // Ctrl+Shift+C
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false; // Ctrl+Shift+J
-      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false; // Ctrl+U
+      if (e.keyCode == 123) return false;
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false;
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
+      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
     };
-
-    // Optional: Warn user on copy attempt
-    document.addEventListener('copy', (e) => {
+    document.addEventListener('copy', e => {
       e.preventDefault();
       alert("Copying content is disabled on this website.");
     });
   </script>
 </body>
-
 </html>
