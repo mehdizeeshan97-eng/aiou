@@ -17,7 +17,7 @@
   <!-- ✅ Favicon -->
   <link rel="icon" type="image/png" href="images/aiou-logo.png" />
 
-  <!-- ✅ Open Graph Meta Tags (for Facebook / WhatsApp) -->
+  <!-- ✅ Open Graph Meta Tags -->
   <meta property="og:title" content="AIOU Resources | Allama Iqbal Open University Help Portal" />
   <meta property="og:description" content="Get access to AIOU books, lesson plans, research projects, past papers and result calculator easily." />
   <meta property="og:image" content="https://aiou-help.github.io/images/aiou-logo.png" />
@@ -54,7 +54,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- ✅ Your Existing CSS (Unchanged) -->
+  <!-- ✅ CSS -->
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -105,8 +105,8 @@
       align-items: center;
     }
 
-    .topbar i {
-      color: #fff !important;
+    .topbar ul li i {
+      color: #fff;
       margin-right: 5px;
     }
 
@@ -127,19 +127,8 @@
       position: relative;
     }
 
-    header img {
-      max-height: 100px;
-      width: auto;
-    }
-
-    header h1 {
-      margin: 10px 0 5px;
-      font-size: 26px;
-    }
-
-    header p {
-      color: #00472D;
-    }
+    header img { max-height: 100px; width: auto; }
+    header h1 { margin: 10px 0 5px; font-size: 26px; }
 
     nav {
       background: #192f59;
@@ -156,9 +145,7 @@
       text-transform: uppercase;
     }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+    nav a:hover { text-decoration: underline; }
 
     .container {
       display: grid;
@@ -212,19 +199,8 @@
 
     @media (max-width: 768px) {
       header h1 { font-size: 20px; }
-      nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-      }
-      nav a {
-        background: #2b3f77;
-        padding: 8px 12px;
-        border-radius: 5px;
-        margin: 4px;
-        font-size: 14px;
-      }
+      nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+      nav a { background: #2b3f77; padding: 8px 12px; border-radius: 5px; margin: 4px; font-size: 14px; }
       .container { grid-template-columns: 1fr; width: 95%; }
       .card { padding: 20px; }
       footer { font-size: 13px; }
@@ -240,9 +216,12 @@
   <div class="topbar">
     <div class="container">
       <ul>
-        <li><i class=""></i> <a href="#"></a></li>
-        <li><i class=""></i> <a href="#"></a></li>
-        <li><i class=""></i></li>
+        <li><i class="fa fa-envelope"></i> 
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=zeeshanaiouhelp1214@gmail.com" target="_blank">zeeshanaiouhelp1214@gmail.com</a>
+        </li>
+        <li><i class="fa fa-phone"></i> 
+          <a href="tel:+923040571214">0304-0571214</a>
+        </li>
       </ul>
       <div>
         <a id="text_resize_decrease" class="text_resize-item"><i class=""></i></a>
@@ -319,4 +298,3 @@
   </script>
 </body>
 </html>
-
