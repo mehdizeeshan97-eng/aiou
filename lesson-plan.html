@@ -231,74 +231,83 @@
     <h1>Allama Iqbal Open University</h1>
   </header>
 
-<nav>
-  <div class="nav-container">
-    <a href="./index.html">Home</a>
-    <a href="./books.html">Books</a>
-    <a href="./lesson-plan.html">Lesson Plan</a>
-    <a href="./teaching-practice.html">Teaching Practice</a>
-    <a href="./research-project.html">Research Project</a>
-    <a href="./past-papers.html">Past Papers</a>
-    <a href="./calculator.html">Calculator</a>
-  </div>
-</nav>
+<!-- 🔵 Main Navigation Bar -->
+<div class="main-menu">
+  <nav>
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./books.html">Books</a></li>
+      <li><a href="./lesson-plan.html">Lesson Plan</a></li>
+      <li><a href="./teaching-practice.html">Teaching Practice</a></li>
+      <li><a href="./research-project.html">Research Project</a></li>
+      <li><a href="./past-papers.html">Past Papers</a></li>
+      <li><a href="./calculator.html">Calculator</a></li>
+    </ul>
+  </nav>
+</div>
 
 <style>
-  nav {
+  /* 🔵 Unified Navigation Bar Styling */
+  .main-menu {
     background: #192f59;
-    padding: 8px 0;
   }
 
-  .nav-container {
+  .main-menu nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 6px; /* 🔹 spacing reduced for better alignment */
+    gap: 4px; /* balanced spacing */
   }
 
-  nav a {
-    color: white;
+  .main-menu nav ul li a {
+    display: block;
+    padding: 10px 14px; /* compact padding */
+    color: #fff;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 15px;
     text-transform: uppercase;
-    padding: 6px 10px; /* 🔹 slightly tighter padding */
-    border-radius: 4px;
-    transition: background 0.2s;
+    font-weight: 600;
+    font-size: 13.5px;
+    border-radius: 5px;
+    transition: background 0.3s;
   }
 
-  nav a:hover {
+  .main-menu nav ul li a:hover {
     background: rgba(255, 255, 255, 0.15);
   }
 
-  /* ✅ Mobile View */
+  /* ✅ Mobile Responsive */
   @media (max-width: 768px) {
-    .nav-container {
+    .main-menu nav ul {
       flex-direction: column;
       align-items: center;
-      gap: 6px;
+      gap: 0;
     }
 
-    nav a {
-      display: block;
-      width: 90%;
+    .main-menu nav ul li {
+      width: 100%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .main-menu nav ul li a {
+      width: 100%;
       text-align: center;
+      padding: 12px 0;
       font-size: 14px;
-      padding: 9px;
-      background: #2b3f77;
-      border-radius: 5px;
     }
   }
 
-  /* ✅ Tablet View */
+  /* ✅ Tablet Responsive */
   @media (min-width: 769px) and (max-width: 1024px) {
-    .nav-container {
-      gap: 8px;
+    .main-menu nav ul {
+      gap: 6px;
     }
 
-    nav a {
-      font-size: 14px;
-      padding: 7px 10px;
+    .main-menu nav ul li a {
+      padding: 10px 12px;
+      font-size: 13.5px;
     }
   }
 </style>
