@@ -5,33 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AIOU Resources | Home</title>
 
-  <!-- ✅ SEO Meta Tags -->
   <meta name="description" content="Access AIOU books, lesson plans, teaching practice guides, research projects, past papers and a result calculator — all in one place." />
   <meta name="keywords" content="AIOU, AIOU Resources, Allama Iqbal Open University, AIOU books, AIOU lesson plan, AIOU teaching practice, AIOU research project, AIOU past papers, AIOU result calculator, AIOU CGPA" />
   <meta name="author" content="Zeeshan | AIOU Help" />
   <meta name="robots" content="index, follow" />
-
-  <!-- ✅ Canonical URL -->
   <link rel="canonical" href="https://aiou-help.github.io/index.html" />
-
-  <!-- ✅ Favicon -->
   <link rel="icon" type="image/png" href="images/aiou-logo.png" />
-
-  <!-- ✅ Open Graph Meta Tags -->
   <meta property="og:title" content="AIOU Resources | Allama Iqbal Open University Help Portal" />
   <meta property="og:description" content="Get access to AIOU books, lesson plans, research projects, past papers and result calculator easily." />
   <meta property="og:image" content="https://aiou-help.github.io/images/aiou-logo.png" />
   <meta property="og:url" content="https://aiou-help.github.io/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_PK" />
-
-  <!-- ✅ Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="AIOU Resources | AIOU Help Portal" />
   <meta name="twitter:description" content="Access AIOU books, lesson plans, past papers, research projects and calculator at one place." />
   <meta name="twitter:image" content="https://aiou-help.github.io/images/aiou-logo.png" />
-
-  <!-- ✅ Structured Data (Schema.org JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -49,12 +38,9 @@
     }
   }
   </script>
-
-  <!-- ✅ Google Fonts + Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- ✅ CSS -->
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -64,6 +50,7 @@
     }
 
     .abstract-background {
+      /* Background styling wahi rakhi gayi hai */
       background-color: #f0f4f9; 
       background-image:
         radial-gradient(at 10% 20%, rgba(255, 255, 255, 0.8) 0px, transparent 50%),
@@ -76,11 +63,12 @@
       z-index: -1;
     }
 
+    /* 1. TOP BAR (topbar) - Size aur Color same rakhe gaye hain */
     .topbar {
       background: #1e603f !important;
       color: #ffffff !important;
-      padding: 20px 0 !important;
-      font-size: 15px;
+      padding: 10px 0 !important; /* Padding kam kiya gaya hai taake size theek rahe */
+      font-size: 14px; /* Font size kam kiya gaya hai */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -92,7 +80,7 @@
       justify-content: space-between;
       align-items: center;
       max-width: 1200px;
-      width: 100%;
+      width: 95%; /* Mobile ke liye behtar */
       margin: 0 auto;
     }
 
@@ -119,6 +107,7 @@
       text-decoration: underline;
     }
 
+    /* 2. HEADER (Logo aur Title) - Size aur Position theek ki gayi hai */
     header {
       background: #fff;
       color: #00472D;
@@ -127,26 +116,48 @@
       position: relative;
     }
 
-    header img { max-height: 100px; width: auto; }
-    header h1 { margin: 10px 0 5px; font-size: 26px; }
-
-    nav {
-      background: #192f59;
-      text-align: center;
-      padding: 12px;
+    header img { 
+      max-height: 90px; /* Max height theek kiya gaya hai */
+      width: auto; 
+    }
+    header h1 { 
+      margin: 10px 0 5px; 
+      font-size: 26px; 
     }
 
-    nav a {
-      color: white;
+    /* 3. NAVIGATION BAR (main-menu) - Consistency ke liye behtareen CSS */
+    .main-menu {
+      background-color: #192f59;
+      width: 100%;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Aik halka sa shadow dala gaya hai */
+    }
+
+    .main-menu nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center; /* Links beech mein aayenge */
+      flex-wrap: wrap; /* Agar screen choti ho toh wrap ho jayenge */
+    }
+
+    .main-menu nav ul li a {
+      display: block;
+      padding: 12px 15px; /* Size theek kiya gaya hai */
+      color: #fff;
       text-decoration: none;
-      margin: 0 12px;
-      font-weight: 600;
-      font-size: 15px;
       text-transform: uppercase;
+      font-weight: 600;
+      font-size: 15px; /* Font size theek kiya gaya hai */
+      transition: background-color 0.2s;
     }
 
-    nav a:hover { text-decoration: underline; }
+    .main-menu nav ul li a:hover {
+      background-color: #2b3f77; /* Hover color theek kiya gaya hai */
+    }
 
+    /* Content Area */
     .container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -158,6 +169,7 @@
     }
 
     .card {
+      /* Card styling wahi rakhi gayi hai */
       background: white;
       border: 1px solid #cce3cc;
       border-radius: 15px;
@@ -197,38 +209,46 @@
 
     .thanks { margin-top: 10px; font-weight: 600; }
 
-    /* ================= Responsive Fix (Full Mobile + Tablet Optimization) ================= */
+
+    /* ================= Responsive Fixes for Mobile/Tablet ================= */
     @media only screen and (max-width: 768px) {
       body { overflow-x: hidden; }
 
+      .topbar { padding: 8px 0 !important; } /* Mobile par Topbar size kam kiya */
       .topbar .container {
         flex-direction: column;
         text-align: center;
-        gap: 10px;
+        gap: 5px;
       }
+      .topbar ul { flex-direction: column; gap: 4px; }
+      .topbar ul li { font-size: 13px; }
 
-      .topbar ul {
-        flex-direction: column;
-        gap: 8px;
-      }
-
-      header img { max-height: 70px; }
+      header img { max-height: 60px; }
       header h1 { font-size: 18px; padding: 0 8px; }
 
-      nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 8px;
+      /* Mobile Navigation - Vertical Buttons banaye gaye hain */
+      .main-menu nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 8px 0;
       }
 
-      nav a {
-        background: #2b3f77;
-        padding: 8px 10px;
-        border-radius: 5px;
-        margin: 4px;
-        font-size: 13px;
-        display: inline-block;
+      .main-menu nav ul li {
+        width: 90%;
+        margin: 4px 0;
+      }
+
+      .main-menu nav ul li a {
+        width: 100%;
+        text-align: center;
+        background: #2b3f77; /* Mobile button background */
+        padding: 12px 0;
+        border-radius: 6px;
+        font-size: 14px;
+      }
+
+      .main-menu nav ul li a:hover {
+        background: #395294;
       }
 
       .container {
@@ -239,21 +259,18 @@
       }
 
       .card { padding: 18px; font-size: 14px; }
-
       footer { font-size: 12px; line-height: 1.5; padding: 10px; }
     }
 
     @media only screen and (min-width: 769px) and (max-width: 1024px) {
-      .topbar .container {
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding: 10px;
+      .topbar .container { padding: 0 20px; }
+      
+      .main-menu nav ul {
+        padding: 0 10px;
       }
-
-      nav a {
-        margin: 5px;
-        font-size: 14px;
+      .main-menu nav ul li a {
         padding: 10px 12px;
+        font-size: 14px;
       }
 
       .container {
@@ -264,12 +281,7 @@
       }
 
       .card { padding: 22px; }
-
       footer { font-size: 13px; }
-    }
-
-    @media screen and (min-width: 1025px) {
-      .container { max-width: 1100px; gap: 25px; }
     }
   </style>
 </head>
@@ -298,93 +310,19 @@
     <h1>Allama Iqbal Open University Resources</h1>
   </header>
 
-<!-- 🔵 Simple Responsive Navigation -->
-<div class="main-menu">
-  <nav>
-    <ul>
-      <li><a href="./index.html">Home</a></li>
-      <li><a href="./books.html">Books</a></li>
-      <li><a href="./lesson-plan.html">Lesson Plan</a></li>
-      <li><a href="./teaching-practice.html">Teaching Practice</a></li>
-      <li><a href="./research-project.html">Research Project</a></li>
-      <li><a href="./past-papers.html">Past Papers</a></li>
-      <li><a href="./calculator.html">Calculator</a></li>
-    </ul>
-  </nav>
-</div>
-
-<style>
-/* ✅ FINAL FIXED NAVIGATION BAR CSS */
-.main-menu {
-  background-color: #192f59;
-  width: 100%;
-  z-index: 100;
-}
-
-.main-menu nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
-}
-
-.main-menu nav ul li {
-  margin: 0;
-}
-
-.main-menu nav ul li a {
-  display: block;
-  padding: 10px 14px;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 14px;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-.main-menu nav ul li a:hover {
-  background-color: rgba(255,255,255,0.15);
-}
-
-/* 📱 Mobile (Vertical Buttons) */
-@media (max-width: 768px) {
-  .main-menu nav ul {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .main-menu nav ul li {
-    width: 90%;
-    margin: 4px 0;
-  }
-
-  .main-menu nav ul li a {
-    width: 100%;
-    text-align: center;
-    background: #223b77;
-    padding: 14px 0;
-    border-radius: 10px;
-    font-size: 15px;
-  }
-
-  .main-menu nav ul li a:hover {
-    background: #2d4b93;
-  }
-}
-
-/* 💻 Desktop (Horizontal Menu in One Line) */
-@media (min-width: 769px) {
-  .main-menu nav ul {
-    flex-direction: row;
-  }
-}
-</style>
-
+  <div class="main-menu">
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./books.html">Books</a></li>
+        <li><a href="./lesson-plan.html">Lesson Plan</a></li>
+        <li><a href="./teaching-practice.html">Teaching Practice</a></li>
+        <li><a href="./research-project.html">Research Project</a></li>
+        <li><a href="./past-papers.html">Past Papers</a></li>
+        <li><a href="./calculator.html">Calculator</a></li>
+      </ul>
+    </nav>
+  </div>
   <div class="container">
     <div class="card" onclick="location.href='books.html'">
       <div class="icon">📚</div>
@@ -425,6 +363,7 @@
   </footer>
 
   <script>
+    // Console aur Right-Click Disable karne wala code wahi rakha gaya hai
     document.addEventListener('contextmenu', e => e.preventDefault());
     document.onkeydown = function(e) {
       if (e.keyCode == 123) return false;
@@ -437,11 +376,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
