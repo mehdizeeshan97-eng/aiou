@@ -186,7 +186,7 @@
 
   <!-- ⚪ Header -->
   <header class="header">
-    <img src="aiou-logo.png" alt="AIOU Logo" class="logo">
+    <img src="images/aiou-logo.png" alt="AIOU Logo" class="logo">
     <h1>Allama Iqbal Open University</h1>
   </header>
 
@@ -210,20 +210,75 @@
     }
   </style>
 
-  <!-- 🔵 Menu -->
-  <div class="main-menu">
-    <div class="container">
-      <nav>
-        <a href="./index.html">Home</a>
-        <a href="./books.html">Books</a>
-        <a href="./lesson-plan.html">Lesson Plan</a>
-        <a href="./teaching-practice.html">Teaching Practice</a>
-        <a href="./research-project.html">Research Project</a>
-        <a href="./past-papers.html">Past Papers</a>
-        <a href="./calculator.html">Calculator</a>
-      </nav>
-    </div>
+<nav>
+  <div class="nav-container">
+    <a href="./index.html">Home</a>
+    <a href="./books.html">Books</a>
+    <a href="./lesson-plan.html">Lesson Plan</a>
+    <a href="./teaching-practice.html">Teaching Practice</a>
+    <a href="./research-project.html">Research Project</a>
+    <a href="./past-papers.html">Past Papers</a>
+    <a href="./calculator.html">Calculator</a>
   </div>
+</nav>
+
+<style>
+  nav {
+    background: #192f59;
+    padding: 10px 0;
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 8px 10px;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+
+  nav a:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  /* ✅ Mobile & Tablet Friendly */
+  @media (max-width: 768px) {
+    .nav-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    nav a {
+      display: block;
+      width: 90%;
+      text-align: center;
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .nav-container {
+      gap: 10px;
+    }
+
+    nav a {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+  }
+</style>
+
 
   <!-- 📘 Page Content -->
   <h1>AIOU Research Project Resources</h1>
@@ -261,4 +316,3 @@
   </script>
 </body>
 </html>
-

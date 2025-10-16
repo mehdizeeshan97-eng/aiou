@@ -7,7 +7,6 @@
   <meta name="description" content="Free AIOU result calculator. Calculate your marks easily for Matric, FA, BA, BS, B.Ed, ADE, BBA students.">
   <meta name="keywords" content="AIOU result calculator, Allama Iqbal Open University, AIOU marks calculator, online result calculator">
   <meta name="author" content="Zeeshan">
-    <!-- ✅ SEO Optimization -->
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
   <meta name="revisit-after" content="7 days">
@@ -32,18 +31,17 @@
       padding: 0;
       color: #00472D;
       background-color: #f0f4f9;
-      position: relative;
       overflow-x: hidden;
     }
 
-    /* ✅ Abstract Background (Added) */
+    /* ✅ Abstract Background */
     .abstract-background {
       background-color: #f0f4f9; 
       background-image:
-        radial-gradient(at 10% 20%, rgba(255, 255, 255, 0.8) 0px, transparent 50%),
-        radial-gradient(at 10% 90%, rgba(200, 220, 255, 0.5) 0px, transparent 50%),
-        radial-gradient(at 90% 40%, rgba(240, 220, 255, 0.6) 0px, transparent 50%),
-        radial-gradient(at 70% 80%, rgba(230, 240, 250, 0.7) 0px, transparent 50%);
+        radial-gradient(at 10% 20%, rgba(255,255,255,0.8) 0px, transparent 50%),
+        radial-gradient(at 10% 90%, rgba(200,220,255,0.5) 0px, transparent 50%),
+        radial-gradient(at 90% 40%, rgba(240,220,255,0.6) 0px, transparent 50%),
+        radial-gradient(at 70% 80%, rgba(230,240,250,0.7) 0px, transparent 50%);
       backdrop-filter: blur(100px);
       -webkit-backdrop-filter: blur(100px);
       position: fixed;
@@ -54,57 +52,63 @@
       z-index: -1;
     }
 
-    /* ✅ Top Bar (Copied exactly from first file) */
-    .topbar {
-      background-color: #1e603f;
-      color: #ffffff;
-      padding: 3px 0;
-      font-size: 14px;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      z-index: 1000;
-      margin: 0;
-      border: none;
-      box-shadow: none;
-    }
-    .topbar::before, 
-    .topbar::after {
-      content: none !important;
-      background: none !important;
-      box-shadow: none !important;
-      border: none !important;
-    }
-    .topbar * {
-      background: transparent !important;
-      box-shadow: none !important;
-      border: none !important;
-    }
-    .topbar .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .topbar ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 15px;
-      align-items: center;
-    }
-    .topbar a {
-      color: #ffffff;
-      text-decoration: none;
-    }
-    .topbar a:hover {
-      text-decoration: underline;
-    }
+/* ✅ Top Bar (Copied exactly from first file) */
+.topbar {
+  background-color: #1e603f;
+  color: #ffffff;
+  padding: 3px 0;
+  font-size: 14px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.topbar::before,
+.topbar::after {
+  content: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.topbar * {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.topbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.topbar a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.topbar a:hover {
+  text-decoration: underline;
+}
 
     /* ⚪ Header */
     header {
@@ -112,19 +116,9 @@
       color: #00472D;
       text-align: center;
       padding: 20px 10px;
-      position: relative;
     }
-    header img {
-      max-height: 100px;
-      width: auto;
-    }
-    header h1 {
-      margin: 10px 0 5px;
-      font-size: 26px;
-    }
-    header p {
-      color: #00472D;
-    }
+    header img { max-height: 100px; }
+    header h1 { margin: 10px 0 5px; font-size: 26px; }
 
     /* 🔵 Navigation Bar */
     nav {
@@ -140,9 +134,7 @@
       font-size: 15px;
       text-transform: uppercase;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
+    nav a:hover { text-decoration: underline; }
 
     /* 🔹 Calculator Section */
     h1 {
@@ -150,7 +142,6 @@
       color: #00472D;
       margin-top: 20px;
     }
-
     .container {
       max-width: 800px;
       margin: 20px auto;
@@ -166,7 +157,6 @@
       display: block;
       margin-top: 10px;
     }
-
     input, select {
       padding: 10px;
       width: 100%;
@@ -176,7 +166,6 @@
       margin-bottom: 15px;
       font-size: 1rem;
     }
-
     button {
       background: #00472D;
       color: white;
@@ -186,9 +175,7 @@
       cursor: pointer;
       font-weight: 600;
     }
-    button:hover {
-      background: #006400;
-    }
+    button:hover { background: #006400; }
 
     .result-card {
       border: 2px solid #00472D;
@@ -213,9 +200,7 @@
       padding: 8px;
       text-align: center;
     }
-    th {
-      background: #e8f5e9;
-    }
+    th { background: #e8f5e9; }
     .final-row {
       background: #c6ecc6;
       font-weight: bold;
@@ -231,59 +216,10 @@
     }
     .thanks { margin-top: 10px; font-weight: 600; }
 
+    /* ✅ Responsive Layout */
     @media (max-width: 768px) {
-      /* Mobile Devices (≤768px) */
-@media (max-width: 768px) {
-  header h1 { font-size: 20px; }
-  header img { max-height: 80px; }
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-  }
-  nav a {
-    background: #2b3f77;
-    padding: 8px 12px;
-    border-radius: 5px;
-    margin: 4px;
-    font-size: 14px;
-  }
-
-  .container {
-    grid-template-columns: 1fr;
-    width: 95%;
-    gap: 20px;
-    padding: 15px;
-  }
-
-  .card { padding: 20px; }
-
-  footer { font-size: 13px; }
-}
-
-/* Tablets (769px – 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  header h1 { font-size: 24px; }
-  header img { max-height: 90px; }
-
-  nav a {
-    margin: 6px;
-    font-size: 15px;
-    padding: 10px 15px;
-  }
-
-  .container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    width: 90%;
-    padding: 20px;
-  }
-
-  .card { padding: 25px; }
-}
       header h1 { font-size: 20px; }
+      header img { max-height: 80px; }
       nav {
         display: flex;
         flex-wrap: wrap;
@@ -300,14 +236,23 @@
       .container { width: 95%; padding: 20px; }
       footer { font-size: 13px; }
     }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      header h1 { font-size: 24px; }
+      header img { max-height: 90px; }
+      nav a {
+        margin: 6px;
+        font-size: 15px;
+        padding: 10px 15px;
+      }
+      .container { width: 90%; padding: 20px; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- ✅ Abstract Background -->
   <div class="abstract-background"></div>
 
-  <!-- 🟩 Top Bar (First File) -->
   <div class="topbar">
     <div class="container">
       <ul></ul>
@@ -319,80 +264,138 @@
     </div>
   </div>
 
-  <!-- ⚪ Header -->
-  <header class="header">
-    <img src="aiou-logo.png" alt="AIOU Logo" class="logo">
+  <header>
+    <img src="images/aiou-logo.png" alt="AIOU Logo">
     <h1>Allama Iqbal Open University</h1>
   </header>
 
-  <!-- 🔵 Navigation -->
-  <nav>
+<nav>
+  <div class="nav-container">
     <a href="./index.html">Home</a>
     <a href="./books.html">Books</a>
     <a href="./lesson-plan.html">Lesson Plan</a>
     <a href="./teaching-practice.html">Teaching Practice</a>
     <a href="./research-project.html">Research Project</a>
     <a href="./past-papers.html">Past Papers</a>
-    <a href="./calculator.html" style="text-decoration: underline;">Calculator</a>
-  </nav>
+    <a href="./calculator.html">Calculator</a>
+  </div>
+</nav>
+
+<style>
+  nav {
+    background: #192f59;
+    padding: 10px 0;
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 8px 10px;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+
+  nav a:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  /* ✅ Mobile & Tablet Friendly */
+  @media (max-width: 768px) {
+    .nav-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    nav a {
+      display: block;
+      width: 90%;
+      text-align: center;
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .nav-container {
+      gap: 10px;
+    }
+
+    nav a {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+  }
+</style>
 
   <h1>AIOU Result Calculator</h1>
 
-  <!-- 🔹 Calculator Section -->
-  <div class="container">
-    <label for="class">Select Class:</label>
-    <select id="class" onchange="toggleInputs()">
+<!-- 🔹 Calculator Section -->
+<div class="container">
+  <label for="class">Select Class:</label>
+  <select id="class" onchange="toggleInputs()">
+    <option value="">Select</option>
+    <option value="matric">Matric / FA / BA</option>
+    <option value="bs">BS / B.Ed / ADE / BBA</option>
+  </select>
+
+  <div id="matricInputs" style="display:none;">
+    <label for="assignSelect">Select Assignments:</label>
+    <select id="assignSelect" onchange="generateAssignmentInputs()">
       <option value="">Select</option>
-      <option value="matric">Matric / FA / BA</option>
-      <option value="bs">BS / B.Ed / ADE / BBA</option>
+      <option value="2">2 Assignments</option>
+      <option value="4">4 Assignments</option>
     </select>
+    <div id="assignmentFields"></div>
 
-    <div id="matricInputs" style="display:none;">
-      <label for="assignSelect">Select Assignments:</label>
-      <select id="assignSelect" onchange="generateAssignmentInputs()">
-        <option value="">Select</option>
-        <option value="2">2 Assignments</option>
-        <option value="4">4 Assignments</option>
-      </select>
-      <div id="assignmentFields"></div>
-      <label>Paper Marks (out of 100):</label>
-      <input type="number" id="matricPaper" min="0" max="100">
-    </div>
-
-    <div id="bsInputs" style="display:none;">
-      <label>Assignment 1 Marks:</label>
-      <input type="number" id="bsAssign1" min="0" max="100">
-      <label>Assignment 2 Marks:</label>
-      <input type="number" id="bsAssign2" min="0" max="100">
-      <label>Quiz Marks (out of 30):</label>
-      <input type="number" id="bsQuiz" min="0" max="30">
-      <label>Paper Marks (out of 100):</label>
-      <input type="number" id="bsPaper" min="0" max="100">
-    </div>
-
-    <button onclick="calculateResult()">Calculate Result</button>
-
-    <div id="resultCard" class="result-card" style="display:none;">
-      <h3>Result Card</h3>
-      <div id="resultDetails"></div>
-    </div>
-
-    <hr style="margin:40px 0;">
-
-    <h3 style="color:#00472D;text-align:center;">Calculate Grade & CGPA</h3>
-    <label for="totalMarks">Enter your total number:</label>
-    <input type="number" id="totalMarks" placeholder="Total Marks" min="1">
-
-    <label for="obtainedMarks">Enter your obtained number:</label>
-    <input type="number" id="obtainedMarks" placeholder="Obtained Marks" min="0">
-
-    <button onclick="calculateGrade()">Calculate Grade & CGPA</button>
-
-    <div id="gradeResult" class="result-card" style="display:none;">
-      <h3>Grade & CGPA Result</h3>
-      <div id="gradeDetails"></div>
-    </div>
+    <label>Paper Marks (out of 100):</label>
+    <input type="number" id="matricPaper" min="0" max="100">
   </div>
+
+  <div id="bsInputs" style="display:none;">
+    <label>Assignment 1 Marks:</label>
+    <input type="number" id="bsAssign1" min="0" max="100">
+    <label>Assignment 2 Marks:</label>
+    <input type="number" id="bsAssign2" min="0" max="100">
+    <label>Quiz Marks (out of 30):</label>
+    <input type="number" id="bsQuiz" min="0" max="30">
+    <label>Paper Marks (out of 100):</label>
+    <input type="number" id="bsPaper" min="0" max="100">
+  </div>
+
+  <button onclick="calculateResult()">Calculate Result</button>
+
+  <div id="resultCard" class="result-card" style="display:none;">
+    <h3>Result Card</h3>
+    <div id="resultDetails"></div>
+  </div>
+
+  <hr style="margin:40px 0;">
+  <h3 style="color:#00472D;text-align:center;">Calculate Grade & CGPA</h3>
+
+  <label for="totalMarks">Enter your total number:</label>
+  <input type="number" id="totalMarks" placeholder="Total Marks" min="1">
+
+  <label for="obtainedMarks">Enter your obtained number:</label>
+  <input type="number" id="obtainedMarks" placeholder="Obtained Marks" min="0">
+
+  <button onclick="calculateGrade()">Calculate Grade & CGPA</button>
+
+  <div id="gradeResult" class="result-card" style="display:none;">
+    <h3>Grade & CGPA Result</h3>
+    <div id="gradeDetails"></div>
+  </div>
+</div>
 
   <footer>
     Developed by Zeeshan (AIOU Help) | Contact: 0304-0571214<br>
@@ -479,7 +482,7 @@
         html = `<table>
           <tr><th>Component</th><th>Marks</th><th>% Weight</th><th>Weighted</th></tr>
           <tr><td>Assignments Avg</td><td>${avg.toFixed(2)}</td><td>20%</td><td>${(avg*0.20).toFixed(2)}</td></tr>
-          <tr><td>Quiz (out of 30)</td><td>${q}</td><td>30%</td><td>${q}</td></tr>
+          <tr><td>Quiz</td><td>${q}</td><td>Fixed</td><td>${q}</td></tr>
           <tr><td>Paper</td><td>${p}</td><td>50%</td><td>${(p*0.50).toFixed(2)}</td></tr>
           <tr class="final-row"><th colspan="3">Final Result</th><th>${res.toFixed(2)}</th></tr>
         </table>`;
@@ -490,4 +493,3 @@
   </script>
 </body>
 </html>
-
