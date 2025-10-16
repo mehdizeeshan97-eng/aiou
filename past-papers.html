@@ -337,7 +337,7 @@
     }
   </style>
 
-<!-- 🔵 Main Navigation Bar -->
+<!-- 🔵 Main Menu Bar -->
 <div class="main-menu">
   <nav>
     <ul>
@@ -353,69 +353,67 @@
 </div>
 
 <style>
-  /* 🔵 Unified Navigation Bar Styling */
-  .main-menu {
-    background: #192f59;
+/* 🔵 Universal Navigation Bar (Simple + Responsive) */
+.main-menu {
+  background: #192f59;
+}
+
+.main-menu nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-menu nav ul li {
+  margin: 0;
+}
+
+.main-menu nav ul li a {
+  display: block;
+  padding: 12px 18px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.3s;
+  border-radius: 5px;
+}
+
+.main-menu nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* 📱 Mobile View (Vertical Layout) */
+@media (max-width: 768px) {
+  .main-menu nav ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  .main-menu nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 4px; /* balanced spacing */
+  .main-menu nav ul li {
+    width: 90%;
   }
 
   .main-menu nav ul li a {
-    display: block;
-    padding: 10px 14px; /* compact padding */
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 13.5px;
-    border-radius: 5px;
-    transition: background 0.3s;
+    width: 100%;
+    text-align: center;
+    background: #223b77;
+    margin: 4px 0;
+    padding: 14px 0;
+    border-radius: 10px;
+    font-size: 15px;
   }
 
   .main-menu nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: #2c4a8d;
   }
-
-  /* ✅ Mobile Responsive */
-  @media (max-width: 768px) {
-    .main-menu nav ul {
-      flex-direction: column;
-      align-items: center;
-      gap: 0;
-    }
-
-    .main-menu nav ul li {
-      width: 100%;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .main-menu nav ul li a {
-      width: 100%;
-      text-align: center;
-      padding: 12px 0;
-      font-size: 14px;
-    }
-  }
-
-  /* ✅ Tablet Responsive */
-  @media (min-width: 769px) and (max-width: 1024px) {
-    .main-menu nav ul {
-      gap: 6px;
-    }
-
-    .main-menu nav ul li a {
-      padding: 10px 12px;
-      font-size: 13.5px;
-    }
-  }
+}
 </style>
 
   <h1>AIOU Past Papers Resources</h1>
