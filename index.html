@@ -3,54 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIOU Resources | Home</title>
+  <title>AIOU Books Resources | Download All AIOU Subject Books (PDF)</title>
 
-  <meta name="description" content="Access AIOU books, lesson plans, teaching practice guides, research projects, past papers and a result calculator — all in one place." />
-  <meta name="keywords" content="AIOU, AIOU Resources, Allama Iqbal Open University, AIOU books, AIOU lesson plan, AIOU teaching practice, AIOU research project, AIOU past papers, AIOU result calculator, AIOU CGPA" />
-  <meta name="author" content="Zeeshan | AIOU Help" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://aiou-help.github.io/index.html" />
-  <link rel="icon" type="image/png" href="images/aiou-logo.png" />
-  <meta property="og:title" content="AIOU Resources | Allama Iqbal Open University Help Portal" />
-  <meta property="og:description" content="Get access to AIOU books, lesson plans, research projects, past papers and result calculator easily." />
-  <meta property="og:image" content="https://aiou-help.github.io/images/aiou-logo.png" />
-  <meta property="og:url" content="https://aiou-help.github.io/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_PK" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="AIOU Resources | AIOU Help Portal" />
-  <meta name="twitter:description" content="Access AIOU books, lesson plans, past papers, research projects and calculator at one place." />
-  <meta name="twitter:image" content="https://aiou-help.github.io/images/aiou-logo.png" />
+  <meta name="description" content="Download all AIOU subject books (PDF) in one place. Access study materials for Allama Iqbal Open University easily.">
+  <meta name="keywords" content="AIOU books, AIOU pdf, AIOU study material, AIOU resources, Allama Iqbal Open University, AIOU books download, AIOU official pdf">
+  <meta name="author" content="Zeeshan - AIOU Help">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://yourdomain.com/books.html" />
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AIOU Books Resources | Download AIOU Books (PDF)">
+  <meta property="og:description" content="Access and download AIOU books in PDF format. Free resources for Allama Iqbal Open University students.">
+  <meta property="og:url" content="https://yourdomain.com/books.html">
+  <meta property="og:image" content="https://yourdomain.com/images/aiou-preview.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AIOU Books Resources | Download AIOU Books (PDF)">
+  <meta name="twitter:description" content="Get all AIOU subject books in PDF format for free. Updated and categorized AIOU resources.">
+  <meta name="twitter:image" content="https://yourdomain.com/images/aiou-preview.jpg">
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "AIOU Resources",
-    "url": "https://aiou-help.github.io/",
-    "author": {
-      "@type": "Person",
-      "name": "Zeeshan"
-    },
-    "description": "AIOU Resources portal provides books, lesson plans, teaching practice guides, research projects, past papers and result calculators.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "AIOU Help"
-    }
+    "@type": "EducationalOrganization",
+    "name": "Allama Iqbal Open University",
+    "alternateName": "AIOU",
+    "url": "https://yourdomain.com/books.html",
+    "logo": "https://yourdomain.com/images/aiou-logo.png",
+    "sameAs": [
+      "https://www.facebook.com/AIOU",
+      "https://twitter.com/AIOU",
+      "https://www.youtube.com/@AIOU"
+    ],
+    "description": "Download Allama Iqbal Open University books and study resources in PDF format."
   }
   </script>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
+    /* -------------------------------------------------------- */
+    /* ✅ INDEX.HTML SE COPY KIYA GAYA CSS (CONSISTENCY KE LIYE) */
+    /* -------------------------------------------------------- */
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
       color: #00472D;
+      background: #f9f9f9; /* Books page ka background colour rakha gaya hai */
+      overflow-x: hidden; /* Books page se */
     }
 
     .abstract-background {
-      /* Background styling wahi rakhi gayi hai */
+      /* Books file mein yeh zaroori nahi, lekin consistency ke liye code rakha gaya hai */
       background-color: #f0f4f9; 
       background-image:
         radial-gradient(at 10% 20%, rgba(255, 255, 255, 0.8) 0px, transparent 50%),
@@ -63,12 +70,12 @@
       z-index: -1;
     }
 
-    /* 1. TOP BAR (topbar) - Size aur Color same rakhe gaye hain */
+    /* 1. TOP BAR (topbar) */
     .topbar {
       background: #1e603f !important;
       color: #ffffff !important;
-      padding: 10px 0 !important; /* Padding kam kiya gaya hai taake size theek rahe */
-      font-size: 14px; /* Font size kam kiya gaya hai */
+      padding: 10px 0 !important; 
+      font-size: 14px; 
       display: flex;
       justify-content: center;
       align-items: center;
@@ -80,7 +87,7 @@
       justify-content: space-between;
       align-items: center;
       max-width: 1200px;
-      width: 95%; /* Mobile ke liye behtar */
+      width: 95%; 
       margin: 0 auto;
     }
 
@@ -107,7 +114,7 @@
       text-decoration: underline;
     }
 
-    /* 2. HEADER (Logo aur Title) - Size aur Position theek ki gayi hai */
+    /* 2. HEADER (Logo aur Title) */
     header {
       background: #fff;
       color: #00472D;
@@ -117,7 +124,7 @@
     }
 
     header img { 
-      max-height: 90px; /* Max height theek kiya gaya hai */
+      max-height: 90px;
       width: auto; 
     }
     header h1 { 
@@ -125,12 +132,12 @@
       font-size: 26px; 
     }
 
-    /* 3. NAVIGATION BAR (main-menu) - Consistency ke liye behtareen CSS */
+    /* 3. NAVIGATION BAR (main-menu) */
     .main-menu {
       background-color: #192f59;
       width: 100%;
       z-index: 100;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Aik halka sa shadow dala gaya hai */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 
     .main-menu nav ul {
@@ -138,66 +145,54 @@
       margin: 0;
       padding: 0;
       display: flex;
-      justify-content: center; /* Links beech mein aayenge */
-      flex-wrap: wrap; /* Agar screen choti ho toh wrap ho jayenge */
+      justify-content: center; 
+      flex-wrap: wrap; 
     }
 
     .main-menu nav ul li a {
       display: block;
-      padding: 12px 15px; /* Size theek kiya gaya hai */
+      padding: 12px 15px; 
       color: #fff;
       text-decoration: none;
       text-transform: uppercase;
       font-weight: 600;
-      font-size: 15px; /* Font size theek kiya gaya hai */
+      font-size: 15px; 
       transition: background-color 0.2s;
     }
 
     .main-menu nav ul li a:hover {
-      background-color: #2b3f77; /* Hover color theek kiya gaya hai */
+      background-color: #2b3f77; 
     }
 
-    /* Content Area */
+    /* Book Section Container (Books page ka original styling) */
     .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      max-width: 1100px;
-      width: 90%;
+      max-width: 700px;
       margin: 40px auto;
       padding: 20px;
-    }
-
-    .card {
-      /* Card styling wahi rakhi gayi hai */
-      background: white;
+      background: #ffffff;
       border: 1px solid #cce3cc;
       border-radius: 15px;
-      padding: 30px;
-      text-align: center;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-      transition: all 0.3s ease;
-      cursor: pointer;
+      text-align: center;
     }
 
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    }
-
-    .icon {
-      font-size: 45px;
-      background: #d4f7d4;
+    .file-list a {
+      display: block;
+      padding: 12px;
+      background: #e8f5e9;
+      margin: 10px 0;
+      text-decoration: none;
       color: #00472D;
-      border-radius: 50%;
-      display: inline-block;
-      padding: 20px;
-      margin-bottom: 15px;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: 0.2s;
     }
 
-    .card h3 { font-size: 18px; color: #00472D; margin: 10px 0; }
-    .card p { font-size: 14px; color: #444; }
+    .file-list a:hover {
+      background: #c8e6c9;
+    }
 
+    /* Footer - index.html se */
     footer {
       background: #00472D;
       color: white;
@@ -209,12 +204,11 @@
 
     .thanks { margin-top: 10px; font-weight: 600; }
 
-
-    /* ================= Responsive Fixes for Mobile/Tablet ================= */
+    /* ================= Responsive Fixes for Mobile/Tablet (index.html se) ================= */
     @media only screen and (max-width: 768px) {
       body { overflow-x: hidden; }
 
-      .topbar { padding: 8px 0 !important; } /* Mobile par Topbar size kam kiya */
+      .topbar { padding: 8px 0 !important; } 
       .topbar .container {
         flex-direction: column;
         text-align: center;
@@ -226,7 +220,7 @@
       header img { max-height: 60px; }
       header h1 { font-size: 18px; padding: 0 8px; }
 
-      /* Mobile Navigation - Vertical Buttons banaye gaye hain */
+      /* Mobile Navigation - Vertical Buttons */
       .main-menu nav ul {
         flex-direction: column;
         align-items: center;
@@ -241,7 +235,7 @@
       .main-menu nav ul li a {
         width: 100%;
         text-align: center;
-        background: #2b3f77; /* Mobile button background */
+        background: #2b3f77; 
         padding: 12px 0;
         border-radius: 6px;
         font-size: 14px;
@@ -251,14 +245,13 @@
         background: #395294;
       }
 
+      /* Container for Books page is 700px, so 95% width is safe */
       .container {
-        grid-template-columns: 1fr;
         width: 95%;
-        padding: 10px;
+        padding: 15px;
         gap: 15px;
       }
-
-      .card { padding: 18px; font-size: 14px; }
+      .card { padding: 18px; font-size: 14px; } /* card styles books page par laazmi nahi */
       footer { font-size: 12px; line-height: 1.5; padding: 10px; }
     }
 
@@ -273,16 +266,17 @@
         font-size: 14px;
       }
 
+      /* Container for Books page is 700px, so 90% width is fine */
       .container {
-        grid-template-columns: repeat(2, 1fr);
         width: 90%;
-        padding: 15px;
-        gap: 20px;
+        padding: 20px;
       }
-
-      .card { padding: 22px; }
+      .card { padding: 22px; } /* card styles books page par laazmi nahi */
       footer { font-size: 13px; }
     }
+    /* -------------------------------------------------------- */
+    /* ✅ INDEX.HTML SE COPY KIYA GAYA CSS (END) */
+    /* -------------------------------------------------------- */
   </style>
 </head>
 
@@ -324,35 +318,11 @@
     </nav>
   </div>
   <div class="container">
-    <div class="card" onclick="location.href='books.html'">
-      <div class="icon">📚</div>
-      <h3>Books</h3>
-      <p>Download Urdu Key Books</p>
-    </div>
-    <div class="card" onclick="location.href='lesson-plan.html'">
-      <div class="icon">📄</div>
-      <h3>Lesson Plan (8608/6997)</h3>
-      <p>Download Lesson Plan Samples</p>
-    </div>
-    <div class="card" onclick="location.href='teaching-practice.html'">
-      <div class="icon">👩🏫</div>
-      <h3>Teaching Practice (8607/6996)</h3>
-      <p>Download Teaching Practical Samples</p>
-    </div>
-    <div class="card" onclick="location.href='research-project.html'">
-      <div class="icon">🔍</div>
-      <h3>Research Project (8613)</h3>
-      <p>Download Research Projects Samples</p>
-    </div>
-    <div class="card" onclick="location.href='past-papers.html'">
-      <div class="icon">📝</div>
-      <h3>Past Papers</h3>
-      <p>Download Previous Years Past Papers</p>
-    </div>
-    <div class="card" onclick="location.href='calculator.html'">
-      <div class="icon">🧮</div>
-      <h3>Result & CGPA Calculator</h3>
-      <p>Calculate your AIOU marks & CGPA easily</p>
+    <h2>📚 Available Books</h2>
+    <div class="file-list">
+      <a href="https://drive.google.com/drive/folders/1VRGkEMo-GXhBSRVfgXjXjgYk6kE_6p06?usp=drive_link" target="_blank">
+        📘 Click Here to View & Download All Books
+      </a>
     </div>
   </div>
 
@@ -363,7 +333,6 @@
   </footer>
 
   <script>
-    // Console aur Right-Click Disable karne wala code wahi rakha gaya hai
     document.addEventListener('contextmenu', e => e.preventDefault());
     document.onkeydown = function(e) {
       if (e.keyCode == 123) return false;
