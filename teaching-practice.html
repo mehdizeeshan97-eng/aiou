@@ -138,7 +138,7 @@
     .main-menu nav ul li { position: relative; }
     .main-menu nav ul li a {
       display: block;
-      padding: 16px 20px;
+      padding: 12px 20px;
       color: #fff;
       text-decoration: none;
       text-transform: uppercase;
@@ -288,11 +288,11 @@
 
   <!-- ⚪ Header -->
   <header class="header">
-    <img src="aiou-logo.png" alt="AIOU Logo" class="logo">
+    <img src="images/aiou-logo.png" alt="AIOU Logo" class="logo">
     <h1>Allama Iqbal Open University</h1>
   </header>
 
-<!-- 🔵 Simple Responsive Navigation -->
+<!-- 🔵 Main Menu Bar -->
 <div class="main-menu">
   <nav>
     <ul>
@@ -308,11 +308,9 @@
 </div>
 
 <style>
-/* ✅ FINAL FIXED NAVIGATION BAR CSS */
+/* 🔵 Universal Navigation Bar (Simple + Responsive) */
 .main-menu {
-  background-color: #192f59;
-  width: 100%;
-  z-index: 100;
+  background: #192f59;
 }
 
 .main-menu nav ul {
@@ -331,51 +329,44 @@
 
 .main-menu nav ul li a {
   display: block;
-  padding: 12px 22px;
+  padding: 12px 18px;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 14px;
-  border-radius: 6px;
-  transition: 0.3s;
+  transition: background 0.3s;
+  border-radius: 5px;
 }
 
 .main-menu nav ul li a:hover {
-  background-color: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
 }
 
-/* 📱 Mobile (Vertical Buttons) */
+/* 📱 Mobile View (Vertical Layout) */
 @media (max-width: 768px) {
   .main-menu nav ul {
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    justify-content: center;
   }
 
   .main-menu nav ul li {
     width: 90%;
-    margin: 4px 0;
   }
 
   .main-menu nav ul li a {
     width: 100%;
     text-align: center;
     background: #223b77;
+    margin: 4px 0;
     padding: 14px 0;
     border-radius: 10px;
     font-size: 15px;
   }
 
   .main-menu nav ul li a:hover {
-    background: #2d4b93;
-  }
-}
-
-/* 💻 Desktop (Horizontal Menu in One Line) */
-@media (min-width: 769px) {
-  .main-menu nav ul {
-    flex-direction: row;
+    background: #2c4a8d;
   }
 }
 </style>
@@ -416,10 +407,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
