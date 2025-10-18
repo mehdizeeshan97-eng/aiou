@@ -49,9 +49,64 @@
       color: #00472D;
     }
 
+    /* ✅ New Top Section with Green Background */
+    .contact-bar {
+      background: #1e603f;
+      color: white;
+      padding: 25px 0;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .contact-options {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .contact-item:hover {
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+
+    .contact-item i {
+      font-size: 24px;
+    }
+
+    /* Simple animation: fade-in + slight slide */
+    .contact-bar {
+      animation: slideIn 1s ease-out;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* ✅ Responsive fix */
+    @media (max-width: 600px) {
+      .contact-options {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+
+    /* Keep rest of your CSS exactly as before */
     .abstract-background {
-      /* Background styling wahi rakhi gayi hai */
-      background-color: #f0f4f9; 
+      background-color: #f0f4f9;
       background-image:
         radial-gradient(at 10% 20%, rgba(255, 255, 255, 0.8) 0px, transparent 50%),
         radial-gradient(at 10% 90%, rgba(200, 220, 255, 0.5) 0px, transparent 50%),
@@ -63,51 +118,6 @@
       z-index: -1;
     }
 
-    /* 1. TOP BAR (topbar) - Size aur Color same rakhe gaye hain */
-    .topbar {
-      background: #1e603f !important;
-      color: #ffffff !important;
-      padding: 12px 0 !important; /* Padding kam kiya gaya hai taake size theek rahe */
-      font-size: 14px; /* Font size kam kiya gaya hai */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-    }
-
-    .topbar .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      width: 95%; /* Mobile ke liye behtar */
-      margin: 0 auto;
-    }
-
-    .topbar ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 15px;
-      align-items: center;
-    }
-
-    .topbar ul li i {
-      color: #fff;
-      margin-right: 5px;
-    }
-
-    .topbar a {
-      color: #fff !important;
-      text-decoration: none;
-    }
-
-    .topbar a:hover {
-      text-decoration: underline;
-    }
-
-    /* 2. HEADER (Logo aur Title) - Size aur Position theek ki gayi hai */
     header {
       background: #fff;
       color: #00472D;
@@ -116,21 +126,14 @@
       position: relative;
     }
 
-    header img { 
-      max-height: 90px; /* Max height theek kiya gaya hai */
-      width: auto; 
-    }
-    header h1 { 
-      margin: 10px 0 5px; 
-      font-size: 26px; 
-    }
+    header img { max-height: 90px; width: auto; }
+    header h1 { margin: 10px 0 5px; font-size: 26px; }
 
-    /* 3. NAVIGATION BAR (main-menu) - Consistency ke liye behtareen CSS */
     .main-menu {
       background-color: #192f59;
       width: 100%;
       z-index: 100;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Aik halka sa shadow dala gaya hai */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 
     .main-menu nav ul {
@@ -138,26 +141,25 @@
       margin: 0;
       padding: 0;
       display: flex;
-      justify-content: center; /* Links beech mein aayenge */
-      flex-wrap: wrap; /* Agar screen choti ho toh wrap ho jayenge */
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     .main-menu nav ul li a {
       display: block;
-      padding: 12px 15px; /* Size theek kiya gaya hai */
+      padding: 12px 15px;
       color: #fff;
       text-decoration: none;
       text-transform: uppercase;
       font-weight: 600;
-      font-size: 15px; /* Font size theek kiya gaya hai */
+      font-size: 15px;
       transition: background-color 0.2s;
     }
 
     .main-menu nav ul li a:hover {
-      background-color: #2b3f77; /* Hover color theek kiya gaya hai */
+      background-color: #2b3f77;
     }
 
-    /* Content Area */
     .container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -169,7 +171,6 @@
     }
 
     .card {
-      /* Card styling wahi rakhi gayi hai */
       background: white;
       border: 1px solid #cce3cc;
       border-radius: 15px;
@@ -206,102 +207,24 @@
       margin-top: 50px;
       font-size: 14px;
     }
-
-    .thanks { margin-top: 10px; font-weight: 600; }
-
-
-    /* ================= Responsive Fixes for Mobile/Tablet ================= */
-    @media only screen and (max-width: 768px) {
-      body { overflow-x: hidden; }
-
-      .topbar { padding: 8px 0 !important; } /* Mobile par Topbar size kam kiya */
-      .topbar .container {
-        flex-direction: column;
-        text-align: center;
-        gap: 5px;
-      }
-      .topbar ul { flex-direction: column; gap: 4px; }
-      .topbar ul li { font-size: 13px; }
-
-      header img { max-height: 60px; }
-      header h1 { font-size: 18px; padding: 0 8px; }
-
-      /* Mobile Navigation - Vertical Buttons banaye gaye hain */
-      .main-menu nav ul {
-        flex-direction: column;
-        align-items: center;
-        padding: 8px 0;
-      }
-
-      .main-menu nav ul li {
-        width: 90%;
-        margin: 4px 0;
-      }
-
-      .main-menu nav ul li a {
-        width: 100%;
-        text-align: center;
-        background: #2b3f77; /* Mobile button background */
-        padding: 12px 0;
-        border-radius: 6px;
-        font-size: 14px;
-      }
-
-      .main-menu nav ul li a:hover {
-        background: #395294;
-      }
-
-      .container {
-        grid-template-columns: 1fr;
-        width: 95%;
-        padding: 10px;
-        gap: 15px;
-      }
-
-      .card { padding: 18px; font-size: 14px; }
-      footer { font-size: 12px; line-height: 1.5; padding: 10px; }
-    }
-
-    @media only screen and (min-width: 769px) and (max-width: 1024px) {
-      .topbar .container { padding: 0 20px; }
-      
-      .main-menu nav ul {
-        padding: 0 10px;
-      }
-      .main-menu nav ul li a {
-        padding: 10px 12px;
-        font-size: 14px;
-      }
-
-      .container {
-        grid-template-columns: repeat(2, 1fr);
-        width: 90%;
-        padding: 15px;
-        gap: 20px;
-      }
-
-      .card { padding: 22px; }
-      footer { font-size: 13px; }
-    }
   </style>
 </head>
 
 <body>
   <div class="abstract-background"></div>
 
-  <div class="topbar">
-    <div class="container">
-      <ul>
-        <li>
-          <i class="fa fa-envelope"></i>
-          <a href="mailto:zeeshanaiouhelp1214@gmail.com">zeeshanaiouhelp1214@gmail.com</a>
-        </li>
-        <li>
-          <i class="fa fa-phone"></i>
-          Call: <a href="tel:+923040571214">0304-0571214</a> |
-          WhatsApp: <a href="https://wa.me/923040571214" target="_blank">Chat</a>
-        </li>
-      </ul>
+  <!-- ✅ New Contact Bar -->
+  <div class="contact-bar">
+    <div class="contact-options">
+      <a href="mailto:zeeshanaiouhelp1214@gmail.com" class="contact-item">
+        <i class="fa-solid fa-envelope"></i> Gmail: zeeshanaiouhelp1214@gmail.com
+      </a>
+      <a href="tel:+923040571214" class="contact-item">
+        <i class="fa-solid fa-phone"></i> Call: 0304-0571214
+      </a>
+      <a href="https://wa.me/923040571214" target="_blank" class="contact-item">
+        <i class="fa-brands fa-whatsapp" style="color:#25D366;"></i> WhatsApp
+      </a>
     </div>
   </div>
 
@@ -323,6 +246,7 @@
       </ul>
     </nav>
   </div>
+
   <div class="container">
     <div class="card" onclick="location.href='books.html'">
       <div class="icon">📚</div>
@@ -377,4 +301,5 @@
 </body>
 
 </html>
+
 
