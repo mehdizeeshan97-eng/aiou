@@ -3,297 +3,212 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIOU Resources | Home</title>
 
-  <!-- ✅ Primary SEO -->
-  <title>AIOU Past Papers Resources | Download Allama Iqbal Open University Old Papers PDF</title>
-  <meta name="description" content="Download AIOU Past Papers (PDF) for all programs and subjects. Access solved and unsolved papers of Allama Iqbal Open University from one trusted platform.">
-  <meta name="keywords" content="AIOU past papers, AIOU previous exams, AIOU solved papers, AIOU old papers, AIOU BA past papers, AIOU B.Ed past papers, AIOU help resources">
+  <meta name="description" content="Access AIOU books, lesson plans, teaching practice guides, research projects, past papers and a result calculator — all in one place." />
+  <meta name="keywords" content="AIOU, AIOU Resources, Allama Iqbal Open University, AIOU books, AIOU lesson plan, AIOU teaching practice, AIOU research project, AIOU past papers, AIOU result calculator, AIOU CGPA" />
+  <meta name="author" content="Zeeshan | AIOU Help" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://aiou-help.github.io/index.html" />
+  <link rel="icon" type="image/png" href="images/aiou-logo.png" />
 
-  <!-- ✅ Robots & Canonical -->
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://aiouhelp.github.io/past-papers.html">
+  <meta property="og:title" content="AIOU Resources | Allama Iqbal Open University Help Portal" />
+  <meta property="og:description" content="Get access to AIOU books, lesson plans, research projects, past papers and result calculator easily." />
+  <meta property="og:image" content="https://aiou-help.github.io/images/aiou-logo.png" />
+  <meta property="og:url" content="https://aiou-help.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_PK" />
 
-  <!-- ✅ Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="AIOU Past Papers Resources">
-  <meta property="og:description" content="Access and download AIOU Past Papers (PDF) for all levels in one place.">
-  <meta property="og:url" content="https://aiouhelp.github.io/past-papers.html">
-  <meta property="og:image" content="https://aiouhelp.github.io/images/aiou-logo.png">
-  <meta property="og:site_name" content="AIOU Help Resources">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AIOU Resources | AIOU Help Portal" />
+  <meta name="twitter:description" content="Access AIOU books, lesson plans, past papers, research projects and calculator at one place." />
+  <meta name="twitter:image" content="https://aiou-help.github.io/images/aiou-logo.png" />
 
-  <!-- ✅ Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AIOU Past Papers Resources">
-  <meta name="twitter:description" content="Get AIOU Past Papers (PDF) for all subjects — B.Ed, B.A, M.Ed, and more.">
-  <meta name="twitter:image" content="https://aiouhelp.github.io/images/aiou-logo.png">
-
-  <!-- ✅ Favicon -->
-  <link rel="icon" href="https://aiouhelp.github.io/images/aiou-favicon.png" type="image/png">
-
-  <!-- ✅ Structured Data for Google -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "AIOU Past Papers Resources",
-    "url": "https://aiouhelp.github.io/past-papers.html",
-    "description": "Download AIOU Past Papers (PDF) for all programs and subjects. Access solved and unsolved past papers from Allama Iqbal Open University.",
+    "@type": "WebSite",
+    "name": "AIOU Resources",
+    "url": "https://aiou-help.github.io/",
+    "author": {
+      "@type": "Person",
+      "name": "Zeeshan"
+    },
+    "description": "AIOU Resources portal provides books, lesson plans, teaching practice guides, research projects, past papers and result calculators.",
     "publisher": {
       "@type": "Organization",
-      "name": "AIOU Help Resources",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://aiouhelp.github.io/images/aiou-logo.png"
-      }
+      "name": "AIOU Help"
     }
   }
   </script>
 
-  <!-- ✅ Fonts and Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- ✅ Original Design (Unchanged) + Responsive CSS -->
   <style>
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      color: #222;
+      color: #00472D;
+    }
+
+    .contact-bar {
+      background: #1e603f;
+      color: white;
+      padding: 25px 0;
+      text-align: center;
+      overflow: hidden;
       position: relative;
-      z-index: 0;
+    }
+    .contact-options {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .contact-item:hover { transform: scale(1.1); opacity: 0.9; }
+    .contact-item i { font-size: 24px; }
+
+    @keyframes slideIn {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .contact-bar { animation: slideIn 1s ease-out; }
+
+    @media (max-width: 600px) {
+      .contact-options { flex-direction: column; gap: 15px; }
     }
 
     .abstract-background {
-      background-color: #f0f4f9; 
+      background-color: #f0f4f9;
       background-image:
         radial-gradient(at 10% 20%, rgba(255, 255, 255, 0.8) 0px, transparent 50%),
         radial-gradient(at 10% 90%, rgba(200, 220, 255, 0.5) 0px, transparent 50%),
         radial-gradient(at 90% 40%, rgba(240, 220, 255, 0.6) 0px, transparent 50%),
         radial-gradient(at 70% 80%, rgba(230, 240, 250, 0.7) 0px, transparent 50%);
-      backdrop-filter: blur(100px);
-      -webkit-backdrop-filter: blur(100px);
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
       z-index: -1;
     }
 
-    .topbar {
-      background-color: #1e603f;
-      color: #ffffff;
-      padding: 25px 0;
-      font-size: 15px;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      z-index: 1000;
-      margin: 0;
-      border: none;
-      box-shadow: none;
-    }
-    .topbar::before, 
-    .topbar::after {
-      content: none !important;
-      background: none !important;
-      box-shadow: none !important;
-      border: none !important;
-    }
-    .topbar * {
-      background: transparent !important;
-      box-shadow: none !important;
-      border: none !important;
-    }
-    .topbar .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    .topbar ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 15px;
-      align-items: center;
-    }
-    .topbar a {
-      color: #ffffff;
-      text-decoration: none;
-    }
-    .topbar a:hover {
-      text-decoration: underline;
-    }
-
-    header.header-default .header-main {
-      background: #fff;
-      padding: 8px 0;
-      border-bottom: 1px solid #ddd;
-    }
-    .header-main .container {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 20px;
-    }
-    .site-branding-logo img {
-      max-height: 80px;
-      width: auto;
-    }
-    .header-info ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    .header-info ul li {
-      font-size: 14px;
-      margin-bottom: 3px;
-    }
-    .header-info ul li span {
-      color: #00472D;
-      font-weight: 600;
-    }
+    header { background: #fff; color: #00472D; text-align: center; padding: 20px 10px; }
+    header img { max-height: 90px; width: auto; }
+    header h1 { margin: 10px 0 5px; font-size: 26px; }
 
     .main-menu {
-      background: #192f59;
+      background-color: #192f59;
+      width: 100%;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
-    .main-menu .container {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
+    .main-menu nav ul {
+      list-style: none; margin: 0; padding: 0;
+      display: flex; justify-content: center; flex-wrap: wrap;
     }
-    nav a {
+    .main-menu nav ul li a {
+      display: block; padding: 12px 15px;
+      color: #fff; text-decoration: none;
+      text-transform: uppercase; font-weight: 600; font-size: 15px;
+      transition: background-color 0.2s;
+    }
+    .main-menu nav ul li a:hover { background-color: #2b3f77; }
+
+    /* ✅ Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0,70,45,0.6), rgba(0,70,45,0.6)), url('images/aiou-campus.jpg') center/cover no-repeat;
       color: white;
-      margin: 0 12px;
-      text-decoration: none;
-      font-weight: 600;
-      text-transform: uppercase;
-      font-size: 13px;
-      position: relative;
+      text-align: center;
+      padding: 100px 20px;
+      animation: fadeIn 1.5s ease-in-out;
     }
-    nav a:hover {
-      text-decoration: underline;
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+    .hero h2 { font-size: 36px; margin-bottom: 15px; }
+    .hero p { font-size: 18px; margin-bottom: 25px; }
+    .hero button {
+      background: #ffd700; color: #00472D; border: none;
+      padding: 12px 25px; font-size: 16px;
+      border-radius: 30px; cursor: pointer; font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .hero button:hover { background: #fff; transform: scale(1.05); }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      width: 90%;
+      margin: 40px auto;
+      padding: 20px;
     }
 
-    h1 {
+    .card {
+      background: white;
+      border: 1px solid #cce3cc;
+      border-radius: 15px;
+      padding: 30px;
       text-align: center;
-      color: #00472D;
-      margin-top: 20px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      cursor: pointer;
     }
-    .container.content {
-      max-width: 700px;
-      margin: 20px auto;
+    .card:hover { transform: translateY(-6px); box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); }
+    .icon {
+      font-size: 45px;
+      background: #d4f7d4;
+      color: #00472D;
+      border-radius: 50%;
+      display: inline-block;
       padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      margin-bottom: 15px;
+    }
+
+    /* ✅ About Section */
+    .about {
+      background: #f8fdf8;
+      padding: 60px 20px;
       text-align: center;
-      background: #fff;
-      position: relative;
-      z-index: 1;
     }
-    .file-list a {
-      display: block;
-      padding: 12px;
-      background: #e8f5e9;
-      margin: 10px 0;
-      text-decoration: none;
-      color: #00472D;
-      border-radius: 5px;
-      font-weight: 500;
-      transition: 0.2s;
+    .about img { width: 120px; border-radius: 50%; margin-bottom: 15px; }
+    .about h3 { font-size: 24px; color: #00472D; margin-bottom: 10px; }
+    .about p { font-size: 16px; max-width: 700px; margin: 0 auto; color: #333; }
+
+    /* ✅ Testimonials Carousel */
+    .testimonials {
+      background: #e9f6ef;
+      padding: 60px 20px;
+      text-align: center;
     }
-    .file-list a:hover {
-      background: #c8e6c9;
+    .testimonials h3 { font-size: 24px; color: #00472D; margin-bottom: 25px; }
+    .testimonial {
+      display: none;
+      max-width: 600px;
+      margin: 0 auto;
+      font-style: italic;
+      color: #333;
+      transition: opacity 0.5s ease;
     }
+    .testimonial.active { display: block; opacity: 1; }
 
     footer {
-      text-align: center;
-      padding: 10px;
       background: #00472D;
       color: white;
-      margin-top: 40px;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* ================= Mobile + Tablet Responsive CSS ================= */
-    /* Mobile Devices (≤768px) */
-    @media (max-width: 768px) {
-      header.header {
-        padding: 15px;
-      }
-      .header h1 {
-        font-size: 20px;
-        text-align: center;
-      }
-      .logo {
-        width: 100px;
-        margin-bottom: 8px;
-      }
-      .main-menu .container {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      nav a {
-        margin: 4px;
-        padding: 8px 12px;
-        font-size: 13px;
-      }
-      .container.content {
-        width: 95%;
-        padding: 15px;
-      }
-      .file-list a {
-        font-size: 14px;
-        padding: 10px;
-      }
-      footer {
-        font-size: 13px;
-        padding: 8px;
-      }
-    }
-
-    /* Tablets (769px – 1024px) */
-    @media (min-width: 769px) and (max-width: 1024px) {
-      header.header {
-        padding: 18px;
-      }
-      .header h1 {
-        font-size: 22px;
-      }
-      .logo {
-        width: 110px;
-      }
-      nav a {
-        margin: 6px;
-        padding: 10px 15px;
-        font-size: 14px;
-      }
-      .container.content {
-        width: 90%;
-        padding: 18px;
-      }
-      .file-list a {
-        font-size: 15px;
-        padding: 11px;
-      }
-      footer {
-        font-size: 14px;
-        padding: 10px;
-      }
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -301,137 +216,62 @@
 <body>
   <div class="abstract-background"></div>
 
-  <div class="topbar">
-    <div class="container">
-      <ul></ul>
-      <div>
-        <a href="#" style="color:white;margin:0 5px;"></a>
-        <a href="#" style="color:white;margin:0 5px;"></a>
-        <a href="#" style="color:white;margin:0 5px;"></a>
-      </div>
-    </div>
-  </div>
-
-  <header class="header">
-    <img src="aiou-logo.png" alt="AIOU Logo" class="logo">
-    <h1>Allama Iqbal Open University</h1>
-  </header>
-
-  <style>
-    .header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      background-color: #f8f8f8;
-    }
-    .logo {
-      width: 120px;
-      height: auto;
-      margin-bottom: 10px;
-    }
-    .header h1 {
-      font-size: 24px;
-      margin: 0;
-    }
-  </style>
-
-<!-- 🔵 Main Menu Bar -->
-<div class="main-menu">
-  <nav>
-    <ul>
-      <li><a href="./index.html">Home</a></li>
-      <li><a href="./books.html">Books</a></li>
-      <li><a href="./lesson-plan.html">Lesson Plan</a></li>
-      <li><a href="./teaching-practice.html">Teaching Practice</a></li>
-      <li><a href="./research-project.html">Research Project</a></li>
-      <li><a href="./past-papers.html">Past Papers</a></li>
-      <li><a href="./calculator.html">Calculator</a></li>
-    </ul>
-  </nav>
-</div>
-
-<style>
-/* 🔵 Universal Navigation Bar (Simple + Responsive) */
-.main-menu {
-  background: #192f59;
-}
-
-.main-menu nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.main-menu nav ul li {
-  margin: 0;
-}
-
-.main-menu nav ul li a {
-  display: block;
-  padding: 12px 18px;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 14px;
-  transition: background 0.3s;
-  border-radius: 5px;
-}
-
-.main-menu nav ul li a:hover {
-  background: rgba(255, 255, 255, 0.15);
-}
-
-/* 📱 Mobile View (Vertical Layout) */
-@media (max-width: 768px) {
-  .main-menu nav ul {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .main-menu nav ul li {
-    width: 90%;
-  }
-
-  .main-menu nav ul li a {
-    width: 100%;
-    text-align: center;
-    background: #223b77;
-    margin: 4px 0;
-    padding: 14px 0;
-    border-radius: 10px;
-    font-size: 15px;
-  }
-
-  .main-menu nav ul li a:hover {
-    background: #2c4a8d;
-  }
-}
-</style>
-
-  <h1>AIOU Past Papers Resources</h1>
-  <div class="container content">
-    <h3>Available Past Papers</h3>
-    <div class="file-list">
-      <a href="https://drive.google.com/drive/folders/1djp6YPDmDlwBTQI7vvEHE3KirEVaCAWI?usp=drive_link" target="_blank" rel="noopener">
-        📂 Click Here to View & Download Past Papers
+  <div class="contact-bar">
+    <div class="contact-options">
+      <a href="mailto:zeeshanaiouhelp1214@gmail.com" class="contact-item">
+        <i class="fa-solid fa-envelope"></i> Gmail: zeeshanaiouhelp1214@gmail.com
+      </a>
+      <a href="tel:+923040571214" class="contact-item">
+        <i class="fa-solid fa-phone"></i> Call: 0304-0571214
+      </a>
+      <a href="https://wa.me/923040571214" target="_blank" class="contact-item">
+        <i class="fa-brands fa-whatsapp" style="color:#25D366;"></i> WhatsApp
       </a>
     </div>
   </div>
 
+  <header>
+    <img src="aiou-logo.png" alt="AIOU Logo">
+    <h1>Allama Iqbal Open University Resources</h1>
+  </header>
+
+  <div class="main-menu">
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./books.html">Books</a></li>
+        <li><a href="./lesson-plan.html">Lesson Plan</a></li>
+        <li><a href="./teaching-practice.html">Teaching Practice</a></li>
+        <li><a href="./research-project.html">Research Project</a></li>
+        <li><a href="./past-papers.html">Past Papers</a></li>
+        <li><a href="./calculator.html">Calculator</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- ✅ HERO SECTION -->
+  <section class="hero">
+    <h2>Your Trusted Source for Allama Iqbal Open University Resources</h2>
+    <p>Access AIOU Past Papers Samples</p>
+  </section>
+    <!-- 📘 Past Papers Section -->
+  <div class="container">
+    <h2>📚 Available Past Papers</h2>
+    <div class="file-list">
+      <a href="https://drive.google.com/drive/folders/1djp6YPDmDlwBTQI7vvEHE3KirEVaCAWI?usp=drive_link" target="_blank">
+        📘 Click Here to Download Past Papers Files
+      </a>
+    </div>
+  </div>
+
+  <!-- ⚫ Footer -->
   <footer>
     Developed by Zeeshan (AIOU Help) | Contact: 0304-0571214<br>
     © 2025 Allama Iqbal Open University
-    <div class="thanks">Thanks To Visiting Zeeshan AIOU Help</div>
+    <div class="thanks">Thanks For Visiting Zeeshan AIOU Help</div>
   </footer>
 
+  <!-- 🔒 Protection Script -->
   <script>
     document.addEventListener('contextmenu', e => e.preventDefault());
     document.addEventListener('selectstart', e => e.preventDefault());
@@ -442,11 +282,10 @@
       if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
       if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
     };
-    document.addEventListener('copy', (e) => {
+    document.addEventListener('copy', e => {
       e.preventDefault();
       alert("Copying content is disabled on this website.");
     });
   </script>
 </body>
 </html>
-
