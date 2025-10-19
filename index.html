@@ -185,22 +185,66 @@
     .about h3 { font-size: 24px; color: #00472D; margin-bottom: 10px; }
     .about p { font-size: 16px; max-width: 700px; margin: 0 auto; color: #333; }
 
-    /* ✅ Testimonials Carousel */
-    .testimonials {
-      background: #e9f6ef;
-      padding: 60px 20px;
-      text-align: center;
+/* ✅ Compact WhatsApp Section Styling */
+.whatsapp-section {
+  padding: 30px 20px;      /* Reduced height */
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+.whatsapp-section h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #00472D;
+  font-weight: 600;
+}
+
+.whatsapp-section .testimonial {
+  padding: 12px 15px;
+  font-size: 15px;
+  background: #e7f7ec;
+  border-radius: 12px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  max-width: 600px;
+  border-left: 4px solid #25D366;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-section .testimonial:hover {
+  transform: scale(1.03);
+  background: #dff9e6;
+}
+
+.whatsapp-section i {
+  color: #25D366;
+  font-size: 18px;
+}
+
+.whatsapp-section a {
+  text-decoration: none;
+  color: #00472D;
+  font-weight: 600;
+}
+      
+      /* SLIDER LOGIC: Hide all by default */
+      display: none; 
+      opacity: 0;
+      transition: opacity 1s ease-in-out; /* Smooth transition */
+      min-height: 100px; /* Ensure a consistent height */
+      display: flex; /* Use flex to center content */
+      align-items: center;
+      justify-content: center;
     }
-    .testimonials h3 { font-size: 24px; color: #00472D; margin-bottom: 25px; }
-    .testimonial {
-      display: none;
-      max-width: 600px;
-      margin: 0 auto;
-      font-style: italic;
-      color: #333;
-      transition: opacity 0.5s ease;
+    .testimonial.active { 
+      /* Only show the active one */
+      display: flex; 
+      opacity: 1;
     }
-    .testimonial.active { display: block; opacity: 1; }
+    /* End Testimonials CSS */
 
     footer {
       background: #00472D;
@@ -249,14 +293,12 @@
     </nav>
   </div>
 
-  <!-- ✅ HERO SECTION -->
   <section class="hero">
     <h2>Your Trusted Source for Allama Iqbal Open University Resources</h2>
     <p>Access all AIOU study materials, books, lesson plans, teaching-practice, past-papers, research projects and calculator in one place.</p>
     <button onclick="document.getElementById('explore').scrollIntoView({behavior:'smooth'})">Get Started</button>
   </section>
 
-  <!-- ✅ 6-COLUMN SECTION -->
   <div id="explore" class="container">
     <div class="card" onclick="location.href='books.html'">
       <div class="icon">📚</div>
@@ -273,7 +315,7 @@
       <h3>Research Project (8613)</h3>
       <p>Download Research Projects Samples</p>
     </div>
-        <div class="card" onclick="location.href='teaching-practice.html'">
+    <div class="card" onclick="location.href='teaching-practice.html'">
       <div class="icon">🏫</div>
       <h3>Teaching Practice (8607/6996)</h3>
       <p>Download Teaching Practical Samples</p>
@@ -290,13 +332,39 @@
      </div>
   </div>
 
-  <!-- ✅ ABOUT SECTION -->
   <section class="about">
     <img src="aiou-logo.png" alt="AIOU Help Logo">
-    <h3>About Zeeshan AIOU Help</h3>
-    <p>Zeeshan AIOU Help is a dedicated online platform developed by Zeeshan Mehdi to provide Allama Iqbal Open University (AIOU) students with easy access to authentic study resources. From course books and lesson plans to teaching practice reports, research projects, and past papers — everything is available in one place to help students achieve academic success.</p>
+    <h3>About AIOU Help</h3>
+    <p>AIOU Help is an online platform created by Zeeshan to make Allama Iqbal Open University resources easily available for students. From books to teaching practice, we provide everything you need to succeed in your studies.</p>
   </section>
+<!-- ✅ WHATSAPP SECTION (Replacing Testimonials) -->
+<section class="testimonials whatsapp-section">
 
+  <h3>Join My Official WhatsApp Groups</h3>
+
+  <div class="testimonial active">
+    <i class="fa-brands fa-whatsapp"></i>
+    <a href="https://whatsapp.com/channel/0029VaPb3QyGOj9skzS3i22M" target="_blank">
+      Join <strong>Official WhatsApp Channel</strong> for Updates and AIOU Announcements
+    </a>
+  </div>
+
+  <div class="testimonial">
+    <i class="fa-brands fa-whatsapp"></i>
+    <a href="https://chat.whatsapp.com/FFIMwRF9fOK8JHy3gmT2Z2?mode=wwc" target="_blank">
+      Join <strong>Matric / FA / BA Students Group</strong> for AIOU Announcements
+    </a>
+  </div>
+
+  <div class="testimonial">
+    <i class="fa-brands fa-whatsapp"></i>
+    <a href="https://chat.whatsapp.com/JDOurklerVU1M2EMJZv4u7?mode=wwc" target="_blank">
+      Join <strong>BS / B.Ed / BBA to Master Programs Group</strong> for AIOU Announcements
+    </a>
+  </div>
+
+</section>
+  
   <footer>
     Developed by Zeeshan (AIOU Help) | Contact: 0304-0571214<br>
     © 2025 Allama Iqbal Open University
@@ -304,7 +372,7 @@
   </footer>
 
   <script>
-    // Disable Console + Copy Protection
+    // Disable Console + Copy Protection (Your existing code)
     document.addEventListener('contextmenu', e => e.preventDefault());
     document.onkeydown = function(e) {
       if (e.keyCode == 123) return false;
@@ -314,15 +382,24 @@
     document.addEventListener('copy', e => e.preventDefault());
     document.addEventListener('selectstart', e => e.preventDefault());
 
-    // Testimonials Auto Slide
+    // Testimonials Auto Slide (New Logic Added Here)
     let tIndex = 0;
     const testimonials = document.querySelectorAll('.testimonial');
-    setInterval(() => {
-      testimonials[tIndex].classList.remove('active');
-      tIndex = (tIndex + 1) % testimonials.length;
-      testimonials[tIndex].classList.add('active');
-    }, 4000);
+    
+    // Check if there are testimonials to prevent error
+    if (testimonials.length > 0) {
+      // Start the rotation: changes every 4 seconds (4000ms)
+      setInterval(() => {
+        // 1. Remove 'active' class from the current one
+        testimonials[tIndex].classList.remove('active');
+        
+        // 2. Calculate the index of the next testimonial (loops back to 0)
+        tIndex = (tIndex + 1) % testimonials.length;
+        
+        // 3. Add 'active' class to the next one to show it
+        testimonials[tIndex].classList.add('active');
+      }, 4000);
+    }
   </script>
 </body>
 </html>
-
