@@ -3,194 +3,205 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIOU Books Resources | Download All AIOU Subject Books (PDF)</title>
+  <title>AIOU Resources | Home</title>
 
-  <!-- ✅ Primary SEO Meta Tags -->
-  <meta name="description" content="Download all AIOU subject books (PDF) in one place. Access study materials for Allama Iqbal Open University easily.">
-  <meta name="keywords" content="AIOU books, AIOU pdf, AIOU study material, AIOU resources, Allama Iqbal Open University, AIOU books download, AIOU official pdf">
+  <meta name="description" content="Access AIOU books, lesson plans, teaching practice guides, research projects, past papers and a result calculator — all in one place." />
+  <meta name="keywords" content="AIOU, AIOU Resources, Allama Iqbal Open University, AIOU books, AIOU lesson plan, AIOU teaching practice, AIOU research project, AIOU past papers, AIOU result calculator, AIOU CGPA" />
+  <meta name="author" content="Zeeshan | AIOU Help" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://aiou-help.github.io/index.html" />
+  <link rel="icon" type="image/png" href="images/aiou-logo.png" />
 
-  <meta name="author" content="Zeeshan - AIOU Help">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://yourdomain.com/books.html" />
+  <meta property="og:title" content="AIOU Resources | Allama Iqbal Open University Help Portal" />
+  <meta property="og:description" content="Get access to AIOU books, lesson plans, research projects, past papers and result calculator easily." />
+  <meta property="og:image" content="https://aiou-help.github.io/images/aiou-logo.png" />
+  <meta property="og:url" content="https://aiou-help.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_PK" />
 
-  <!-- ✅ Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="AIOU Books Resources | Download AIOU Books (PDF)">
-  <meta property="og:description" content="Access and download AIOU books in PDF format. Free resources for Allama Iqbal Open University students.">
-  <meta property="og:url" content="https://yourdomain.com/books.html">
-  <meta property="og:image" content="https://yourdomain.com/images/aiou-preview.jpg">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AIOU Resources | AIOU Help Portal" />
+  <meta name="twitter:description" content="Access AIOU books, lesson plans, past papers, research projects and calculator at one place." />
+  <meta name="twitter:image" content="https://aiou-help.github.io/images/aiou-logo.png" />
 
-  <!-- ✅ Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AIOU Books Resources | Download AIOU Books (PDF)">
-  <meta name="twitter:description" content="Get all AIOU subject books in PDF format for free. Updated and categorized AIOU resources.">
-  <meta name="twitter:image" content="https://yourdomain.com/images/aiou-preview.jpg">
-
-  <!-- ✅ Favicon -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
-  <!-- ✅ Schema Markup (Structured Data) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "Allama Iqbal Open University",
-    "alternateName": "AIOU",
-    "url": "https://yourdomain.com/books.html",
-    "logo": "https://yourdomain.com/images/aiou-logo.png",
-    "sameAs": [
-      "https://www.facebook.com/AIOU",
-      "https://twitter.com/AIOU",
-      "https://www.youtube.com/@AIOU"
-    ],
-    "description": "Download Allama Iqbal Open University books and study resources in PDF format."
+    "@type": "WebSite",
+    "name": "AIOU Resources",
+    "url": "https://aiou-help.github.io/",
+    "author": {
+      "@type": "Person",
+      "name": "Zeeshan"
+    },
+    "description": "AIOU Resources portal provides books, lesson plans, teaching practice guides, research projects, past papers and result calculators.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "AIOU Help"
+    }
   }
   </script>
 
-  <!-- ✅ Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    /* ✅ General Reset */
-    html, body {
+    body {
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      font-family: 'Poppins', sans-serif;
       color: #00472D;
-      background: #f9f9f9;
-      overflow-x: hidden;
     }
 
-    /* 🟩 FIXED TOP BAR */
-    .topbar {
-      background-color: #1e603f;
-      color: #ffffff;
-      padding: 6px 0;
-      font-size: 14px;
-      width: 100%;
+    .contact-bar {
+      background: #1e603f;
+      color: white;
+      padding: 25px 0;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .contact-options {
       display: flex;
       justify-content: center;
+      gap: 50px;
       align-items: center;
-      position: relative;
-      z-index: 1000;
-      margin: 0;
-      border: none;
-      box-shadow: none;
+      flex-wrap: wrap;
     }
-
-    .topbar::before, 
-    .topbar::after {
-      content: none !important;
-      background: none !important;
-      box-shadow: none !important;
-      border: none !important;
-    }
-
-    .topbar * {
-      background: transparent !important;
-      box-shadow: none !important;
-      border: none !important;
-    }
-
-    .topbar .container {
+    .contact-item {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .topbar ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 15px;
-      align-items: center;
-    }
-
-    .topbar a {
-      color: #ffffff;
-      text-decoration: none;
-    }
-
-    .topbar a:hover {
-      text-decoration: underline;
-    }
-
-    /* ⚪ Header */
-    header {
-      background: #ffffff;
-      color: #00472D;
-      text-align: center;
-      padding: 20px 10px;
-      border: none;
-    }
-
-    header img {
-      max-height: 100px;
-      width: auto;
-      display: block;
-      margin: 0 auto;
-    }
-
-    header h1 {
-      margin: 10px 0 5px;
-      font-size: 26px;
-    }
-
-    /* 🔵 Main Menu Bar */
-    nav {
-      background: #192f59;
-      text-align: center;
-      padding: 12px;
-      margin: 0;
-    }
-
-    nav a {
+      gap: 10px;
       color: white;
       text-decoration: none;
-      margin: 0 12px;
-      font-weight: 600;
-      font-size: 15px;
-      text-transform: uppercase;
+      font-size: 18px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .contact-item:hover { transform: scale(1.1); opacity: 0.9; }
+    .contact-item i { font-size: 24px; }
+
+    @keyframes slideIn {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .contact-bar { animation: slideIn 1s ease-out; }
+
+    @media (max-width: 600px) {
+      .contact-options { flex-direction: column; gap: 15px; }
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .abstract-background {
+      background-color: #f0f4f9;
+      background-image:
+        radial-gradient(at 10% 20%, rgba(255, 255, 255, 0.8) 0px, transparent 50%),
+        radial-gradient(at 10% 90%, rgba(200, 220, 255, 0.5) 0px, transparent 50%),
+        radial-gradient(at 90% 40%, rgba(240, 220, 255, 0.6) 0px, transparent 50%),
+        radial-gradient(at 70% 80%, rgba(230, 240, 250, 0.7) 0px, transparent 50%);
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      z-index: -1;
     }
 
-    /* 📘 Book Section */
+    header { background: #fff; color: #00472D; text-align: center; padding: 20px 10px; }
+    header img { max-height: 90px; width: auto; }
+    header h1 { margin: 10px 0 5px; font-size: 26px; }
+
+    .main-menu {
+      background-color: #192f59;
+      width: 100%;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .main-menu nav ul {
+      list-style: none; margin: 0; padding: 0;
+      display: flex; justify-content: center; flex-wrap: wrap;
+    }
+    .main-menu nav ul li a {
+      display: block; padding: 12px 15px;
+      color: #fff; text-decoration: none;
+      text-transform: uppercase; font-weight: 600; font-size: 15px;
+      transition: background-color 0.2s;
+    }
+    .main-menu nav ul li a:hover { background-color: #2b3f77; }
+
+    /* ✅ Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0,70,45,0.6), rgba(0,70,45,0.6)), url('images/aiou-campus.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+    .hero h2 { font-size: 36px; margin-bottom: 15px; }
+    .hero p { font-size: 18px; margin-bottom: 25px; }
+    .hero button {
+      background: #ffd700; color: #00472D; border: none;
+      padding: 12px 25px; font-size: 16px;
+      border-radius: 30px; cursor: pointer; font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .hero button:hover { background: #fff; transform: scale(1.05); }
+
     .container {
-      max-width: 700px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      width: 90%;
       margin: 40px auto;
       padding: 20px;
-      background: #ffffff;
+    }
+
+    .card {
+      background: white;
       border: 1px solid #cce3cc;
       border-radius: 15px;
+      padding: 30px;
+      text-align: center;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); }
+    .icon {
+      font-size: 45px;
+      background: #d4f7d4;
+      color: #00472D;
+      border-radius: 50%;
+      display: inline-block;
+      padding: 20px;
+      margin-bottom: 15px;
+    }
+
+    /* ✅ About Section */
+    .about {
+      background: #f8fdf8;
+      padding: 60px 20px;
       text-align: center;
     }
+    .about img { width: 120px; border-radius: 50%; margin-bottom: 15px; }
+    .about h3 { font-size: 24px; color: #00472D; margin-bottom: 10px; }
+    .about p { font-size: 16px; max-width: 700px; margin: 0 auto; color: #333; }
 
-    .file-list a {
-      display: block;
-      padding: 12px;
-      background: #e8f5e9;
-      margin: 10px 0;
-      text-decoration: none;
-      color: #00472D;
-      border-radius: 8px;
-      font-weight: 500;
-      transition: 0.2s;
+    /* ✅ Testimonials Carousel */
+    .testimonials {
+      background: #e9f6ef;
+      padding: 60px 20px;
+      text-align: center;
     }
-
-    .file-list a:hover {
-      background: #c8e6c9;
+    .testimonials h3 { font-size: 24px; color: #00472D; margin-bottom: 25px; }
+    .testimonial {
+      display: none;
+      max-width: 600px;
+      margin: 0 auto;
+      font-style: italic;
+      color: #333;
+      transition: opacity 0.5s ease;
     }
+    .testimonial.active { display: block; opacity: 1; }
 
-    /* ⚫ Footer */
     footer {
       background: #00472D;
       color: white;
@@ -199,179 +210,51 @@
       margin-top: 50px;
       font-size: 14px;
     }
-
-    /* 📱 Responsive Design */
-    @media (max-width: 768px) {
-      /* Mobile Devices (≤768px) */
-@media (max-width: 768px) {
-  header h1 { font-size: 20px; }
-  header img { max-height: 80px; }
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-  }
-  nav a {
-    background: #2b3f77;
-    padding: 8px 12px;
-    border-radius: 5px;
-    margin: 4px;
-    font-size: 14px;
-  }
-
-  .container {
-    grid-template-columns: 1fr;
-    width: 95%;
-    gap: 20px;
-    padding: 15px;
-  }
-
-  .card { padding: 20px; }
-
-  footer { font-size: 13px; }
-}
-
-/* Tablets (769px – 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  header h1 { font-size: 24px; }
-  header img { max-height: 90px; }
-
-  nav a {
-    margin: 6px;
-    font-size: 15px;
-    padding: 10px 15px;
-  }
-
-  .container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    width: 90%;
-    padding: 20px;
-  }
-
-  .card { padding: 25px; }
-}
-      header h1 { font-size: 20px; }
-      nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-      }
-      nav a {
-        background: #2b3f77;
-        padding: 8px 12px;
-        border-radius: 5px;
-        margin: 4px;
-        font-size: 14px;
-      }
-      .container { width: 90%; }
-      footer { font-size: 13px; }
-    }
   </style>
 </head>
 
 <body>
-  <!-- 🟩 Top Bar -->
-  <div class="topbar">
-    <div class="container">
-      <ul></ul>
-      <div>
-        <a href="#" style="color:white;margin:0 5px;"></a>
-        <a href="#" style="color:white;margin:0 5px;"></a>
-        <a href="#" style="color:white;margin:0 5px;"></a>
-      </div>
+  <div class="abstract-background"></div>
+
+  <div class="contact-bar">
+    <div class="contact-options">
+      <a href="mailto:zeeshanaiouhelp1214@gmail.com" class="contact-item">
+        <i class="fa-solid fa-envelope"></i> Gmail: zeeshanaiouhelp1214@gmail.com
+      </a>
+      <a href="tel:+923040571214" class="contact-item">
+        <i class="fa-solid fa-phone"></i> Call: 0304-0571214
+      </a>
+      <a href="https://wa.me/923040571214" target="_blank" class="contact-item">
+        <i class="fa-brands fa-whatsapp" style="color:#25D366;"></i> WhatsApp
+      </a>
     </div>
   </div>
 
-  <!-- ⚪ Header -->
-  <header class="header">
-    <img src="aiou-logo.png" alt="AIOU Logo" class="logo">
-    <h1>Allama Iqbal Open University</h1>
+  <header>
+    <img src="aiou-logo.png" alt="AIOU Logo">
+    <h1>Allama Iqbal Open University Resources</h1>
   </header>
 
-<!-- 🔵 Main Menu Bar -->
-<div class="main-menu">
-  <nav>
-    <ul>
-      <li><a href="./index.html">Home</a></li>
-      <li><a href="./books.html">Books</a></li>
-      <li><a href="./lesson-plan.html">Lesson Plan</a></li>
-      <li><a href="./teaching-practice.html">Teaching Practice</a></li>
-      <li><a href="./research-project.html">Research Project</a></li>
-      <li><a href="./past-papers.html">Past Papers</a></li>
-      <li><a href="./calculator.html">Calculator</a></li>
-    </ul>
-  </nav>
-</div>
+  <div class="main-menu">
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./books.html">Books</a></li>
+        <li><a href="./lesson-plan.html">Lesson Plan</a></li>
+        <li><a href="./teaching-practice.html">Teaching Practice</a></li>
+        <li><a href="./research-project.html">Research Project</a></li>
+        <li><a href="./past-papers.html">Past Papers</a></li>
+        <li><a href="./calculator.html">Calculator</a></li>
+      </ul>
+    </nav>
+  </div>
 
-<style>
-/* 🔵 Universal Navigation Bar (Simple + Responsive) */
-.main-menu {
-  background: #192f59;
-}
-
-.main-menu nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.main-menu nav ul li {
-  margin: 0;
-}
-
-.main-menu nav ul li a {
-  display: block;
-  padding: 12px 18px;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 14px;
-  transition: background 0.3s;
-  border-radius: 5px;
-}
-
-.main-menu nav ul li a:hover {
-  background: rgba(255, 255, 255, 0.15);
-}
-
-/* 📱 Mobile View (Vertical Layout) */
-@media (max-width: 768px) {
-  .main-menu nav ul {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .main-menu nav ul li {
-    width: 90%;
-  }
-
-  .main-menu nav ul li a {
-    width: 100%;
-    text-align: center;
-    background: #223b77;
-    margin: 4px 0;
-    padding: 14px 0;
-    border-radius: 10px;
-    font-size: 15px;
-  }
-
-  .main-menu nav ul li a:hover {
-    background: #2c4a8d;
-  }
-}
-</style>
-
-  <!-- 📘 Book Section -->
+  <!-- ✅ HERO SECTION -->
+  <section class="hero">
+    <h2>Your Trusted Source for Allama Iqbal Open University Resources</h2>
+    <p>Access AIOU Urdu Key Books</p>
+  </section>
+    <!-- 📘 Book Section -->
   <div class="container">
     <h2>📚 Available Books</h2>
     <div class="file-list">
@@ -401,4 +284,3 @@
   </script>
 </body>
 </html>
-
