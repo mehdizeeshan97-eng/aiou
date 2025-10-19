@@ -3,24 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIOU Result Calculator</title>
-  <meta name="description" content="Free AIOU result calculator. Calculate your marks easily for Matric, FA, BA, BS, B.Ed, ADE, BBA students.">
-  <meta name="keywords" content="AIOU result calculator, Allama Iqbal Open University, AIOU marks calculator, online result calculator">
-  <meta name="author" content="Zeeshan">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-  <meta name="revisit-after" content="7 days">
-  <meta name="rating" content="General">
-  <meta property="og:title" content="AIOU Result Calculator | Allama Iqbal Open University">
-  <meta property="og:description" content="Calculate your AIOU result easily for Matric, FA, BA, BS, B.Ed, ADE, and BBA students. Simple, fast, and accurate result calculator.">
-  <meta property="og:image" content="https://yourwebsite.com/images/aiou-logo.png">
-  <meta property="og:url" content="https://yourwebsite.com/calculator.html">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AIOU Result Calculator | AIOU Help">
-  <meta name="twitter:description" content="Free AIOU Result Calculator. Calculate your marks easily.">
-  <meta name="twitter:image" content="https://yourwebsite.com/images/aiou-logo.png">
-  <link rel="canonical" href="https://yourwebsite.com/calculator.html">
-  <link rel="icon" type="image/png" href="https://yourwebsite.com/images/favicon.png">
+  <title>AIOU Resources | Home</title>
+
+  <meta name="description" content="Access AIOU books, lesson plans, teaching practice guides, research projects, past papers and a result calculator — all in one place." />
+  <meta name="keywords" content="AIOU, AIOU Resources, Allama Iqbal Open University, AIOU books, AIOU lesson plan, AIOU teaching practice, AIOU research project, AIOU past papers, AIOU result calculator, AIOU CGPA" />
+  <meta name="author" content="Zeeshan | AIOU Help" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://aiou-help.github.io/index.html" />
+  <link rel="icon" type="image/png" href="images/aiou-logo.png" />
+
+  <meta property="og:title" content="AIOU Resources | Allama Iqbal Open University Help Portal" />
+  <meta property="og:description" content="Get access to AIOU books, lesson plans, research projects, past papers and result calculator easily." />
+  <meta property="og:image" content="https://aiou-help.github.io/images/aiou-logo.png" />
+  <meta property="og:url" content="https://aiou-help.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_PK" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AIOU Resources | AIOU Help Portal" />
+  <meta name="twitter:description" content="Access AIOU books, lesson plans, past papers, research projects and calculator at one place." />
+  <meta name="twitter:image" content="https://aiou-help.github.io/images/aiou-logo.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AIOU Resources",
+    "url": "https://aiou-help.github.io/",
+    "author": {
+      "@type": "Person",
+      "name": "Zeeshan"
+    },
+    "description": "AIOU Resources portal provides books, lesson plans, teaching practice guides, research projects, past papers and result calculators.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "AIOU Help"
+    }
+  }
+  </script>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -30,176 +51,156 @@
       margin: 0;
       padding: 0;
       color: #00472D;
-      background-color: #f0f4f9;
-      overflow-x: hidden;
+    }
+
+    .contact-bar {
+      background: #1e603f;
+      color: white;
+      padding: 25px 0;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .contact-options {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .contact-item:hover { transform: scale(1.1); opacity: 0.9; }
+    .contact-item i { font-size: 24px; }
+
+    @keyframes slideIn {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .contact-bar { animation: slideIn 1s ease-out; }
+
+    @media (max-width: 600px) {
+      .contact-options { flex-direction: column; gap: 15px; }
     }
 
     .abstract-background {
-      background-color: #f0f4f9; 
+      background-color: #f0f4f9;
       background-image:
-        radial-gradient(at 10% 20%, rgba(255,255,255,0.8) 0px, transparent 50%),
-        radial-gradient(at 10% 90%, rgba(200,220,255,0.5) 0px, transparent 50%),
-        radial-gradient(at 90% 40%, rgba(240,220,255,0.6) 0px, transparent 50%),
-        radial-gradient(at 70% 80%, rgba(230,240,250,0.7) 0px, transparent 50%);
-      backdrop-filter: blur(100px);
-      -webkit-backdrop-filter: blur(100px);
+        radial-gradient(at 10% 20%, rgba(255, 255, 255, 0.8) 0px, transparent 50%),
+        radial-gradient(at 10% 90%, rgba(200, 220, 255, 0.5) 0px, transparent 50%),
+        radial-gradient(at 90% 40%, rgba(240, 220, 255, 0.6) 0px, transparent 50%),
+        radial-gradient(at 70% 80%, rgba(230, 240, 250, 0.7) 0px, transparent 50%);
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
       z-index: -1;
     }
 
-.topbar {
-  background-color: #1e603f;
-  color: #ffffff;
-  padding: 1px 0;
-  font-size: 14px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 1000;
-  margin: 0;
-  border: none;
-  box-shadow: none;
-}
-
-.topbar::before,
-.topbar::after {
-  content: none !important;
-  background: none !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-
-.topbar * {
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-
-.topbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.topbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-
-.topbar a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.topbar a:hover {
-  text-decoration: underline;
-}
-
-    header {
-      background: #fff;
-      color: #00472D;
-      text-align: center;
-      padding: 20px 10px;
-    }
-    header img { max-height: 100px; }
+    header { background: #fff; color: #00472D; text-align: center; padding: 20px 10px; }
+    header img { max-height: 90px; width: auto; }
     header h1 { margin: 10px 0 5px; font-size: 26px; }
 
-    nav {
-      background: #192f59;
-      text-align: center;
-      padding: 12px;
+    .main-menu {
+      background-color: #192f59;
+      width: 100%;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: 600;
-      font-size: 15px;
-      text-transform: uppercase;
+    .main-menu nav ul {
+      list-style: none; margin: 0; padding: 0;
+      display: flex; justify-content: center; flex-wrap: wrap;
     }
-    nav a:hover { text-decoration: underline; }
+    .main-menu nav ul li a {
+      display: block; padding: 12px 15px;
+      color: #fff; text-decoration: none;
+      text-transform: uppercase; font-weight: 600; font-size: 15px;
+      transition: background-color 0.2s;
+    }
+    .main-menu nav ul li a:hover { background-color: #2b3f77; }
 
-    h1 {
+    /* ✅ Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0,70,45,0.6), rgba(0,70,45,0.6)), url('images/aiou-campus.jpg') center/cover no-repeat;
+      color: white;
       text-align: center;
-      color: #00472D;
-      margin-top: 20px;
+      padding: 100px 20px;
+      animation: fadeIn 1.5s ease-in-out;
     }
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+    .hero h2 { font-size: 36px; margin-bottom: 15px; }
+    .hero p { font-size: 18px; margin-bottom: 25px; }
+    .hero button {
+      background: #ffd700; color: #00472D; border: none;
+      padding: 12px 25px; font-size: 16px;
+      border-radius: 30px; cursor: pointer; font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .hero button:hover { background: #fff; transform: scale(1.05); }
+
     .container {
-      max-width: 800px;
-      margin: 20px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      width: 90%;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .card {
       background: white;
       border: 1px solid #cce3cc;
       border-radius: 15px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-      padding: 25px;
-    }
-
-    label {
-      font-weight: 600;
-      display: block;
-      margin-top: 10px;
-    }
-    input, select {
-      padding: 10px;
-      width: 100%;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      margin-top: 5px;
-      margin-bottom: 15px;
-      font-size: 1rem;
-    }
-    button {
-      background: #00472D;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
       cursor: pointer;
-      font-weight: 600;
     }
-    button:hover { background: #006400; }
-
-    .result-card {
-      border: 2px solid #00472D;
-      padding: 15px;
-      margin-top: 20px;
-      border-radius: 8px;
-      background: #f9fff9;
-    }
-    .result-card h3 {
-      text-align: center;
+    .card:hover { transform: translateY(-6px); box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); }
+    .icon {
+      font-size: 45px;
+      background: #d4f7d4;
       color: #00472D;
-      text-decoration: underline;
-      margin-bottom: 10px;
+      border-radius: 50%;
+      display: inline-block;
+      padding: 20px;
+      margin-bottom: 15px;
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-    }
-    th, td {
-      border: 1px solid #00472D;
-      padding: 8px;
+
+    /* ✅ About Section */
+    .about {
+      background: #f8fdf8;
+      padding: 60px 20px;
       text-align: center;
     }
-    th { background: #e8f5e9; }
-    .final-row {
-      background: #c6ecc6;
-      font-weight: bold;
+    .about img { width: 120px; border-radius: 50%; margin-bottom: 15px; }
+    .about h3 { font-size: 24px; color: #00472D; margin-bottom: 10px; }
+    .about p { font-size: 16px; max-width: 700px; margin: 0 auto; color: #333; }
+
+    /* ✅ Testimonials Carousel */
+    .testimonials {
+      background: #e9f6ef;
+      padding: 60px 20px;
+      text-align: center;
     }
+    .testimonials h3 { font-size: 24px; color: #00472D; margin-bottom: 25px; }
+    .testimonial {
+      display: none;
+      max-width: 600px;
+      margin: 0 auto;
+      font-style: italic;
+      color: #333;
+      transition: opacity 0.5s ease;
+    }
+    .testimonial.active { display: block; opacity: 1; }
 
     footer {
       background: #00472D;
@@ -209,254 +210,405 @@
       margin-top: 50px;
       font-size: 14px;
     }
-    .thanks { margin-top: 10px; font-weight: 600; }
-
-    @media (max-width: 768px) {
-      header h1 { font-size: 20px; }
-      header img { max-height: 80px; }
-      nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-      }
-      nav a {
-        background: #2b3f77;
-        padding: 8px 12px;
-        border-radius: 5px;
-        margin: 4px;
-        font-size: 14px;
-      }
-      .container { width: 95%; padding: 20px; }
-      footer { font-size: 13px; }
-    }
-
-    @media (min-width: 769px) and (max-width: 1024px) {
-      header h1 { font-size: 24px; }
-      header img { max-height: 90px; }
-      nav a {
-        margin: 6px;
-        font-size: 15px;
-        padding: 10px 15px;
-      }
-      .container { width: 90%; padding: 20px; }
-    }
   </style>
 </head>
-<body>
 
+<body>
   <div class="abstract-background"></div>
 
-  <div class="topbar">
-    <div class="container">
-      <ul></ul>
-      <div>
-        <a href="#" style="color:white;margin:0 5px;"></a>
-        <a href="#" style="color:white;margin:0 5px;"></a>
-        <a href="#" style="color:white;margin:0 5px;"></a>
-      </div>
+  <div class="contact-bar">
+    <div class="contact-options">
+      <a href="mailto:zeeshanaiouhelp1214@gmail.com" class="contact-item">
+        <i class="fa-solid fa-envelope"></i> Gmail: zeeshanaiouhelp1214@gmail.com
+      </a>
+      <a href="tel:+923040571214" class="contact-item">
+        <i class="fa-solid fa-phone"></i> Call: 0304-0571214
+      </a>
+      <a href="https://wa.me/923040571214" target="_blank" class="contact-item">
+        <i class="fa-brands fa-whatsapp" style="color:#25D366;"></i> WhatsApp
+      </a>
     </div>
   </div>
 
   <header>
     <img src="aiou-logo.png" alt="AIOU Logo">
-    <h1>Allama Iqbal Open University</h1>
+    <h1>Allama Iqbal Open University Resources</h1>
   </header>
 
-<!-- 🔵 Main Menu Bar -->
-<div class="main-menu">
-  <nav>
-    <ul>
-      <li><a href="./index.html">Home</a></li>
-      <li><a href="./books.html">Books</a></li>
-      <li><a href="./lesson-plan.html">Lesson Plan</a></li>
-      <li><a href="./teaching-practice.html">Teaching Practice</a></li>
-      <li><a href="./research-project.html">Research Project</a></li>
-      <li><a href="./past-papers.html">Past Papers</a></li>
-      <li><a href="./calculator.html">Calculator</a></li>
-    </ul>
-  </nav>
-</div>
-
-<style>
-/* 🔵 Universal Navigation Bar (Simple + Responsive) */
-.main-menu {
-  background: #192f59;
-}
-
-.main-menu nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.main-menu nav ul li {
-  margin: 0;
-}
-
-.main-menu nav ul li a {
-  display: block;
-  padding: 12px 18px;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 14px;
-  transition: background 0.3s;
-  border-radius: 5px;
-}
-
-.main-menu nav ul li a:hover {
-  background: rgba(255, 255, 255, 0.15);
-}
-
-/* 📱 Mobile View (Vertical Layout) */
-@media (max-width: 768px) {
-  .main-menu nav ul {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .main-menu nav ul li {
-    width: 90%;
-  }
-
-  .main-menu nav ul li a {
-    width: 100%;
-    text-align: center;
-    background: #223b77;
-    margin: 4px 0;
-    padding: 14px 0;
-    border-radius: 10px;
-    font-size: 15px;
-  }
-
-  .main-menu nav ul li a:hover {
-    background: #2c4a8d;
-  }
-}
-</style>
-
-<h1>AIOU Result Calculator</h1>
-
-<div class="container">
-  <label for="class">Select Class:</label>
-  <select id="class" onchange="toggleInputs()">
-    <option value="">Select</option>
-    <option value="matric">Matric / FA / BA</option>
-    <option value="bs">BS / B.Ed / ADE / BBA</option>
-  </select>
-
-  <div id="matricInputs" style="display:none;">
-    <label for="assignSelect">Select Assignments:</label>
-    <select id="assignSelect" onchange="generateAssignmentInputs()">
-      <option value="">Select</option>
-      <option value="2">2 Assignments</option>
-      <option value="4">4 Assignments</option>
-    </select>
-    <div id="assignmentFields"></div>
-
-    <label>Paper Marks (out of 100):</label>
-    <input type="number" id="matricPaper" min="0" max="100">
+  <div class="main-menu">
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./books.html">Books</a></li>
+        <li><a href="./lesson-plan.html">Lesson Plan</a></li>
+        <li><a href="./teaching-practice.html">Teaching Practice</a></li>
+        <li><a href="./research-project.html">Research Project</a></li>
+        <li><a href="./past-papers.html">Past Papers</a></li>
+        <li><a href="./calculator.html">Calculator</a></li>
+      </ul>
+    </nav>
   </div>
 
-  <div id="bsInputs" style="display:none;">
-    <label>Assignment 1 Marks:</label>
-    <input type="number" id="bsAssign1" min="0" max="100">
-    <label>Assignment 2 Marks:</label>
-    <input type="number" id="bsAssign2" min="0" max="100">
-    <label>Quiz Marks (out of 30):</label>
-    <input type="number" id="bsQuiz" min="0" max="30">
-    <label>Paper Marks (out of 100):</label>
-    <input type="number" id="bsPaper" min="0" max="100">
-  </div>
+  <!-- ✅ HERO SECTION -->
+  <section class="hero">
+    <h2>Your Trusted Source for Allama Iqbal Open University Resources</h2>
+    <p>Access AIOU Lesson Plans Samples</p>
+  </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIOU Result Calculator - Enlarged</title>
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIOU Result Calculator - Professional</title>
+    
+    <style>
+        /* --- Professional General Styling --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Changed to a modern font */
+            background-color: #eef2f5; /* Lighter, subtle background */
+            margin: 0;
+            padding: 30px;
+        }
+        .page-title {
+            color: #004d40;
+            margin-bottom: 30px;
+            font-size: 3em; /* Further increased title size */
+            font-weight: 300; /* Lighter font weight for modern look */
+            text-align: center; /* Centered title */
+            letter-spacing: 1px;
+        }
+        .container {
+            /* Maximum width set to 1200px (slightly adjusted from 1500px for better visibility on most wide screens) */
+            max-width: 1500px; 
+            margin: auto;
+        }
+        .calculator-box {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            /* Enhanced Box Shadow for a lifted/professional effect */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.05);
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600; /* Semi-bold */
+            color: #444; /* Darker, clear color */
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        .form-select, .form-input {
+            padding: 15px;
+            border: 1px solid #ddd; /* Lighter border */
+            border-radius: 8px; /* Slightly more rounded corners */
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .form-input:focus, .form-select:focus {
+            border-color: #00665c; /* Highlight color on focus */
+            box-shadow: 0 0 0 3px rgba(0, 102, 92, 0.2);
+            outline: none;
+        }
+        .btn-primary {
+            background-color: #00665c; /* Darker, more professional teal */
+            color: white;
+            cursor: pointer;
+            border: none;
+            padding: 18px;
+            border-radius: 8px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 25px; /* Increased top margin */
+            transition: background-color 0.3s, transform 0.1s;
+            font-size: 1.4em; /* Maximized button font size */
+            font-weight: 600;
+        }
+        .btn-primary:hover {
+            background-color: #004d40;
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+        .btn-primary:active {
+            transform: translateY(0);
+        }
 
-  <button onclick="calculateResult()">Calculate Result</button>
+        /* --- Input Layout Fixes --- */
+        .calculator-box > * {
+            margin-bottom: 30px;
+        }
+        .input-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+        .input-group .form-input, .input-group .form-select {
+            margin-bottom: 0;
+        }
 
-  <div id="resultCard" class="result-card" style="display:none;">
-    <h3>Result Card</h3>
-    <div id="resultDetails"></div>
-  </div>
-</div>
+        /* --- Professional Result Card Styling --- */
+        .result-card {
+            margin-top: 50px; /* Increased separation */
+            padding: 0; 
+            border: 1px solid #e0e0e0;
+            border-left: 8px solid #00665c; /* Highlight color */
+            border-radius: 12px; /* Smoother corners */
+            background-color: #ffffff;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); 
+        }
+        .result-card h3 {
+            color: #004d40;
+            font-size: 2.5em; /* Header font size maximized */
+            margin: 0 40px; 
+            padding: 35px 0 25px 0; /* Increased padding */
+            border-bottom: 1px solid #e0e0e0; /* Finer, modern separator */
+            font-weight: 400; /* Lighter font weight */
+        }
+        
+        .result-card table {
+            width: 100%; 
+            border-collapse: collapse; /* Changed to collapse for cleaner lines */
+            margin: 0;
+        }
 
-  <footer>
-    Developed by Zeeshan (AIOU Help) | Contact: 0304-0571214<br>
-    © 2025 Allama Iqbal Open University
-    <div class="thanks">Thanks To Visiting Zeeshan AIOU Help</div>
-  </footer>
+        .result-card th, .result-card td {
+            border: none;
+            border-bottom: 1px solid #f0f0f0; /* Very light row separator */
+            padding: 25px 22px; 
+            text-align: left;
+            font-size: 1.4em; /* Slightly larger content font size */
+            color: #333;
+        }
+        .result-card th {
+            background-color: #f7f9fa; /* Very light header background */
+            font-weight: 600;
+            color: #555;
+            border-top: none;
+        }
+        
+        /* Final Result Row Styling - Highlighted */
+        .final-row th, .final-row td {
+            background-color: #e6f5f4; /* Subtle highlight color */
+            font-weight: 700;
+            color: #004d40;
+            font-size: 2.0em; /* Final row font size maximized */
+            padding: 30px 22px; 
+            border-top: 2px solid #00665c; /* Strong separator line above final result */
+            border-bottom: none !important;
+        }
+        
+        /* Alignment adjustments (kept from original for structure) */
+        .result-card th:nth-child(2), .result-card td:nth-child(2),
+        .result-card th:nth-child(3), .result-card td:nth-child(3) {
+            text-align: center; 
+            width: 15%; 
+        }
+        .result-card th:last-child, .result-card td:last-child {
+            text-align: right; 
+            width: 20%; 
+        }
+        .final-row th:last-child, .final-row td:last-child {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
 
-  <script>
-    document.addEventListener('contextmenu', e => e.preventDefault());
-    document.onkeydown = function(e) {
-      if (e.keyCode == 123) return false;
-      if (e.ctrlKey && e.shiftKey && ['I','C','J'].includes(String.fromCharCode(e.keyCode))) return false;
-      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
-    };
-    document.addEventListener('copy', e => e.preventDefault());
-    document.addEventListener('selectstart', e => e.preventDefault());
-  </script>
+<section class="result-calculator">
+    <div class="container">
+        <h1 class="page-title">AIOU Result Calculator</h1>
 
-  <script>
+        <div class="calculator-box">
+            
+            <div>
+                <label for="class" class="form-label">Select Class:</label>
+                <select id="class" class="form-select" onchange="toggleInputs()">
+                    <option value="">Select</option>
+                    <option value="matric">Matric / FA / BA</option>
+                    <option value="bs">BS / B.Ed / ADE / BBA</option>
+                </select>
+            </div>
+
+            <div id="matricInputs" style="display:none;">
+                <label for="assignSelect" class="form-label">Select Assignments:</label>
+                <select id="assignSelect" class="form-select" onchange="generateAssignmentInputs()">
+                    <option value="">Select</option>
+                    <option value="2">2 Assignments</option>
+                    <option value="4">4 Assignments</option>
+                </select>
+                <div id="assignmentFields"></div>
+
+                <label class="form-label">Paper Marks (out of 100):</label>
+                <input type="number" id="matricPaper" class="form-input" min="0" max="100">
+            </div>
+
+            <div id="bsInputs" style="display:none;">
+                
+                <div class="input-group">
+                    <div>
+                        <label class="form-label">Assignment 1 Marks (out of 100):</label>
+                        <input type="number" id="bsAssign1" class="form-input" min="0" max="100">
+                    </div>
+                    <div>
+                        <label class="form-label">Assignment 2 Marks (out of 100):</label>
+                        <input type="number" id="bsAssign2" class="form-input" min="0" max="100">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div>
+                        <label class="form-label">Quiz Marks (out of 30):</label>
+                        <input type="number" id="bsQuiz" class="form-input" min="0" max="30">
+                    </div>
+                    <div>
+                        <label class="form-label">Paper Marks (out of 100):</label>
+                        <input type="number" id="bsPaper" class="form-input" min="0" max="100">
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="calculateResult()" class="btn-primary">Calculate Result</button>
+
+            <div id="resultCard" class="result-card" style="display:none;">
+                <h3>Result Card</h3>
+                <div id="resultDetails"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // --- JAVASCRIPT LOGIC (Unchanged as requested) ---
     function toggleInputs() {
-      const c = document.getElementById("class").value;
-      document.getElementById("matricInputs").style.display = "none";
-      document.getElementById("bsInputs").style.display = "none";
-      document.getElementById("assignmentFields").innerHTML = "";
-      if (c === "matric") document.getElementById("matricInputs").style.display = "block";
-      else if (c === "bs") document.getElementById("bsInputs").style.display = "block";
-      document.getElementById("resultCard").style.display = "none";
+        const c = document.getElementById("class").value;
+        document.getElementById("matricInputs").style.display = "none";
+        document.getElementById("bsInputs").style.display = "none";
+        document.getElementById("assignmentFields").innerHTML = "";
+        
+        if (document.getElementById("assignSelect")) {
+            document.getElementById("assignSelect").value = "";
+        }
+        
+        if (c === "matric") {
+            document.getElementById("matricInputs").style.display = "block";
+        } else if (c === "bs") {
+            document.getElementById("bsInputs").style.display = "block";
+        }
+        document.getElementById("resultCard").style.display = "none";
     }
 
     function generateAssignmentInputs() {
-      const count = parseInt(document.getElementById("assignSelect").value) || 0;
-      const container = document.getElementById("assignmentFields");
-      container.innerHTML = "";
-      for (let i = 1; i <= count; i++) {
-        container.innerHTML += `<label>Assignment ${i} Marks:</label>
-        <input type="number" id="matricAssign${i}" min="0" max="100" style="margin-bottom:10px;">`;
-      }
+        const count = parseInt(document.getElementById("assignSelect").value) || 0;
+        const container = document.getElementById("assignmentFields");
+        container.innerHTML = "";
+        for (let i = 1; i <= count; i++) {
+            container.innerHTML += `
+                <label class="form-label">Assignment ${i} Marks:</label>
+                <input type="number" id="matricAssign${i}" class="form-input" min="0" max="100">
+            `;
+        }
     }
 
-   function calculateResult() {
-      const selected = document.getElementById("class").value;
-      let html = "";
-      if (selected === "matric") {
-        const assignCount = parseInt(document.getElementById("assignSelect").value) || 0;
-        let assignTotal = 0;
-        for (let i = 1; i <= assignCount; i++)
-          assignTotal += parseFloat(document.getElementById("matricAssign"+i).value) || 0;
-        let avg = assignTotal / (assignCount || 1);
-        let result = avg * 0.30 + (parseFloat(document.getElementById("matricPaper").value)||0)*0.70;
-        html = `<table>
-          <tr><th>Component</th><th>Marks</th><th>Weight %</th><th>Weighted</th></tr>
-          <tr><td>Assignments</td><td>${avg.toFixed(2)}</td><td>30%</td><td>${(avg*0.30).toFixed(2)}</td></tr>
-          <tr><td>Paper</td><td>${document.getElementById("matricPaper").value||0}</td><td>70%</td><td>${((parseFloat(document.getElementById("matricPaper").value)||0)*0.70).toFixed(2)}</td></tr>
-          <tr class="final-row"><th colspan="3">Final Result</th><th>${result.toFixed(2)}</th></tr>
-        </table>`;
-      } else if (selected === "bs") {
-        let a1 = parseFloat(document.getElementById("bsAssign1").value)||0;
-        let a2 = parseFloat(document.getElementById("bsAssign2").value)||0;
-        let q = parseFloat(document.getElementById("bsQuiz").value)||0;
-        let p = parseFloat(document.getElementById("bsPaper").value)||0;
-        let avg = (a1+a2)/2, res = avg*0.20 + q + p*0.50;
-        html = `<table>
-          <tr><th>Component</th><th>Marks</th><th>Weight %</th><th>Weighted</th></tr>
-          <tr><td>Assignments</td><td>${avg.toFixed(2)}</td><td>20%</td><td>${(avg*0.20).toFixed(2)}</td></tr>
-          <tr><td>Quiz</td><td>${q}</td><td>30%</td><td>${q}</td></tr>
-          <tr><td>Paper</td><td>${p}</td><td>50%</td><td>${(p*0.50).toFixed(2)}</td></tr>
-          <tr class="final-row"><th colspan="3">Final Result</th><th>${res.toFixed(2)}</th></tr>
-        </table>`;
-      }
-      document.getElementById("resultDetails").innerHTML = html;
-      document.getElementById("resultCard").style.display = "block";
+    function calculateResult() {
+        const selected = document.getElementById("class").value;
+        let html = "";
+        
+        if (selected === "matric") {
+            const assignCount = parseInt(document.getElementById("assignSelect").value) || 0;
+            let assignTotal = 0;
+            for (let i = 1; i <= assignCount; i++) {
+                assignTotal += parseFloat(document.getElementById("matricAssign"+i).value) || 0;
+            }
+            
+            if (!document.getElementById("matricPaper").value || (assignCount > 0 && Array.from({length: assignCount}, (_, i) => document.getElementById("matricAssign"+(i+1)).value).some(v => v === ""))) {
+                 alert("Please enter marks for all required fields.");
+                 return;
+            }
+
+            let avg = assignTotal / (assignCount || 1);
+            let paperMarks = parseFloat(document.getElementById("matricPaper").value) || 0;
+            
+            let assignWeight = avg * 0.30;
+            let paperWeight = paperMarks * 0.70;
+            let result = assignWeight + paperWeight;
+
+            html = `<table>
+                <tr><th>Component</th><th>Marks</th><th>Weight %</th><th>Weighted</th></tr>
+                <tr><td>Assignments (Avg.)</td><td>${avg.toFixed(2)}</td><td>30%</td><td>${assignWeight.toFixed(2)}</td></tr>
+                <tr><td>Paper</td><td>${paperMarks}</td><td>70%</td><td>${paperWeight.toFixed(2)}</td></tr>
+                <tr class="final-row"><th colspan="3">Final Result</th><td>${result.toFixed(2)}</td></tr>
+            </table>`;
+            
+        } else if (selected === "bs") {
+            let a1 = parseFloat(document.getElementById("bsAssign1").value)||0;
+            let a2 = parseFloat(document.getElementById("bsAssign2").value)||0;
+            let q = parseFloat(document.getElementById("bsQuiz").value)||0;
+            let p = parseFloat(document.getElementById("bsPaper").value)||0;
+
+            if (document.getElementById("bsAssign1").value === "" || document.getElementById("bsAssign2").value === "" || document.getElementById("bsQuiz").value === "" || document.getElementById("bsPaper").value === "") {
+                alert("Please enter marks for all four fields.");
+                return;
+            }
+
+            let avg = (a1 + a2) / 2;
+            
+            let assignWeight = avg * 0.20;
+            let quizWeight = q; 
+            let paperWeight = p * 0.50;
+            let res = assignWeight + quizWeight + paperWeight;
+            
+            html = `<table>
+                <tr><th>Component</th><th>Marks</th><th>Weight %</th><th>Weighted</th></tr>
+                <tr><td>Assignments (Avg. out of 100)</td><td>${avg.toFixed(2)}</td><td>20%</td><td>${assignWeight.toFixed(2)}</td></tr>
+                <tr><td>Quiz (out of 30)</td><td>${q}</td><td>30%</td><td>${quizWeight.toFixed(2)}</td></tr>
+                <tr><td>Paper (out of 100)</td><td>${p}</td><td>50%</td><td>${paperWeight.toFixed(2)}</td></tr>
+                <tr class="final-row"><th colspan="3">Final Result</th><td>${res.toFixed(2)}</td></tr>
+            </table>`;
+        } else {
+            alert("Please select a class first.");
+            return;
+        }
+        
+        document.getElementById("resultDetails").innerHTML = html;
+        document.getElementById("resultCard").style.display = "block";
     }
-  </script>
+</script>
 </body>
 </html>
 
+  <!-- ⚫ Footer -->
+  <footer>
+    Developed by Zeeshan (AIOU Help) | Contact: 0304-0571214<br>
+    © 2025 Allama Iqbal Open University
+    <div class="thanks">Thanks For Visiting Zeeshan AIOU Help</div>
+  </footer>
 
+  <!-- 🔒 Protection Script -->
+  <script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('selectstart', e => e.preventDefault());
+    document.onkeydown = function(e) {
+      if (e.keyCode == 123) return false;
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false;
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
+      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
+    };
+    document.addEventListener('copy', e => {
+      e.preventDefault();
+      alert("Copying content is disabled on this website.");
+    });
+  </script>
+</body>
+</html>
