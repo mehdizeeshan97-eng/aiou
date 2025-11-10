@@ -268,20 +268,6 @@
     © 2025 Zeeshan AIOU Help | Allama Iqbal Open University Resources
   </div>
   <div class="thanks">Thanks for Visiting Zeeshan AIOU Help</div>
-  <div style="text-align:center; font-family:Poppins, Arial, sans-serif; color:white; font-size:16px; padding:10px;">
-  👁️ <span id="visitorCounter" style="font-weight:bold;">Loading...</span> Visitors
-</div>
-
-<script>
-fetch("counter.php")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("visitorCounter").innerText = data;
-  })
-  .catch(() => {
-    document.getElementById("visitorCounter").innerText = "Error";
-  });
-</script>
 </footer>
 
 
@@ -327,6 +313,7 @@ fetch("counter.php")
   </script>
 </body>
 </html>
+
 
 
 
