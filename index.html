@@ -349,6 +349,16 @@
     <button class="ok-btn" onclick="closeNotice2()">OK</button>
   </div>
 </div>
+
+    <!-- ✅ Script (Fix for closing notice) -->
+<script>
+  function closeNotice2() {
+    const notice = document.getElementById("noticeBoard2");
+    if (notice) {
+      notice.style.display = "none"; // hide the popup
+    }
+  }
+</script>
   <script>
     document.addEventListener('contextmenu', e => e.preventDefault());
     document.onkeydown = function(e) {
@@ -377,6 +387,7 @@
   </script>
 </body>
 </html>
+
 
 
 
