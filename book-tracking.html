@@ -256,6 +256,21 @@ function trackNow(){
   </div>
   <div class="thanks">Thanks for Visiting Zeeshan AIOU Help</div>
 </footer>
-
+  <!-- 🔒 Protection Script -->
+  <script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('selectstart', e => e.preventDefault());
+    document.onkeydown = function(e) {
+      if (e.keyCode == 123) return false;
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false;
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
+      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
+    };
+    document.addEventListener('copy', e => {
+      e.preventDefault();
+      alert("Copying content is disabled on this website.");
+    });
+  </script>
 </body>
 </html>
