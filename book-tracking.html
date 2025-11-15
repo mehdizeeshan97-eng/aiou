@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIOU Resources | Home</title>
+
+  <meta name="description" content="Access AIOU books, lesson plans, teaching practice guides, research projects, past papers and a result calculator — all in one place." />
+  <meta name="keywords" content="AIOU, AIOU Resources, Allama Iqbal Open University, AIOU books, AIOU lesson plan, AIOU teaching practice, AIOU research project, AIOU past papers, AIOU result calculator, AIOU CGPA" />
+  <meta name="author" content="Zeeshan | AIOU Help" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://aiou-help.github.io/index.html" />
+  <link rel="icon" type="image/png" href="images/aiou-logo.png" />
+
+  <meta property="og:title" content="AIOU Resources | Allama Iqbal Open University Help Portal" />
+  <meta property="og:description" content="Get access to AIOU books, lesson plans, research projects, past papers and result calculator easily." />
+  <meta property="og:image" content="https://aiou-help.github.io/images/aiou-logo.png" />
+  <meta property="og:url" content="https://aiou-help.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_PK" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #00472D;
+    }
+
+    .contact-bar {
+      background: #1e603f;
+      color: white;
+      padding: 25px 0;
+      text-align: center;
+    }
+
+    header { background: #fff; color: #00472D; text-align: center; padding: 20px 10px; }
+    header img { max-height: 90px; width: auto; }
+
+    .main-menu {
+      background-color: #192f59;
+      width: 100%;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .main-menu nav ul {
+      list-style: none;
+      margin: 0; padding: 0;
+      display: flex; justify-content: center; flex-wrap: wrap;
+    }
+    .main-menu nav ul li a {
+      display: block; padding: 12px 15px;
+      color: #fff; text-decoration: none;
+      text-transform: uppercase; font-weight: 600;
+      font-size: 15px;
+      transition: background-color 0.2s;
+    }
+    .main-menu nav ul li a:hover { background-color: #2b3f77; }
+
+    /* ---------------------------------
+       📦 Book Tracking Box Styling
+    ----------------------------------*/
+    .tracking-box{
+        width: 300px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 12px;
+        background: #f8f8f8;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        text-align:center;
+    }
+    .input-container{
+        position: relative;
+        margin-top: 10px;
+    }
+    .input-container input{
+        width: 100%;
+        padding: 10px 40px 10px 10px;
+        border-radius: 6px;
+        border: 1px solid #aaa;
+        box-sizing: border-box;
+    }
+    .copy-btn{
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+    }
+    .copy-btn:hover{ color: #0066ff; }
+    .btn{
+        width: 100%;
+        margin-top: 15px;
+        padding: 10px;
+        background: #0066ff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    #resultBox{
+        width: 100%;
+        height: 500px;
+        margin-top: 20px;
+        border: 2px solid #444;
+        border-radius: 10px;
+        display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Top Bar -->
+<div class="contact-bar"></div>
+
+<header>
+  <img src="aiou-logo.png" alt="AIOU Logo">
+  <h1>Allama Iqbal Open University Resources</h1>
+</header>
+
+<div class="main-menu">
+  <nav>
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./books.html">Books</a></li>
+      <li><a href="./lesson-plan.html">Lesson Plan</a></li>
+      <li><a href="./teaching-practice.html">Teaching Practice</a></li>
+      <li><a href="./research-project.html">Research Project</a></li>
+      <li><a href="./past-papers.html">Past Papers</a></li>
+      <li><a href="./calculator.html">Calculator</a></li>
+      <li><a href="./assinments.html">Assinments</a></li>
+      <li><a href="./links.html">Links</a></li>
+    </ul>
+  </nav>
+</div>
+
+<!-- 📦 BOOK TRACKING -->
+<div class="tracking-box">
+    <h3>Book Tracking</h3>
+
+    <select id="classSelect">
+        <option value="">Select Class</option>
+        <option value="matric">Matric</option>
+        <option value="fa">FA</option>
+        <option value="ba_bcom">BA / B.Com</option>
+    </select>
+
+    <div class="input-container">
+        <input type="text" id="trackingID" placeholder="Enter User ID" />
+        <button class="copy-btn" onclick="copyID()">📋</button>
+    </div>
+
+    <button class="btn" onclick="trackNow()">Track Now</button>
+</div>
+
+<iframe id="resultBox"></iframe>
+
+<script>
+const classSelect = document.getElementById("classSelect");
+const trackingID = document.getElementById("trackingID");
+
+// Class selection → Set fixed prefix
+classSelect.addEventListener("change", function () {
+    if (this.value === "matric") {
+        setPrefix("A2501");
+    } else if (this.value === "fa") {
+        setPrefix("A2503");
+    } else if (this.value === "ba_bcom") {
+        setPrefix("A2513");
+    } else {
+        trackingID.value = "";
+    }
+});
+
+// Function to set prefix without allowing delete
+function setPrefix(prefix) {
+    trackingID.value = prefix;
+    trackingID.setAttribute("data-prefix", prefix);
+}
+
+// Prevent deleting prefix
+trackingID.addEventListener("keydown", function (e) {
+    let prefix = trackingID.getAttribute("data-prefix") || "";
+    let cursorPos = trackingID.selectionStart;
+
+    // Backspace blocked inside prefix
+    if (e.key === "Backspace" && cursorPos <= prefix.length) {
+        e.preventDefault();
+    }
+
+    // Delete key blocked inside prefix
+    if (e.key === "Delete" && cursorPos < prefix.length) {
+        e.preventDefault();
+    }
+});
+
+// Prevent selecting & replacing prefix
+trackingID.addEventListener("select", () => {
+    let prefix = trackingID.getAttribute("data-prefix") || "";
+    if (trackingID.selectionStart < prefix.length) {
+        trackingID.selectionStart = prefix.length;
+    }
+});
+
+// Copy Function
+function copyID(){
+    let copyText = document.getElementById("trackingID");
+    if(copyText.value.trim() === ""){
+        alert("No Tracking ID to copy!");
+        return;
+    }
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+    alert("Tracking ID Copied!");
+}
+
+// Tracking System
+function trackNow(){
+    let trackID = document.getElementById("trackingID").value.trim();
+
+    if(trackID === ""){
+        alert("Please enter Tracking ID!");
+        return;
+    }
+
+    let url = "https://ep.gov.pk/track.asp?t=" + encodeURIComponent(trackID);
+
+    let frame = document.getElementById("resultBox");
+    frame.style.display = "block";
+    frame.src = url;
+}
+</script>
+
+  <!-- ⚫ Footer -->
+  <footer>
+<footer style="background:#00472D; color:white; text-align:center; padding:20px; font-size:14px;">
+  <div style="margin-bottom:8px;">
+    Developed by <strong>Zeeshan AIOU Help</strong>
+  </div>
+  <div style="margin-bottom:8px;">
+    Contact: <a href="tel:+923040571214" style="color:white; text-decoration:none;">0304-0571214</a> | 
+    Email: <a href="mailto:zeeshanaiouhelp1214@gmail.com" style="color:white; text-decoration:none;">zeeshanaiouhelp1214@gmail.com</a> | 
+    WhatsApp: <a href="https://wa.me/923040571214" target="_blank" style="color:white; text-decoration:none;">0304-0571214</a>
+  </div>
+  <div style="margin-bottom:8px;">
+    © 2025 Zeeshan AIOU Help | Allama Iqbal Open University Resources
+  </div>
+  <div class="thanks">Thanks for Visiting Zeeshan AIOU Help</div>
+</footer>
+
+</body>
+</html>
