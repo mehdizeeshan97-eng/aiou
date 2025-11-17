@@ -233,16 +233,15 @@ function downloadPDF(){
 </html>
 
 
-  <!-- 🔒 Protection Script -->
-  <script>
-    document.addEventListener('contextmenu', e => e.preventDefault());
-    document.onkeydown = function(e) {
-      if (e.keyCode == 123) return false;
-      if (e.ctrlKey && e.shiftKey && ['I','C','J'].includes(String.fromCharCode(e.keyCode))) return false;
-      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
-    };
-    document.addEventListener('copy', e => e.preventDefault());
-    document.addEventListener('selectstart', e => e.preventDefault());
-  </script>
-</body>
-</html>
+<!-- 🔒 Safe Protection Script -->
+<script>
+  document.addEventListener('contextmenu', e => e.preventDefault());
+
+  document.onkeydown = function(e) {
+    if (e.keyCode == 123) return false;
+    if (e.ctrlKey && e.shiftKey && ['I','C','J'].includes(String.fromCharCode(e.keyCode))) return false;
+    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
+  };
+
+  document.addEventListener('copy', e => e.preventDefault());
+</script>
