@@ -238,6 +238,74 @@
   transform: scale(1.05);
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+<style>
+/* ===== Useful Links Section (PDF Tools Style) ===== */
+.links-section {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.links-section h2 {
+  font-size: 28px;
+  color: #192f59;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.link-card {
+  background: #fff;
+  border: 1px solid #e5e9f2;
+  border-radius: 14px;
+  padding: 22px;
+  text-decoration: none;
+  color: #222;
+  transition: all 0.3s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+.link-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* icon colors */
+.red { background:#fde2e2; color:#d93025; }
+.orange { background:#fff1d6; color:#f29900; }
+.green { background:#e6f4ea; color:#1e8e3e; }
+.blue { background:#e8f0fe; color:#1a73e8; }
+.purple { background:#f3e8fd; color:#9334e6; }
+.yellow { background:#fff7d6; color:#f9ab00; }
+
+.link-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 6px;
+  color: #192f59;
+}
+
+.link-card p {
+  font-size: 13px;
+  color: #555;
+  margin: 0;
+}
+</style>
   </style>
 </head>
 
@@ -277,165 +345,99 @@
     <p>Access Differents Useful Links</p>
   </section>
 <!-- 🌐 Useful Website Links Section -->
-<div class="container">
+<section class="links-section">
   <h2>🔗 Useful Links</h2>
-  <div class="file-list">
 
+  <div class="links-grid">
 
-    <!-- 1. AIOU Main Website Link -->
-    <a href="https://www.aiou.edu.pk/" target="_blank"
-       class="block bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-      <div class="flex flex-col items-start space-y-3">
-        <div class="bg-red-100 text-red-500 p-2 rounded-lg">
-        </div>
-        <h3 class="text-lg font-semibold">AIOU Main Website Link</h3>
-        <p class="text-gray-600 text-sm">Access AIOU Main Website.</p>
-      </div>
+    <a href="https://www.aiou.edu.pk/" target="_blank" class="link-card">
+      <div class="link-icon red"><i class="fa-solid fa-globe"></i></div>
+      <h3>AIOU Main Website</h3>
+      <p>Official Allama Iqbal Open University website</p>
     </a>
 
-    <!-- 2. CMS Account Link -->
-    <a href="https://enrollment.aiou.edu.pk/psp/prod/?cmd=login" target="_blank"
-       class="block bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-      <div class="flex flex-col items-start space-y-3">
-        <div class="bg-orange-100 text-orange-500 p-2 rounded-lg">
-        </div>
-        <h3 class="text-lg font-semibold">CMS Account Link</h3>
-        <p class="text-gray-600 text-sm">Access CMS Account.</p>
-      </div>
+    <a href="https://enrollment.aiou.edu.pk/psp/prod/?cmd=login" target="_blank" class="link-card">
+      <div class="link-icon orange"><i class="fa-solid fa-user-graduate"></i></div>
+      <h3>CMS Account</h3>
+      <p>Login to AIOU CMS student account</p>
     </a>
 
-    <!-- 3. LMS Account Link -->
-    <a href="https://login.microsoftonline.com/organizations/oauth2/authorize?response_type=code&client_id=fa34f726-0096-400a-8d24-3fd3bcd7c90b&scope=openid%20profile%20email&nonce=N69145bc227f4b&response_mode=form_post&state=oQcx1UfrQiV8nxy&redirect_uri=https%3A%2F%2Flms3.aiou.edu.pk%2Fauth%2Foidc%2F&resource=https%3A%2F%2Fgraph.microsoft.com" target="_blank"
-       class="block bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-      <div class="flex flex-col items-start space-y-3">
-        <div class="bg-green-100 text-green-500 p-2 rounded-lg">
-        </div>
-        <h3 class="text-lg font-semibold">LMS Account Link</h3>
-        <p class="text-gray-600 text-sm">Access LMS Account.</p>
-      </div>
+    <a href="https://lms3.aiou.edu.pk" target="_blank" class="link-card">
+      <div class="link-icon green"><i class="fa-solid fa-laptop"></i></div>
+      <h3>LMS Account</h3>
+      <p>Access Learning Management System</p>
     </a>
 
-    <!-- 4. Workshop Schedule Link -->
-    <a href="https://www.aiou.edu.pk/workshop-info" target="_blank"
-       class="block bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-      <div class="flex flex-col items-start space-y-3">
-        <div class="bg-green-100 text-green-500 p-2 rounded-lg">
-        </div>
-        <h3 class="text-lg font-semibold">Workshop Schedule Link</h3>
-        <p class="text-gray-600 text-sm">Access Workshop Schedule.</p>
-      </div>
+    <a href="https://www.aiou.edu.pk/workshop-info" target="_blank" class="link-card">
+      <div class="link-icon green"><i class="fa-solid fa-calendar-days"></i></div>
+      <h3>Workshop Schedule</h3>
+      <p>View current workshop schedules</p>
     </a>
 
-    <!-- 5. Degree Application Status Link -->
-    <a href="https://dts.aiou.edu.pk/"_blank"
-       class="block bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-      <div class="flex flex-col items-start space-y-3">
-        <div class="bg-blue-100 text-blue-500 p-2 rounded-lg">
-        </div>
-        <h3 class="text-lg font-semibold">Degree Application Status Link</h3>
-        <p class="text-gray-600 text-sm">Access Degree Application Status.</p>
-      </div>
+    <a href="https://dts.aiou.edu.pk/" target="_blank" class="link-card">
+      <div class="link-icon blue"><i class="fa-solid fa-file-circle-check"></i></div>
+      <h3>Degree Application Status</h3>
+      <p>Track your degree application</p>
     </a>
 
-   <!-- 6. Challan Form Link -->
-    <a href="https://online.aiou.edu.pk/challan/" target="_blank"
-       class="block bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-      <div class="flex flex-col items-start space-y-3">
-        <div class="bg-blue-100 text-blue-500 p-2 rounded-lg">
-        </div>
-        <h3 class="text-lg font-semibold">Challan Form Link</h3>
-        <p class="text-gray-600 text-sm">Access Challan Form.</p>
-      </div>
-    </a>
-    
-    <!-- 7. LMS Password Reset Link -->
-    <a href="https://amcr.aiou.edu.pk/forgot_lms_password" target="_blank"
-       class="block bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-      <div class="flex flex-col items-start space-y-3">
-        <div class="bg-blue-100 text-blue-500 p-2 rounded-lg">
-        </div>
-        <h3 class="text-lg font-semibold">LMS Password Reset Link</h3>
-        <p class="text-gray-600 text-sm">Access LMS Password Reset.</p>
-      </div>
+    <a href="https://online.aiou.edu.pk/challan/" target="_blank" class="link-card">
+      <div class="link-icon blue"><i class="fa-solid fa-receipt"></i></div>
+      <h3>Challan Form</h3>
+      <p>Generate online challan form</p>
     </a>
 
-    <!-- 8. Compress PDF File Link -->
-    <a href="https://www.ilovepdf.com/compress_pdf" target="_blank"
-       class="block bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-      <div class="flex flex-col items-start space-y-3">
-        <div class="bg-purple-100 text-purple-500 p-2 rounded-lg">
-        </div>
-        <h3 class="text-lg font-semibold">Compress PDF File Link</h3>
-        <p class="text-gray-600 text-sm">Access Compress PDF File.</p>
-      </div>
+    <a href="https://amcr.aiou.edu.pk/forgot_lms_password" target="_blank" class="link-card">
+      <div class="link-icon blue"><i class="fa-solid fa-key"></i></div>
+      <h3>LMS Password Reset</h3>
+      <p>Reset LMS account password</p>
     </a>
 
-    <!-- 9. Fresh Admission Link -->
-    <a href="https://fmbp.aiou.edu.pk/application/index.php" target="_blank"
-       class="block bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-      <div class="flex flex-col items-start space-y-3">
-        <div class="bg-pink-100 text-pink-500 p-2 rounded-lg">
-        </div>
-        <h3 class="text-lg font-semibold">Fresh Admission Link</h3>
-        <p class="text-gray-600 text-sm">Access Fresh Admission.</p>
-      </div>
+    <a href="https://www.ilovepdf.com/compress_pdf" target="_blank" class="link-card">
+      <div class="link-icon purple"><i class="fa-solid fa-file-pdf"></i></div>
+      <h3>Compress PDF</h3>
+      <p>Reduce PDF file size online</p>
     </a>
 
-    <!-- 10. AIOU Books Link -->
-    <a href="https://www.aiou.edu.pk/books" target="_blank"
-       class="block bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-      <div class="flex flex-col items-start space-y-3">
-        <div class="bg-yellow-100 text-yellow-500 p-2 rounded-lg">
-        </div>
-        <h3 class="text-lg font-semibold">AIOU Books Link</h3>
-        <p class="text-gray-600 text-sm">Access AIOU Books.</p>
-      </div>
+    <a href="https://fmbp.aiou.edu.pk/application/index.php" target="_blank" class="link-card">
+      <div class="link-icon pink"><i class="fa-solid fa-file-signature"></i></div>
+      <h3>Fresh Admission</h3>
+      <p>Apply for new admission online</p>
     </a>
 
-    <!-- 11. S.S.C., H.S.S.C.,NFE& Literacy certificate, French Online Courses Question Paper Link -->
-    <a href="https://www.aiou.edu.pk/assignmentqponeautumn" target="_blank"
-       class="block bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-      <div class="flex flex-col items-start space-y-3">
-        <div class="bg-yellow-100 text-yellow-500 p-2 rounded-lg">
-        </div>
-        <h3 class="text-lg font-semibold">S.S.C., H.S.S.C.,NFE& Literacy certificate, French Online Courses Question Paper Link</h3>
-        <p class="text-gray-600 text-sm">Access Question Paper.</p>
-      </div>
-    </a> 
-
-    <!-- 12. Bachelor, ATTC, ADC,ADB,BS,BBA,B.ed,Post Graduate Courses Question Paper Link -->
-    <a href="https://www.aiou.edu.pk/assignmentqptwoautumn" target="_blank"
-       class="block bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-      <div class="flex flex-col items-start space-y-3">
-        <div class="bg-yellow-100 text-yellow-500 p-2 rounded-lg">
-        </div>
-        <h3 class="text-lg font-semibold">Bachelor, ATTC, ADC,ADB,BS,BBA,B.ed,Post Graduate Courses Question Paper Link</h3>
-        <p class="text-gray-600 text-sm">Access Question Paper.</p>
-      </div>
+    <a href="https://www.aiou.edu.pk/books" target="_blank" class="link-card">
+      <div class="link-icon yellow"><i class="fa-solid fa-book"></i></div>
+      <h3>AIOU Books</h3>
+      <p>Download AIOU books & materials</p>
     </a>
 
-    <!-- 13. AIOU HelpDesk Portal Link -->
-    <a href="https://support.aiou.edu.pk" target="_blank"
-       class="block bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-      <div class="flex flex-col items-start space-y-3">
-        <div class="bg-yellow-100 text-yellow-500 p-2 rounded-lg">
-        </div>
-        <h3 class="text-lg font-semibold">AIOU HelpDesk Portal</h3>
-        <p class="text-gray-600 text-sm">Access AIOU HelpDesk Portal.</p>
-      </div>
+    <!-- ✅ NEW: SSC / HSSC Question Papers -->
+    <a href="https://www.aiou.edu.pk/assignmentqponeautumn" target="_blank" class="link-card">
+      <div class="link-icon yellow"><i class="fa-solid fa-file-lines"></i></div>
+      <h3>SSC, HSSC & NFE Question Papers</h3>
+      <p>SSC, HSSC, NFE, Literacy & French course papers</p>
     </a>
-    <!-- 14. AIOU Bookstore Link -->
-    <a href="https://bookstore.aiou.edu.pk" target="_blank"
-       class="block bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-      <div class="flex flex-col items-start space-y-3">
-        <div class="bg-yellow-100 text-yellow-500 p-2 rounded-lg">
-        </div>
-        <h3 class="text-lg font-semibold">AIOU Bookstore</h3>
-        <p class="text-gray-600 text-sm">Access AIOU Bookstore.</p>
-      </div>
-    </a>    
+
+    <!-- ✅ NEW: Bachelor / BS Question Papers -->
+    <a href="https://www.aiou.edu.pk/assignmentqptwoautumn" target="_blank" class="link-card">
+      <div class="link-icon yellow"><i class="fa-solid fa-file-circle-question"></i></div>
+      <h3>Bachelor, BS & Post Graduate Papers</h3>
+      <p>Bachelor, BS, BBA, B.Ed & postgraduate papers</p>
+    </a>
+
+    <a href="https://support.aiou.edu.pk" target="_blank" class="link-card">
+      <div class="link-icon yellow"><i class="fa-solid fa-headset"></i></div>
+      <h3>AIOU Help Desk</h3>
+      <p>Get official AIOU support</p>
+    </a>
+
+    <a href="https://bookstore.aiou.edu.pk" target="_blank" class="link-card">
+      <div class="link-icon yellow"><i class="fa-solid fa-store"></i></div>
+      <h3>AIOU Bookstore</h3>
+      <p>Order printed AIOU books</p>
+    </a>
+
   </div>
-</div>
+</section>
 
   <!-- ⚫ Footer -->
   <footer>
@@ -468,6 +470,3 @@
   </script>
 </body>
 </html>
-
-
-
