@@ -1,6 +1,2 @@
 User-agent: *
-Allow: /
-Sitemap: https://mehdizeeshan97-eng.github.io/aiou/sitemap.xml
-
-User-agent: bingbot  
-Disallow: /aiou/blob/main/index.html
+Disallow: /
