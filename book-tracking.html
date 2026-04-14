@@ -148,8 +148,7 @@
 
     <select id="classSelect">
         <option value="">Select Class</option>
-        <option value="matric">Matric</option>
-        <option value="fa">FA</option>
+        <option value="matric_fa">Matric/ FA</option>
         <option value="ba_bcom">BA / B.Com</option>
     </select>
 
@@ -169,9 +168,7 @@ const trackingID = document.getElementById("trackingID");
 
 // Class selection → Set fixed prefix
 classSelect.addEventListener("change", function () {
-    if (this.value === "matric") {
-        setPrefix("A2601");
-    } else if (this.value === "fa") {
+    if (this.value === "matric_fa") {
         setPrefix("A2601");
     } else if (this.value === "ba_bcom") {
         setPrefix("A2611");
